@@ -1,0 +1,148 @@
+nav{
+	background: rgba(170,180,190,0.6);
+}
+
+.form_title{
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        color: #ffefec;
+        font-size: 3rem;
+}
+
+.new_story{
+        min-height: 120vh;
+        width: 100%;
+        padding: 100px 0 100px 0;
+        margin: 0;
+        background-image: url(/static/media/bg/reflection.jpg);
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+
+.new_story>form{
+        background-color: rgba(223, 255, 227, 0.55);
+        padding: 30px;
+        width: 70%;
+        border-radius: 10px;
+}
+
+.item{
+        flex-direction: column;
+        font-size: larger !important;
+}
+.item>label{
+        color: rgb(12, 13, 90);
+        font-weight: bold;
+}
+
+
+#editor_tw, #editor_cn{
+        display: none;
+}
+button{
+        cursor: pointer;
+}
+
+.button_area{
+        text-align: center;
+}
+
+hr{
+        width: 80%;
+}
+
+/* story image input */
+
+#story_img{
+        display: none;
+}
+
+#upload{
+        background-color:#3b9aca ;
+        padding: 10px;
+        text-align: center;
+        color: white !important;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+}
+#upload:hover{
+        background-color:#2b7ea8 ;
+}
+
+#clear_img{
+        background-color:#ca5959 ;
+        padding: 12px;
+        text-align: center;
+        color: rgb(0, 0, 0) !important;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+}
+#clear_img:hover{
+        background-color:#be2929 ;
+}
+
+#lang_en, #lang_tw, #lang_cn{
+        font: bold;
+        color: rgb(255, 255, 255);
+}
+.chosen_lang{
+        background-color: #1d5774 !important;
+}
+
+
+
+
+
+@media (max-width:1400px) {
+        .new_story>form{
+                width: 70%;
+        }
+}
+@media (max-width:1200px) {
+        .new_story>form{
+                width: 80%;
+        }
+}
+@media (max-width:992px) {
+        .new_story>form{
+                width: 90%;
+        }
+        .form_title{
+                font-size: 2.6rem;
+        }
+}
+@media (max-width:768px) {
+        #show_story_img{
+                width: 300px !important;
+                height: 150px !important;
+        }
+        .form_title{
+                font-size: 2.4rem;
+        }
+}
+
+@media (max-width: 500px) {
+        .new_story>form{
+                padding: 10px;
+        }
+        .preview_img{
+                margin-left: 0 !important;
+        }
+        #show_story_img{
+                width: 270px !important;
+        }
+        .col-12.m-3.item{
+                margin: 0.3rem !important;
+        }
+        .form_title{
+                font-size: 2.2rem;
+        }
+}

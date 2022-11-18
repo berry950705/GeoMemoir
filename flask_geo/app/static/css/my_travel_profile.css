@@ -1,0 +1,287 @@
+/* author's profile */
+nav{
+	background: rgba(170, 180, 190, 0.6);
+}
+.header{
+        position: relative;
+}
+#header_img{
+        width: 100%;
+        height: 70vh;
+}
+
+
+/* profile_info */
+.profile_info{
+        min-height: 60vh;
+        padding: 0;
+}
+
+.author_wrap{
+        padding: 0 10px;
+        position: relative;
+}
+#avatar{
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 10px solid #f0f0f063;
+        top: -40px;
+}
+.author{
+        padding: 2px 0 0 140px;
+}
+#profile_name{
+        font-size: 25px;
+        color: #626168;
+        display: block;
+}
+#motto{
+        font-size: 16px;
+        color: #a495d9;
+}
+
+@media (min-width: 1000px) {  
+        .author_wrap{
+                padding: 0 50px;
+        }
+        #avatar{
+                position: absolute;
+                width: 175px;
+                height: 175px;
+                border-radius: 50%;
+                top: -60px;
+        }
+        .author{
+                padding: 20px 0 0 200px;
+        }
+        #author_name{
+                font-size: 34px;
+        }
+        #motto{
+                font-size: 18px;
+        }
+}
+
+/* self_introduction */
+.self_introduction{
+        margin: 35px 60px;
+        padding: 20px;
+        border-radius: 5px;
+        color: #574f4f;
+        font-weight: bold;
+        font-size: 18px;
+        justify-content: center;
+}
+
+/* story_wrap */
+.story_count{
+        background-color: #f4af71;
+        text-align: center;
+}
+.total_num{
+        color: #9f350c;
+        font-size: 66px;
+        margin-right: 10px;
+        font-weight: bold;
+}
+
+/* intro_content */
+.intro_content{
+        background-color: #a7e6dcd4;
+}
+.about{
+        color: #ffffff;
+}
+.intro_content>p{
+        margin-top: 0;
+        margin-bottom: 1rem ;
+        padding: 0 36px !important;
+}
+
+@media (max-width:576px) {
+        .self_introduction{
+                padding: 0;
+                margin: 20px 10px;
+        }
+}
+
+
+/* travel_experience */
+
+.travel_experience{
+        background-color: #e4edfbba;
+        text-align: center;
+        padding: 30px 30px 0;
+}
+.travel_experience>h3{
+        color: rgb(155, 151, 151);
+}
+.experience_count{
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        padding: 0 50px 30px;
+        margin-bottom: 35px;
+}
+
+.count{
+        color: rgb(183, 106, 6);
+        font-size: 52px;
+        margin-right: 10px;
+        font-weight: bold;
+}
+
+.experience{
+        font-size: 26px;
+        color: rgba(114, 128, 17, 0.79);
+        font-weight: bold;
+}
+
+@media (max-width:768px) {
+        .count{
+                font-size: 38px;
+        }
+        
+        .experience{
+                font-size: 24px;
+        }
+}
+
+/* filter & author's stories */
+.filters{
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 30px 0;
+        background-color: rgba(43, 42, 39, 0.89);
+}
+
+.filters > li{
+        display: inline-block;
+        color:aliceblue ;
+        text-decoration: none;
+        padding: 5px 20px;
+        font-size: large;
+        font-weight: bold;
+}
+
+.filters >li:hover{
+        background-color: #9ab3af;
+}
+
+.filters > li.active{
+        color: #fff;
+        background-color: #126f79;
+}
+
+
+/* stories_section */
+.stories{
+        margin: 0;
+        padding: 100px;
+        background-color: rgba(249, 243, 239, 0.4);
+}
+
+.stories_list {
+        height: inherit !important;
+}
+
+@media (max-width:1400px) {
+        .stories{
+                padding: 60px;
+        }
+}
+
+.stories > .container{
+        max-width: 1600px;
+}
+
+.card > a{
+        overflow: hidden;
+}
+.card-body > a{
+        text-decoration: none;
+        color: #434e5e;
+}
+
+.card-img-top{
+        height: 300px;
+}
+
+.card-img-top:hover{
+        transform: scale(1.1);
+}
+
+.card-title{
+        margin-bottom: 1rem;
+}
+.card-title:hover{
+        color:rgb(14, 128, 181);
+}
+
+.photo_desc{
+        color: gray;
+}
+
+.icon{
+        width: 22px;
+}
+
+.country, .view_total, .published_time, .like_total{
+        display: inline;
+        bottom: 0;
+}
+
+
+
+/* page_navigation */
+.page_navigation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.page-item.active .page-link{
+        background-color: #126f79;
+        border-color: #126f79;
+}
+
+.pagination{
+        margin: 30px;
+}
+
+a:not([href]):not([tabindex]) {
+        color: #323235;
+}
+
+a:hover:not([href]):not([tabindex]) {
+        color: #323235;
+}
+
+
+@media (max-width:500px) {
+        #avatar{
+                width: 100px;
+                height: 100px;
+        }
+        #profile_name{
+                font-size: 20px;
+        }
+        .about{
+                font-size: 1rem;
+        }
+        .total_num{
+                font-size: 36px;
+        }
+        .intro_content>p{
+                padding: 0 16px !important;
+        }
+        .stories{
+                padding: 15px;
+        }
+        .filters > li{
+                font-size: medium !important;
+        }
+}

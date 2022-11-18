@@ -1,0 +1,1927 @@
+# Chinese (Simplified, China) translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-09-27 13:50+0800\n"
+"PO-Revision-Date: 2022-09-07 16:15+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: zh_Hans_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: app/templates/about.html:13 app/templates/about.html:24
+#: app/templates/index.html:50 app/templates/index.html:304
+msgid "About"
+msgstr "关于网站"
+
+#: app/templates/about.html:21 app/templates/signup.html:42
+msgid "Welcome to Geo Memoir!"
+msgstr "欢迎来到Geo Memoir!"
+
+#: app/templates/about.html:37
+msgid "About Geo Memoir.."
+msgstr "关于Geo Memoir.."
+
+#: app/templates/about.html:39
+msgid ""
+"Geo Memoir provides a friendly platform for travel lovers to share their "
+"stories."
+msgstr "Geo Memoir为旅行爱好者提供了一个友好的平台来分享他们的故事，"
+
+#: app/templates/about.html:40
+msgid ""
+"When you start writing your experience, you start creating your travel "
+"memoir too."
+msgstr "当您开始记录下您的经历时，同时也开始了旅行回忆录的创作之旅。"
+
+#: app/templates/about.html:41
+msgid "If you are a travel buff, don't hesitate to join us and give it a try."
+msgstr "如果您是一个旅行爱好者，不要犹豫，加入我们试一试吧!"
+
+#: app/templates/about.html:42
+msgid "Let's TRAVEL, EXPLORE, and SHARE!"
+msgstr "让我们一起旅行、一起探索、一起分享!"
+
+#: app/templates/about.html:46
+msgid "Explore Our Travel Stories. Broaden Your Perspective."
+msgstr "探索我们的旅行故事，拓宽您的视野"
+
+#: app/templates/about.html:48
+msgid "The world is like a huge book and you will never finish reading it."
+msgstr "世界就像一本巨大的书籍，永远都无法阅读完成。"
+
+#: app/templates/about.html:49
+msgid ""
+"If you want to plan your next vacation but don't know where to start, you"
+" may get some inspiration from some of our experienced travelers."
+msgstr "如果您想规划下一个假期，但不知从何开始, 您可以从我们有经验的旅行者获得一些灵感。"
+
+#: app/templates/about.html:50
+msgid "Every time we travel, we change the shape of our thoughts."
+msgstr "每当我们旅行的同时，我们也改变了思维。"
+
+#: app/templates/about.html:51
+msgid ""
+"Be ready to appreciate different cultures and add new experiences to your"
+" life!"
+msgstr "准备好欣赏不同的文化，为您的生活添增新的体验!"
+
+#: app/templates/about.html:55
+msgid "Show Us The World In Your Eyes"
+msgstr "向我们展示您眼中的世界"
+
+#: app/templates/about.html:57
+msgid ""
+"There is beauty in every corner of the world. Some of them may have been "
+"visited by you."
+msgstr "世界的每个角落都存在着美丽的事物，而您或许已经造访过。"
+
+#: app/templates/about.html:58
+msgid ""
+"We hope to learn from your traveling experience. It doesn't need to be a "
+"perfect sharing or an enchanting story."
+msgstr "我们希望能从您的旅行中学习，它不需要是一个完美的分享或是一个引人入胜的故事，"
+
+#: app/templates/about.html:59
+msgid ""
+"Every one of us is a life storyteller. Be our eyes and show us the world "
+"in your way."
+msgstr "我们每个人都能成为人生故事的演讲者，用自己的方式向我们展示您所看到的世界。"
+
+#: app/templates/americas.html:12 app/templates/americas.html:21
+#: app/templates/destinations.html:76 app/templates/edit_stories.html:40
+#: app/templates/index.html:56 app/templates/index.html:313
+#: app/templates/new_stories.html:39
+msgid "The Americas"
+msgstr "美洲地区"
+
+#: app/templates/americas.html:18
+msgid "Welcome to The Americas "
+msgstr "欢迎来到美洲地区"
+
+#: app/templates/americas.html:19 app/templates/asia_pacific.html:19
+#: app/templates/europe.html:19 app/templates/middle_east_africa.html:19
+msgid "Find your travel inspiration and start your journey"
+msgstr "找到旅游灵感并开始您的旅程"
+
+#: app/templates/americas.html:28 app/templates/asia_pacific.html:29
+#: app/templates/europe.html:29 app/templates/gallery.html:30
+#: app/templates/middle_east_africa.html:29
+#: app/templates/my_travel_profile.html:82
+msgid "All"
+msgstr "全部"
+
+#: app/templates/americas.html:29 app/templates/asia_pacific.html:30
+#: app/templates/edit_stories.html:62 app/templates/europe.html:30
+#: app/templates/gallery.html:31 app/templates/middle_east_africa.html:30
+#: app/templates/my_travel_profile.html:83 app/templates/new_stories.html:61
+msgid "Tourist Attraction"
+msgstr "旅游景点"
+
+#: app/templates/americas.html:30 app/templates/asia_pacific.html:31
+#: app/templates/edit_stories.html:66 app/templates/europe.html:31
+#: app/templates/gallery.html:32 app/templates/middle_east_africa.html:31
+#: app/templates/my_travel_profile.html:84 app/templates/new_stories.html:65
+msgid "Cuisine"
+msgstr "美食"
+
+#: app/templates/americas.html:31 app/templates/asia_pacific.html:32
+#: app/templates/europe.html:32 app/templates/gallery.html:33
+#: app/templates/middle_east_africa.html:32
+#: app/templates/my_travel_profile.html:85
+msgid "Accomodation"
+msgstr "住宿"
+
+#: app/templates/asia_pacific.html:12 app/templates/destinations.html:82
+#: app/templates/edit_stories.html:44 app/templates/index.html:57
+#: app/templates/index.html:314 app/templates/new_stories.html:43
+msgid "Asia Pacific"
+msgstr "亞洲太平洋地區"
+
+#: app/templates/asia_pacific.html:18
+msgid "Welcome to Asia Pacific"
+msgstr "欢迎来到亞洲太平洋地區"
+
+#: app/templates/asia_pacific.html:21
+msgid "Asia Pacific "
+msgstr "亞洲太平洋地區"
+
+#: app/templates/change_email.html:22 app/templates/change_email.html:74
+#: app/templates/index.html:107
+msgid "Change Email"
+msgstr "更换邮箱"
+
+#: app/templates/change_email.html:36
+msgid "Want to change your email?"
+msgstr "想要更换您的邮箱吗？"
+
+#: app/templates/change_email.html:37
+msgid "Please check your"
+msgstr "当您点击发送后，请查看您的"
+
+#: app/templates/change_email.html:37
+msgid "NEW EMAIL"
+msgstr "新邮箱"
+
+#: app/templates/change_email.html:38
+msgid "for the verification code once you click send."
+msgstr "以获取验证码。"
+
+#: app/templates/change_email.html:53
+msgid "Your Current Email"
+msgstr "您目前的邮箱"
+
+#: app/templates/change_email.html:58
+msgid "New Email"
+msgstr "新邮箱"
+
+#: app/templates/change_email.html:59
+msgid " Enter your new email"
+msgstr "输入您的新邮箱"
+
+#: app/templates/change_email.html:64
+msgid "Verification Code"
+msgstr "验证码"
+
+#: app/templates/change_email.html:66
+msgid " Enter code"
+msgstr "输入验证码"
+
+#: app/templates/change_email.html:68
+msgid "Send Code"
+msgstr "发送验证码"
+
+#: app/templates/change_password.html:22 app/templates/change_password.html:86
+#: app/templates/index.html:108
+msgid "Change Password"
+msgstr "更改密码"
+
+#: app/templates/change_password.html:36
+msgid "Change Your Password"
+msgstr "更改密码"
+
+#: app/templates/change_password.html:38
+#: app/templates/forgot_password_reset.html:36 app/templates/signup.html:95
+msgid "Your password must contain at least:"
+msgstr "您的密码至少需要包含:"
+
+#: app/templates/change_password.html:39
+#: app/templates/forgot_password_reset.html:37 app/templates/signup.html:97
+msgid "An"
+msgstr "一个"
+
+#: app/templates/change_password.html:40
+#: app/templates/forgot_password_reset.html:38 app/templates/signup.html:97
+msgid "uppercase"
+msgstr "大写"
+
+#: app/templates/change_password.html:40 app/templates/change_password.html:42
+#: app/templates/forgot_password_reset.html:38
+#: app/templates/forgot_password_reset.html:40 app/templates/signup.html:98
+#: app/templates/signup.html:102
+msgid "letter"
+msgstr "字母"
+
+#: app/templates/change_password.html:41 app/templates/change_password.html:43
+#: app/templates/forgot_password_reset.html:39
+#: app/templates/forgot_password_reset.html:41 app/templates/signup.html:101
+#: app/templates/signup.html:105
+msgid "A"
+msgstr "一个"
+
+#: app/templates/change_password.html:42
+#: app/templates/forgot_password_reset.html:40 app/templates/signup.html:101
+msgid "lowercase"
+msgstr "小写"
+
+#: app/templates/change_password.html:44
+#: app/templates/forgot_password_reset.html:42 app/templates/signup.html:105
+msgid "number"
+msgstr "数字"
+
+#: app/templates/change_password.html:45
+#: app/templates/forgot_password_reset.html:43 app/templates/signup.html:108
+msgid "Minimum"
+msgstr "最少"
+
+#: app/templates/change_password.html:46
+#: app/templates/forgot_password_reset.html:44 app/templates/signup.html:108
+msgid "8 characters"
+msgstr "8个字符"
+
+#: app/templates/change_password.html:61
+msgid "Old Password"
+msgstr "旧密码"
+
+#: app/templates/change_password.html:69
+#: app/templates/forgot_password_reset.html:60
+msgid "New Password"
+msgstr "新密码"
+
+#: app/templates/change_password.html:78
+#: app/templates/forgot_password_reset.html:69 app/templates/signup.html:115
+msgid "Confirm Password"
+msgstr "确认密码"
+
+#: app/templates/contact.html:103 app/templates/index.html:75
+msgid "Contact"
+msgstr "联系我们"
+
+#: app/templates/contact.html:110 app/templates/index.html:286
+#: app/templates/privacy_policy.html:105
+#: app/templates/terms_and_conditions.html:132
+msgid "Contact Us"
+msgstr "联系我们"
+
+#: app/templates/contact.html:114
+msgid "Your Name"
+msgstr "姓名"
+
+#: app/templates/contact.html:119
+msgid "Email Address"
+msgstr "邮箱"
+
+#: app/templates/contact.html:126
+msgid "Your Message"
+msgstr "您的讯息"
+
+#: app/templates/contact.html:128
+msgid " Let us know what's on your mind!"
+msgstr "让我们知道您的想法!"
+
+#: app/templates/contact.html:132
+msgid "Send Message"
+msgstr "发送讯息"
+
+#: app/templates/destinations.html:20
+msgid "Choose Your Destination To Explore"
+msgstr "挑选您想探索的目的地"
+
+#: app/templates/destinations.html:22
+msgid "Continent"
+msgstr "洲大陆"
+
+#: app/templates/destinations.html:28
+msgid "Current Weather & Time Of Frequently Visited Cities"
+msgstr "经常拜访的城市天气&时间"
+
+#: app/templates/destinations.html:30
+msgid "Hover over to see the details"
+msgstr "将滑鼠移至各城市以查看详细讯息"
+
+#: app/templates/destinations.html:88 app/templates/edit_stories.html:48
+#: app/templates/europe.html:12 app/templates/index.html:58
+#: app/templates/index.html:315 app/templates/new_stories.html:47
+msgid "Europe"
+msgstr "欧洲地区"
+
+#: app/templates/destinations.html:94
+msgid "Middle East"
+msgstr "中东"
+
+#: app/templates/destinations.html:94
+msgid "Africa"
+msgstr "非洲地区"
+
+#: app/templates/edit_profile.html:20 app/templates/index.html:71
+msgid "Edit My Profile"
+msgstr "修改我的简介"
+
+#: app/templates/edit_profile.html:30 app/templates/edit_profile.html:42
+msgid "Change"
+msgstr "更换"
+
+#: app/templates/edit_profile.html:30 app/templates/privacy_policy.html:44
+msgid "Avatar"
+msgstr "头像"
+
+#: app/templates/edit_profile.html:31 app/templates/edit_profile.html:43
+#: app/templates/edit_stories.html:91 app/templates/new_stories.html:90
+msgid "Clear"
+msgstr "清除"
+
+#: app/templates/edit_profile.html:42
+msgid "Background"
+msgstr "背景"
+
+#: app/templates/edit_profile.html:51
+msgid "Profile Name"
+msgstr "简介页面名称"
+
+#: app/templates/edit_profile.html:56
+msgid "Motto"
+msgstr "座右铭"
+
+#: app/templates/edit_profile.html:61
+msgid "Self-Introduction"
+msgstr "自我介绍"
+
+#: app/templates/edit_profile.html:66
+msgid "Update Profile"
+msgstr "修改我的简介"
+
+#: app/templates/edit_stories.html:24
+msgid "Edit My Story"
+msgstr "更新我的故事"
+
+#: app/templates/edit_stories.html:31 app/templates/new_stories.html:30
+msgid "Story Title"
+msgstr "故事标题"
+
+#: app/templates/edit_stories.html:36 app/templates/new_stories.html:35
+msgid "Traveling Area"
+msgstr "旅行地区"
+
+#: app/templates/edit_stories.html:52 app/templates/new_stories.html:51
+msgid "Middle East / Africa"
+msgstr "中东/非洲地区"
+
+#: app/templates/edit_stories.html:58 app/templates/new_stories.html:57
+msgid "Category"
+msgstr "类别"
+
+#: app/templates/edit_stories.html:70 app/templates/new_stories.html:69
+msgid "Accommodation"
+msgstr "住宿"
+
+#: app/templates/edit_stories.html:76 app/templates/new_stories.html:75
+msgid "What is the country you visited?"
+msgstr "您造访的国家？"
+
+#: app/templates/edit_stories.html:78 app/templates/new_stories.html:77
+msgid "Choose"
+msgstr "选择"
+
+#: app/templates/edit_stories.html:85 app/templates/new_stories.html:84
+msgid "Upload the photo you'd like to share"
+msgstr "上传您想分享的照片"
+
+#: app/templates/edit_stories.html:90 app/templates/new_stories.html:89
+msgid "Upload"
+msgstr "上传"
+
+#: app/templates/edit_stories.html:97
+msgid "Update the description to the photo"
+msgstr "更新照片描述"
+
+#: app/templates/edit_stories.html:106 app/templates/edit_stories.html:112
+#: app/templates/edit_stories.html:118
+msgid "Update Your Travel Story"
+msgstr "更新您的旅行故事"
+
+#: app/templates/edit_stories.html:125
+msgid "Switch Editor Language: "
+msgstr "切换编辑器语言："
+
+#: app/templates/edit_stories.html:133
+msgid "Update Story"
+msgstr "更新故事"
+
+#: app/templates/europe.html:18
+msgid "Welcome to Europe"
+msgstr "欢迎来到欧洲地区"
+
+#: app/templates/europe.html:21 app/templates/middle_east_africa.html:21
+msgid "Destination"
+msgstr "目的地"
+
+#: app/templates/forgot_password.html:22
+msgid "Forgot Password"
+msgstr "忘记密码"
+
+#: app/templates/forgot_password.html:33
+msgid "Forgot your password?"
+msgstr "忘记您的密码?"
+
+#: app/templates/forgot_password.html:34
+msgid "Please check your email for the password reset link once you click send."
+msgstr "当您点击发送后, 请到您的邮箱查看密码重设连结"
+
+#: app/templates/forgot_password.html:47 app/templates/index.html:330
+#: app/templates/privacy_policy.html:43 app/templates/signup.html:82
+msgid "Email"
+msgstr "邮箱"
+
+#: app/templates/forgot_password.html:49
+msgid " Email signed up for Geo Memoir"
+msgstr "注册Geo Memoir时使用的邮箱"
+
+#: app/templates/forgot_password.html:54
+msgid "Send Password Reset Link"
+msgstr "发送密码重设连结"
+
+#: app/templates/forgot_password_reset.html:21
+#: app/templates/forgot_password_reset.html:76
+msgid "Reset Password"
+msgstr "重设密码"
+
+#: app/templates/forgot_password_reset.html:34
+msgid "Reset Your Password"
+msgstr "重设您的密码"
+
+#: app/templates/gallery.html:20
+msgid "Photography is the beauty of life captured."
+msgstr "摄影即是捕捉生活之美。"
+
+#: app/templates/gallery.html:23
+msgid "Photo Gallery"
+msgstr "相片艺廊"
+
+#: app/templates/index.html:53
+msgid "Destinations"
+msgstr "目的地"
+
+#: app/templates/index.html:55 app/templates/index.html:312
+msgid "Weather & Time"
+msgstr "天气&时间"
+
+#: app/templates/index.html:59 app/templates/index.html:316
+msgid "Middle East/Africa"
+msgstr "中东/非洲地区"
+
+#: app/templates/index.html:63 app/templates/index.html:317
+msgid "Gallery"
+msgstr "相片艺廊"
+
+#: app/templates/index.html:66
+msgid "My Memoir"
+msgstr "我的回忆录"
+
+#: app/templates/index.html:68
+msgid "My Travel Profile"
+msgstr "我的旅行简介"
+
+#: app/templates/index.html:69
+msgid "Write New Stories"
+msgstr "分享新故事"
+
+#: app/templates/index.html:70
+msgid "My List of Stories"
+msgstr "我的故事列表"
+
+#: app/templates/index.html:94 app/templates/signup.html:123
+msgid "Sign up"
+msgstr "注册"
+
+#: app/templates/index.html:97 app/templates/login.html:68
+msgid "Sign in"
+msgstr "登录"
+
+#: app/templates/index.html:105
+msgid "Account Settings"
+msgstr "帐户设定"
+
+#: app/templates/index.html:110 app/templates/index.html:121
+msgid "Sign out"
+msgstr "登出"
+
+#: app/templates/index.html:118
+msgid "Sign in as"
+msgstr "登录邮箱为"
+
+#: app/templates/index.html:139
+msgid "TRAVEL . EXPLORE . SHARE ."
+msgstr "旅行. 探索 . 分享"
+
+#: app/templates/index.html:140
+msgid ""
+"Every one of us can be an excellent storyteller. Choose your path now and"
+" start your journey."
+msgstr "人人都能成为一位优秀的故事演讲者, 现在就选择您想前往的目的地, 并开始您的旅程！"
+
+#: app/templates/index.html:142
+msgid "Get travel inspiration"
+msgstr "獲取旅遊靈感"
+
+#: app/templates/index.html:143
+msgid "Share travel stories"
+msgstr "分享旅遊故事"
+
+#: app/templates/index.html:162
+msgid "Australia"
+msgstr "澳洲"
+
+#: app/templates/index.html:166
+msgid "Germany"
+msgstr "德國"
+
+#: app/templates/index.html:170 app/templates/index.html:190
+msgid "Egypt"
+msgstr "埃及"
+
+#: app/templates/index.html:174
+msgid "The Philippines"
+msgstr "菲律賓"
+
+#: app/templates/index.html:178
+msgid "Turkey"
+msgstr "土耳其"
+
+#: app/templates/index.html:182
+msgid "Canada"
+msgstr "加拿大"
+
+#: app/templates/index.html:186
+msgid "The United States"
+msgstr "美国"
+
+#: app/templates/index.html:205
+msgid "Do you need some inspiration for your travel plan?"
+msgstr "您想要为您的旅行计画获取一些灵感吗?"
+
+#: app/templates/index.html:206
+msgid ""
+"Choose your destination and start exploring the stories shared by our "
+"experienced travelers!"
+msgstr "选择您的目的地, 并开始探索我们许多有经验的旅行家所分享的故事"
+
+#: app/templates/index.html:207
+msgid "Explore Now"
+msgstr "立即探索"
+
+#: app/templates/index.html:239
+msgid "Geo Memoir Gallery"
+msgstr "Geo Memoir 照片艺廊"
+
+#: app/templates/index.html:240
+msgid "Every picture has its story. Visit the gallery and choose your favorite."
+msgstr "每张照片都有它的故事, 造访照片艺廊并选择您最喜爱的"
+
+#: app/templates/index.html:241
+msgid "Proceed to the Gallery"
+msgstr "前往艺廊"
+
+#: app/templates/index.html:265
+msgid "Create Your Own Travel Memoir"
+msgstr "建立您的旅行回忆录"
+
+#: app/templates/index.html:266
+msgid ""
+"Life is made up of a series of short stories. Create your own to hold the"
+" moment you want to remember."
+msgstr "人生是由许多一系列的短篇故事组合而成的, 建立自己的回忆录并抓住您想记得的那一刻"
+
+#: app/templates/index.html:267
+msgid "Create Now"
+msgstr "立即建立"
+
+#: app/templates/index.html:278
+msgid "ANY"
+msgstr "有"
+
+#: app/templates/index.html:279
+msgid "THOUGHTS"
+msgstr "任"
+
+#: app/templates/index.html:280
+msgid "IN"
+msgstr "何"
+
+#: app/templates/index.html:281
+msgid "YOUR"
+msgstr "想"
+
+#: app/templates/index.html:282
+msgid "MIND"
+msgstr "法"
+
+#: app/templates/index.html:283
+msgid "NOW"
+msgstr "吗"
+
+#: app/templates/index.html:305
+msgid "About Geo Memoir"
+msgstr "关于Geo Memoir"
+
+#: app/templates/index.html:306 app/templates/terms_and_conditions.html:17
+msgid "Terms & Conditions"
+msgstr "使用条款"
+
+#: app/templates/index.html:307 app/templates/privacy_policy.html:17
+msgid "Privacy Policy"
+msgstr "隐私政策"
+
+#: app/templates/index.html:311
+msgid "Explore"
+msgstr "探索"
+
+#: app/templates/index.html:323
+msgid "Join us to get monthly update!"
+msgstr "加入我们, 获取每月更新讯息!"
+
+#: app/templates/index.html:326
+msgid "Full Name"
+msgstr "姓名"
+
+#: app/templates/index.html:333
+msgid "Subscribe"
+msgstr "订阅"
+
+#: app/templates/login.html:41
+msgid "Welcome back to Geo Memoir!"
+msgstr "欢迎回到Geo Memoir"
+
+#: app/templates/login.html:42
+msgid "Sign in now and start sharing your journey."
+msgstr "现在就登录并分享您的旅程故事"
+
+#: app/templates/login.html:55 app/templates/signup.html:72
+msgid "Username"
+msgstr "用户名"
+
+#: app/templates/login.html:60 app/templates/signup.html:89
+msgid "Password"
+msgstr "密码"
+
+#: app/templates/login.html:64
+msgid "Forgot Password?"
+msgstr "忘记密码?"
+
+#: app/templates/login.html:73 app/templates/signup.html:129
+msgid "or continue with"
+msgstr "或是"
+
+#: app/templates/login.html:81
+msgid "Do not have an account?"
+msgstr "还未创建帐号?"
+
+#: app/templates/login.html:82
+msgid "Create Account"
+msgstr "创建帐号"
+
+#: app/templates/middle_east_africa.html:12
+msgid "Middle East & Africa"
+msgstr "中东/非洲地区"
+
+#: app/templates/middle_east_africa.html:18
+msgid "Welcome to Middle East/Africa"
+msgstr "欢迎来到中东/非洲地区"
+
+#: app/templates/my_travel_profile.html:33
+msgid "I have written"
+msgstr "我已完成了"
+
+#: app/templates/my_travel_profile.html:35
+#: app/templates/my_travel_profile.html:48
+#: app/templates/my_travel_profile.html:53
+#: app/templates/my_travel_profile.html:58
+#: app/templates/my_travel_profile.html:63
+msgid "Stories"
+msgstr "篇故事"
+
+#: app/templates/my_travel_profile.html:38
+msgid "About me"
+msgstr "关于我"
+
+#: app/templates/my_travel_profile.html:45
+msgid "My Travel Experience"
+msgstr "我的旅行经验"
+
+#: app/templates/my_travel_profile.html:49
+msgid "THE AMERICAS"
+msgstr "美洲地区"
+
+#: app/templates/my_travel_profile.html:54
+msgid "ASIA PACIFIC"
+msgstr "亚太地区"
+
+#: app/templates/my_travel_profile.html:59
+msgid "EUROPE"
+msgstr "欧洲地区"
+
+#: app/templates/my_travel_profile.html:64
+msgid "MIDDLE EAST/AFRICA"
+msgstr "中东/非洲地区"
+
+#: app/templates/my_travel_profile.html:68
+msgid "Countries"
+msgstr "个国家"
+
+#: app/templates/my_travel_profile.html:69
+msgid "VISITED"
+msgstr "已造访"
+
+#: app/templates/new_stories.html:24
+msgid "Share A New Story"
+msgstr "分享旅遊故事"
+
+#: app/templates/new_stories.html:96
+msgid "Give a brief description to the photo"
+msgstr "请简短描述照片"
+
+#: app/templates/new_stories.html:105 app/templates/new_stories.html:111
+#: app/templates/new_stories.html:117
+msgid "Your Travel Story"
+msgstr "您的旅行故事"
+
+#: app/templates/new_stories.html:124
+msgid "Switch Editor Language:"
+msgstr "切换编辑器语言："
+
+#: app/templates/new_stories.html:132
+msgid "Post New Story"
+msgstr "发布新故事"
+
+#: app/templates/privacy_policy.html:24
+msgid "PRIVACY POLICY"
+msgstr "隐私政策"
+
+#: app/templates/privacy_policy.html:26
+#: app/templates/terms_and_conditions.html:29
+msgid "Last updated"
+msgstr "最后更新时间"
+
+#: app/templates/privacy_policy.html:27
+msgid "Your privacy is important to us.  "
+msgstr "您的隐私对我们很重要。"
+
+#: app/templates/privacy_policy.html:27
+msgid ""
+"It is Geo Memoir's policy to respect your privacy and comply with any "
+"applicable law and regulation regarding any personal information we may "
+"collect about you, including across our website,"
+msgstr "Geo Memoir 的政策是尊重您的隐私并遵守有关我们可能收集的关于您的任何个人信息的任何适用法律和法规，包括在我们的网站上收集的信息，"
+
+#: app/templates/privacy_policy.html:29
+msgid ", and other sites we own and operate. "
+msgstr "，以及我们拥有和运营的其他网站。"
+
+#: app/templates/privacy_policy.html:30
+msgid ""
+"This policy is effective as of <b> 1 September 2022</b> and was last "
+"updated on <b>1 September 2022</b>. "
+msgstr "本政策自<b>2022 年 9 月 1 日</b>起生效，最后更新日期为<b>2022 年 9 月 1 日</b>。"
+
+#: app/templates/privacy_policy.html:32
+msgid "Information We Collect"
+msgstr "我们收集的信息"
+
+#: app/templates/privacy_policy.html:33
+msgid ""
+"Information we collect includes both information you knowingly and "
+"actively provide us when using or participating in any of our services "
+"and promotions, and any information automatically sent by your devices in"
+" the course of accessing our products and services. "
+msgstr "我们收集的信息包括您在使用或参与我们的任何服务和促销活动时有意并主动提供给我们的信息，以及您的设备在访问我们的产品和服务过程中自动发送的任何信息。"
+
+#: app/templates/privacy_policy.html:35
+msgid "Log Data"
+msgstr ""
+
+#: app/templates/privacy_policy.html:36
+msgid ""
+"When you visit our website, our servers may automatically log the "
+"standard data provided by your web browser.  "
+msgstr "当您访问我们的网站时，我们的服务器可能会自动记录您的网络浏览器提供的标准数据。"
+
+#: app/templates/privacy_policy.html:36
+msgid ""
+"It may include your device's Internet Protocol (IP) address, your browser"
+" type and version, the pages you visit, the time and date of your visit, "
+"the time spent on each page, other details about your visit, and "
+"technical details that occur in conjunction with any errors you may "
+"encounter. "
+msgstr ""
+"它可能包括您设备的互联网协议 (IP) "
+"地址、您的浏览器类型和版本、您访问的页面、您访问的时间和日期、在每个页面上花费的时间、有关您访问的其他详细信息以及在结合您可能遇到的任何错误。"
+
+#: app/templates/privacy_policy.html:37
+msgid ""
+"Please be aware that while this information may not be personally "
+"identifying by itself, it may be possible to combine it with other data "
+"to personally identify individual persons. "
+msgstr "请注意，虽然此信息本身可能无法识别个人身份，但可以将其与其他数据结合起来以识别个人身份。"
+
+#: app/templates/privacy_policy.html:39
+msgid "Personal Information"
+msgstr "个人信息"
+
+#: app/templates/privacy_policy.html:40
+msgid ""
+"We may ask for personal information which may include one or more of the "
+"following:"
+msgstr "我们可能会要求您提供个人信息，其中可能包括以下一项或多项："
+
+#: app/templates/privacy_policy.html:42
+msgid "Name"
+msgstr "姓名"
+
+#: app/templates/privacy_policy.html:47
+msgid "Legitimate Reasons for Processing Your Personal Information"
+msgstr "处理您的个人信息的正当理由"
+
+#: app/templates/privacy_policy.html:48
+msgid ""
+"We only collect and use your personal information when we have a "
+"legitimate reason for doing so.  "
+msgstr "我们仅在有正当理由的情况下收集和使用您的个人信息。"
+
+#: app/templates/privacy_policy.html:48
+msgid ""
+"In which instance, we only collect personal information that is "
+"reasonably necessary to provide our services to you. "
+msgstr "在这种情况下，我们仅收集为向您提供服务而合理必要的个人信息。"
+
+#: app/templates/privacy_policy.html:50
+msgid "Collection and Use of Information"
+msgstr "信息的收集和使用"
+
+#: app/templates/privacy_policy.html:51
+msgid ""
+"We may collect personal information from you when you do any of the "
+"following on our website:"
+msgstr "当您在我们的网站上进行以下任何操作时，我们可能会收集您的个人信息："
+
+#: app/templates/privacy_policy.html:53
+msgid "Sign up to receive updates from us via email or social media channels"
+msgstr "注册以通过电子邮件或社交媒体渠道接收我们的更新"
+
+#: app/templates/privacy_policy.html:54
+msgid "Use a mobile device or web browser to access our content"
+msgstr "使用移动设备或网络浏览器访问我们的内容"
+
+#: app/templates/privacy_policy.html:55
+msgid "Contact us via email, social media, or on any similar technologies"
+msgstr "通过电子邮件、社交媒体或任何类似技术与我们联系"
+
+#: app/templates/privacy_policy.html:56
+msgid "When you mention us on social media"
+msgstr "当您在社交媒体上提及我们时"
+
+#: app/templates/privacy_policy.html:58
+msgid ""
+"We may collect, hold, use, and disclose information for the following "
+"purposes, and personal information will not be further processed in a "
+"manner that is incompatible with these purposes:"
+msgstr "我们可能出于以下目的收集、持有、使用和披露信息，并且不会以与这些目的不相容的方式对个人信息进行进一步处理："
+
+#: app/templates/privacy_policy.html:60
+msgid "to contact and communicate with you"
+msgstr "与您联系和沟通"
+
+#: app/templates/privacy_policy.html:61
+msgid ""
+"to enable you to access and use our website, associated applications, and"
+" associated social media platforms"
+msgstr "使您能够访问和使用我们的网站、相关应用程序和相关社交媒体平台"
+
+#: app/templates/privacy_policy.html:62
+msgid "for internal record keeping and administrative purposes"
+msgstr "用于内部记录保存和管理目的"
+
+#: app/templates/privacy_policy.html:63
+msgid ""
+"for security and fraud prevention, and to ensure that our sites and apps "
+"are safe, secure, and used in line with our terms of use"
+msgstr "用于安全和欺诈预防，并确保我们的网站和应用程序安全、可靠并按照我们的使用条款使用"
+
+#: app/templates/privacy_policy.html:65
+msgid ""
+"Please be aware that we may combine information we collect about you with"
+" general information or research data we receive from other trusted "
+"sources. "
+msgstr "请注意，我们可能会将我们收集的关于您的信息与我们从其他可信来源收到的一般信息或研究数据相结合。"
+
+#: app/templates/privacy_policy.html:67
+msgid "Security of Your Personal Information"
+msgstr "您的个人信息的安全"
+
+#: app/templates/privacy_policy.html:68
+msgid ""
+"When we collect and process personal information, and while we retain "
+"this information, we will protect it within commercially acceptable means"
+" to prevent loss and theft, as well as unauthorized access, disclosure, "
+"copying, use, or modification."
+msgstr "当我们收集和处理个人信息时，在我们保留这些信息的同时，我们会以商业上可接受的方式对其进行保护，以防止丢失和被盗，以及未经授权的访问、披露、复制、使用或修改。"
+
+#: app/templates/privacy_policy.html:69
+#, python-format
+msgid ""
+"Although we will do our best to protect the personal information you "
+"provide to us, we advise that no method of electronic transmission or "
+"storage is 100% secure, and no one can guarantee absolute data security."
+msgstr "尽管我们会尽最大努力保护您提供给我们的个人信息，但我们建议没有任何一种电子传输或存储方法是绝对正确的，也没有人能保证绝对的数据安全。"
+
+#: app/templates/privacy_policy.html:69
+msgid "We will comply with laws applicable to us in respect of any data breach. "
+msgstr "对于任何数据泄露，我们将遵守适用于我们的法律。"
+
+#: app/templates/privacy_policy.html:70
+msgid ""
+"You are responsible for selecting any password and its overall security "
+"strength, ensuring the security of your own information within the bounds"
+" of our services. "
+msgstr "您有责任选择任何密码及其整体安全强度，确保您自己的信息在我们服务范围内的安全。"
+
+#: app/templates/privacy_policy.html:72
+msgid "How Long We Keep Your Personal Information"
+msgstr "我们保留您的个人信息的时间"
+
+#: app/templates/privacy_policy.html:73
+msgid "We keep your personal information only for as long as we need to. "
+msgstr "我们仅在需要时保留您的个人信息。"
+
+#: app/templates/privacy_policy.html:73
+msgid ""
+" This time period may depend on what we are using your information for, "
+"in accordance with this privacy policy. "
+msgstr "根据本隐私政策，此时间段可能取决于我们使用您的信息的目的。"
+
+#: app/templates/privacy_policy.html:73
+msgid ""
+"If your personal information is no longer required, we will delete it or "
+"make it anonymous by removing all details that identify you. "
+msgstr "如果不再需要您的个人信息，我们将通过删除所有可识别您身份的详细信息将其删除或匿名。"
+
+#: app/templates/privacy_policy.html:74
+msgid ""
+"However, if necessary, we may retain your personal information for our "
+"compliance with a legal, accounting, or reporting obligation or for "
+"archiving purposes in the public interest, scientific, or historical "
+"research purposes or statistical purposes. "
+msgstr "但是，如有必要，我们可能会出于遵守法律、会计或报告义务或出于公共利益、科学或历史研究目的或统计目的的存档目的而保留您的个人信息。"
+
+#: app/templates/privacy_policy.html:76
+msgid "Disclosure of Personal Information to Third Parties"
+msgstr "向第三方披露个人信息"
+
+#: app/templates/privacy_policy.html:77
+msgid "We may disclose personal information to: "
+msgstr "我们可能会将个人信息披露给："
+
+#: app/templates/privacy_policy.html:79
+msgid "a parent, subsidiary, or affiliate of our company"
+msgstr "我们公司的母公司、子公司或关联公司"
+
+#: app/templates/privacy_policy.html:80
+msgid ""
+"third party service providers for the purpose of enabling them to provide"
+" their services, for example, IT service providers, data storage, hosting"
+" and server providers, advertisers, or analytics platforms"
+msgstr "第三方服务提供商，以使他们能够提供服务，例如 IT 服务提供商、数据存储、托管和服务器提供商、广告商或分析平台"
+
+#: app/templates/privacy_policy.html:81
+msgid "our employees, contractors, and/or related entities"
+msgstr "我们的员工、承包商和/或相关实体"
+
+#: app/templates/privacy_policy.html:82
+msgid "our existing or potential agents or business partners"
+msgstr "我们现有或潜在的代理商或业务合作伙伴"
+
+#: app/templates/privacy_policy.html:83
+msgid "sponsors or promoters of any competition, sweepstakes, or promotion we run"
+msgstr "我们举办的任何比赛、抽奖或促销活动的赞助商或发起人"
+
+#: app/templates/privacy_policy.html:84
+msgid ""
+"courts, tribunals, regulatory authorities, and law enforcement officers, "
+"as required by law, in connection with any actual or prospective legal "
+"proceedings, or in order to establish, exercise, or defend our legal "
+"rights"
+msgstr "法院、法庭、监管机构和执法人员，根据法律要求，与任何实际或未来的法律程序有关，或为了确立、行使或捍卫我们的合法权利"
+
+#: app/templates/privacy_policy.html:85
+msgid ""
+"third parties, including agents or sub-contractors, who assist us in "
+"providing information, products, services, or direct marketing to you "
+"third parties to collect and process data"
+msgstr "协助我们向您提供信息、产品、服务或直接营销以收集和处理数据的第三方，包括代理或分包商"
+
+#: app/templates/privacy_policy.html:88
+msgid "International Transfers of Personal Information"
+msgstr "个人信息的国际传输"
+
+#: app/templates/privacy_policy.html:89
+msgid ""
+"The personal information we collect is stored and/or processed where we "
+"or our partners, affiliates, and third-party providers maintain "
+"facilities.  "
+msgstr "我们收集的个人信息在我们或我们的合作伙伴、关联公司和第三方提供商维护设施的地方存储和/或处理。"
+
+#: app/templates/privacy_policy.html:89
+msgid ""
+"Please be aware that the locations to which we store, process, or "
+"transfer your personal information may not have the same data protection "
+"laws as the country in which you initially provided the information. "
+msgstr "请注意，我们存储、处理或传输您的个人信息的地点可能与您最初提供信息的国家/地区的数据保护法律不同。"
+
+#: app/templates/privacy_policy.html:89
+msgid ""
+" If we transfer your personal information to third parties in other "
+"countries: "
+msgstr "如果我们将您的个人信息转移给其他国家/地区的第三方："
+
+#: app/templates/privacy_policy.html:89
+msgid ""
+"(i) we will perform those transfers in accordance with the requirements "
+"of applicable law; and (ii) we will protect the transferred personal "
+"information in accordance with this privacy policy. "
+msgstr "(i) 我们将根据适用法律的要求进行这些转移；(ii) 我们将根据本隐私政策保护转移的个人信息。"
+
+#: app/templates/privacy_policy.html:91
+msgid "Your Rights and Controlling Your Personal Information"
+msgstr "您的权利和控制您的个人信息"
+
+#: app/templates/privacy_policy.html:92
+msgid ""
+"You always retain the right to withhold personal information from us, "
+"with the understanding that your experience of our website may be "
+"affected. "
+msgstr "您始终保留向我们隐瞒个人信息的权利，但您了解您对我们网站的体验可能会受到影响。"
+
+#: app/templates/privacy_policy.html:92
+msgid ""
+"We will not discriminate against you for exercising any of your rights "
+"over your personal information. "
+msgstr "我们不会因您对您的个人信息行使任何权利而歧视您。"
+
+#: app/templates/privacy_policy.html:92
+msgid ""
+" If you do provide us with personal information you understand that we "
+"will collect, hold, use and disclose it in accordance with this privacy "
+"policy.  "
+msgstr "如果您确实向我们提供了个人信息，您了解我们将根据本隐私政策收集、持有、使用和披露这些信息。"
+
+#: app/templates/privacy_policy.html:92
+msgid ""
+" You retain the right to request details of any personal information we "
+"hold about you. "
+msgstr "您保留要求我们提供有关您的任何个人信息的详细信息的权利。"
+
+#: app/templates/privacy_policy.html:93
+msgid ""
+"If we receive personal information about you from a third party, we will "
+"protect it as set out in this privacy policy. "
+msgstr "如果我们从第三方收到有关您的个人信息，我们将按照本隐私政策的规定对其进行保护。"
+
+#: app/templates/privacy_policy.html:93
+msgid ""
+" If you are a third party providing personal information about somebody "
+"else, you represent and warrant that you have such person's consent to "
+"provide the personal information to us. "
+msgstr "如果您是提供他人个人信息的第三方，您声明并保证您已获得该人的同意向我们提供个人信息。"
+
+#: app/templates/privacy_policy.html:94
+msgid ""
+"If you have previously agreed to us using your personal information for "
+"direct marketing purposes, you may change your mind at any time. "
+msgstr "如果您之前同意我们将您的个人信息用于直接营销目的，您可以随时改变主意。"
+
+#: app/templates/privacy_policy.html:94
+msgid ""
+"We will provide you with the ability to unsubscribe from our email-"
+"database or opt out of communications.  "
+msgstr "我们将为您提供取消订阅我们的电子邮件数据库或选择退出通信的能力。"
+
+#: app/templates/privacy_policy.html:94
+msgid ""
+"Please be aware we may need to request specific information from you to "
+"help us confirm your identity. "
+msgstr "请注意，我们可能需要向您索取特定信息，以帮助我们确认您的身份。"
+
+#: app/templates/privacy_policy.html:95
+msgid ""
+"If you believe that any information we hold about you is inaccurate, out "
+"of date, incomplete, irrelevant, or misleading, please contact us using "
+"the details provided in this privacy policy. "
+msgstr "如果您认为我们持有的关于您的任何信息不准确、过时、不完整、不相关或具有误导性，请使用本隐私政策中提供的详细信息与我们联系。"
+
+#: app/templates/privacy_policy.html:95
+msgid ""
+"We will take reasonable steps to correct any information found to be "
+"inaccurate, incomplete, misleading, or out of date. "
+msgstr "我们将采取合理措施纠正任何被发现不准确、不完整、误导或过时的信息。"
+
+#: app/templates/privacy_policy.html:96
+msgid ""
+"If you believe that we have breached a relevant data protection law and "
+"wish to make a complaint, please contact us using the details below and "
+"provide us with full details of the alleged breach. "
+msgstr "如果您认为我们违反了相关的数据保护法并希望提出投诉，请使用以下详细信息与我们联系，并向我们提供涉嫌违规的全部详细信息。"
+
+#: app/templates/privacy_policy.html:96
+msgid ""
+"We will promptly investigate your complaint and respond to you, in "
+"writing, setting out the outcome of our investigation and the steps we "
+"will take to deal with your complaint.  "
+msgstr "我们将及时调查您的投诉并以书面形式回复您，说明我们的调查结果以及我们将采取的处理您的投诉的步骤。"
+
+#: app/templates/privacy_policy.html:96
+msgid ""
+"You also have the right to contact a regulatory body or data protection "
+"authority in relation to your complaint. "
+msgstr "您还有权就您的投诉联系监管机构或数据保护机构。"
+
+#: app/templates/privacy_policy.html:98
+msgid "Limits of Our Policy"
+msgstr "我们政策的限制"
+
+#: app/templates/privacy_policy.html:99
+msgid "Our website may link to external sites that are not operated by us.  "
+msgstr "我们的网站可能会链接到非我们运营的外部网站。"
+
+#: app/templates/privacy_policy.html:99
+msgid ""
+"Please be aware that we have no control over the content and policies of "
+"those sites, and cannot accept responsibility or liability for their "
+"respective privacy practices."
+msgstr "请注意，我们无法控制这些网站的内容和政策，也不对其各自的隐私惯例承担责任或义务。"
+
+#: app/templates/privacy_policy.html:101
+msgid "Changes to This Policy"
+msgstr "本政策的变更"
+
+#: app/templates/privacy_policy.html:102
+msgid ""
+"At our discretion, we may change our privacy policy to reflect updates to"
+" our business processes, current acceptable practices, or legislative or "
+"regulatory changes. "
+msgstr "根据我们的判断，我们可能会更改我们的隐私政策，以反映我们的业务流程、当前可接受的做法或立法或监管变化的更新。"
+
+#: app/templates/privacy_policy.html:102
+msgid ""
+"If we decide to change this privacy policy, we will post the changes here"
+" at the same link by which you are accessing this privacy policy. "
+msgstr "如果我们决定更改本隐私政策，我们将在您访问本隐私政策的同一链接上发布更改。"
+
+#: app/templates/privacy_policy.html:103
+msgid ""
+"If required by law, we will get your permission or give you the "
+"opportunity to opt in to or opt out of, as applicable, any new uses of "
+"your personal information. "
+msgstr "如果法律要求，我们将获得您的许可或让您有机会选择加入或退出（如适用）对您的个人信息的任何新用途。"
+
+#: app/templates/privacy_policy.html:106
+msgid ""
+"For any questions or concerns regarding your privacy, you may contact us "
+"using the following details: "
+msgstr "对于有关您的隐私的任何问题或疑虑，您可以使用以下详细信息与我们联系："
+
+#: app/templates/signup.html:43
+msgid "Sign up now and start creating your travel memoir."
+msgstr "现在就注册并开始创建您的旅行回忆录"
+
+#: app/templates/signup.html:58
+msgid "First Name"
+msgstr "名字"
+
+#: app/templates/signup.html:65
+msgid "Last Name"
+msgstr "姓氏"
+
+#: app/templates/signup.html:75
+msgid "letters and numbers only; min. 6 char"
+msgstr "只可输入字母和数字; 最少6个字符"
+
+#: app/templates/signup.html:140
+msgid "Already have an account?"
+msgstr "还未创建帐号?"
+
+#: app/templates/signup.html:141
+msgid "Sign in now"
+msgstr "立即登录"
+
+#: app/templates/story_detail.html:13
+msgid "Story Page"
+msgstr "故事页面"
+
+#: app/templates/story_detail.html:25
+msgid "Like the story"
+msgstr "为故事点赞"
+
+#: app/templates/story_detail.html:29
+msgid "Unike the story"
+msgstr "取消点赞"
+
+#: app/templates/story_detail.html:47
+msgid " Leave your comment here.. "
+msgstr "在此发表评论.."
+
+#: app/templates/story_detail.html:49
+msgid "Comment"
+msgstr "评论"
+
+#: app/templates/story_detail.html:51
+msgid "Cancel"
+msgstr "取消"
+
+#: app/templates/story_list.html:12
+msgid "List of Stories"
+msgstr "我的故事列表"
+
+#: app/templates/story_list.html:22
+msgid "List of Travel Stories"
+msgstr "旅游故事列表"
+
+#: app/templates/terms_and_conditions.html:27
+msgid "TERMS AND CONDITIONS"
+msgstr "使用条款"
+
+#: app/templates/terms_and_conditions.html:30
+msgid "Introduction"
+msgstr "介绍"
+
+#: app/templates/terms_and_conditions.html:31
+msgid "Welcome to"
+msgstr "欢迎来到"
+
+#: app/templates/terms_and_conditions.html:31
+msgid "“Company”, “we”, “our”, “us”"
+msgstr "“公司”、“我们”、“我们的”、“我们”"
+
+#: app/templates/terms_and_conditions.html:34
+msgid ""
+"These Terms of Service (“Terms”, “Terms of Service”) govern your use of "
+"our website located at <b>geomemo.com</b> (together or individually "
+"“Service”) operated by <b>Geo Memoir</b>."
+msgstr ""
+"这些服务条款（“条款”、“服务条款”）适用于<b>Geo "
+"Memoir</b>所运营的我们位于<b>geomemo.com</b>的网站使用（统称为“服务”）。"
+
+#: app/templates/terms_and_conditions.html:35
+msgid ""
+"Our Privacy Policy also governs your use of our Service and explains how "
+"we collect, safeguard and disclose information that results from your use"
+" of our web pages."
+msgstr "我们的隐私政策还管理您对我们服务的使用，并解释了我们如何收集、保护和披露因您使用我们的网页而产生的信息。"
+
+#: app/templates/terms_and_conditions.html:36
+msgid ""
+"Your agreement with us includes these Terms and our Privacy Policy "
+"(“Agreements”). You acknowledge that you have read and understood "
+"Agreements, and agree to be bound of them."
+msgstr "您与我们的协议包括这些条款和我们的隐私政策（“协议”）。您承认您已阅读并理解协议，并同意受其约束。"
+
+#: app/templates/terms_and_conditions.html:37
+msgid ""
+"If you do not agree with (or cannot comply with) Agreements, then you may"
+" not use the Service, but please let us know by emailing at "
+"<b>travelwithgeomemo@gmail.com</b> so we can try to find a solution. "
+"These Terms apply to all visitors, users and others who wish to access or"
+" use Service."
+msgstr "如果您不同意（或无法遵守）协议，则您可能无法使用该服务，但请发送电子邮件至<b>travelwithgeomemo@gmail.com</b>告知我们，以便我们尝试找到解决方案。这些条款适用于所有访问者、用户和其他希望访问或使用服务的人。"
+
+#: app/templates/terms_and_conditions.html:39
+msgid "Communications"
+msgstr "通讯"
+
+#: app/templates/terms_and_conditions.html:40
+msgid ""
+"By using our Service, you agree to subscribe to newsletters, marketing or"
+" promotional materials and other information we may send. However, you "
+"may opt out of receiving any, or all, of these communications from us by "
+"following the unsubscribe link or by emailing at "
+"travelwithgeomemo@gmail.com."
+msgstr ""
+"使用我们的服务，即表示您同意订阅时事通讯、营销或促销材料以及我们可能发送的其他信息。但是，您可以通过点击取消订阅链接或发送电子邮件至 "
+"travelwithgeomemo@gmail.com 选择不接收我们的任何或所有这些通信。"
+
+#: app/templates/terms_and_conditions.html:42
+msgid "Content"
+msgstr "内容"
+
+#: app/templates/terms_and_conditions.html:43
+msgid ""
+"Our Service allows you to post, link, store, share and otherwise make "
+"available certain information, text, graphics, videos, or other material "
+"(“Content”). You are responsible for Content that you post on or through "
+"Service, including its legality, reliability, and appropriateness."
+msgstr "我们的服务允许您发布、链接、存储、共享和以其他方式提供某些信息、文本、图形、视频或其他材料（“内容”）。您对您在服务上或通过服务发布的内容负责，包括其合法性、可靠性和适当性。"
+
+#: app/templates/terms_and_conditions.html:43
+msgid ""
+"By posting Content on or through Service, You represent and warrant that:"
+" (i) Content is yours (you own it) and/or you have the right to use it "
+"and the right to grant us the rights and license as provided in these "
+"Terms, and (ii) that the posting of your Content on or through Service "
+"does not violate the privacy rights, publicity rights, copyrights, "
+"contract rights or any other rights of any person or entity. We reserve "
+"the right to terminate the account of anyone found to be infringing on a "
+"copyright."
+msgstr ""
+"通过在服务上或通过服务发布内容，您声明并保证：(i) 内容是您的（您拥有它）和/或您有权使用它并有权授予我们这些条款中规定的权利和许可，并且 "
+"(ii) "
+"在服务上或通过服务发布您的内容不侵犯任何个人或实体的隐私权、公开权、版权、合同权或任何其他权利。我们保留终止任何被发现侵犯版权的人的帐户的权利。"
+
+#: app/templates/terms_and_conditions.html:43
+msgid ""
+"You retain any and all of your rights to any Content you submit, post or "
+"display on or through Service and you are responsible for protecting "
+"those rights. We take no responsibility and assume no liability for "
+"Content you or any third party posts on or through Service. However, by "
+"posting Content using Service you grant us the right and license to use, "
+"modify, publicly perform, publicly display, reproduce, and distribute "
+"such Content on and through Service. You agree that this license includes"
+" the right for us to make your Content available to other users of "
+"Service, who may also use your Content subject to these Terms."
+msgstr "您保留对您在服务上或通过服务提交、发布或展示的任何内容的任何和所有权利，并且您有责任保护这些权利。对于您或任何第三方在服务上或通过服务发布的内容，我们不承担任何责任。但是，通过使用服务发布内容，您授予我们在服务上和通过服务使用、修改、公开执行、公开展示、复制和分发此类内容的权利和许可。您同意本许可包括我们将您的内容提供给其他服务用户的权利，这些用户也可以根据这些条款使用您的内容。"
+
+#: app/templates/terms_and_conditions.html:43
+msgid ""
+"Geo Memoir has the right but not the obligation to monitor and edit all "
+"Content provided by users."
+msgstr "Geo Memoir 有权但没有义务监控和编辑用户提供的所有内容。"
+
+#: app/templates/terms_and_conditions.html:43
+msgid ""
+"In addition, Content found on or through this Service are the property of"
+" Geo Memoir or used with permission. You may not distribute, modify, "
+"transmit, reuse, download, repost, copy, or use said Content, whether in "
+"whole or in part, for commercial purposes or for personal gain, without "
+"express advance written permission from us."
+msgstr ""
+"此外，在本服务上或通过本服务找到的内容是 Geo Memoir "
+"的财产或经许可使用。未经我们事先明确书面许可，您不得出于商业目的或个人利益分发、修改、传输、重复使用、下载、转发、复制或使用上述内容，无论是全部还是部分。"
+
+#: app/templates/terms_and_conditions.html:45
+msgid "Prohibited Uses"
+msgstr "禁止使用"
+
+#: app/templates/terms_and_conditions.html:46
+msgid ""
+"You may use Service only for lawful purposes and in accordance with "
+"Terms. You agree not to use Service:"
+msgstr "您只能出于合法目的并根据条款使用服务。您同意不使用服务："
+
+#: app/templates/terms_and_conditions.html:47
+msgid ""
+"In any way that violates any applicable national or international law or "
+"regulation."
+msgstr "以任何违反任何适用的国家或国际法律或法规的方式。"
+
+#: app/templates/terms_and_conditions.html:48
+msgid ""
+"For the purpose of exploiting, harming, or attempting to exploit or harm "
+"minors in any way by exposing them to inappropriate content or otherwise."
+msgstr "以任何方式剥削、伤害或试图剥削或伤害未成年人，让他们接触不适当的内容或其他方式。"
+
+#: app/templates/terms_and_conditions.html:49
+msgid ""
+"To transmit, or procure the sending of, any advertising or promotional "
+"material, including any “junk mail”, “chain letter,” “spam,” or any other"
+" similar solicitation."
+msgstr "传输或促使发送任何广告或促销材料，包括任何“垃圾邮件”、“连锁信”、“垃圾邮件”或任何其他类似的招揽。"
+
+#: app/templates/terms_and_conditions.html:50
+msgid ""
+"To impersonate or attempt to impersonate Company, a Company employee, "
+"another user, or any other person or entity."
+msgstr "冒充或试图冒充公司、公司员工、其他用户或任何其他个人或实体。"
+
+#: app/templates/terms_and_conditions.html:51
+msgid ""
+"In any way that infringes upon the rights of others, or in any way is "
+"illegal, threatening, fraudulent, or harmful, or in connection with any "
+"unlawful, illegal, fraudulent, or harmful purpose or activity."
+msgstr "以任何侵犯他人权利的方式，或以任何方式非法、威胁、欺诈或有害，或与任何非法、非法、欺诈或有害目的或活动有关。"
+
+#: app/templates/terms_and_conditions.html:52
+msgid ""
+"To engage in any other conduct that restricts or inhibits anyone’s use or"
+" enjoyment of Service, or which, as determined by us, may harm or offend "
+"Company or users of Service or expose them to liability."
+msgstr "从事任何其他限制或禁止任何人使用或享受服务的行为，或者我们认为可能损害或冒犯公司或服务用户或使他们承担责任的任何其他行为。"
+
+#: app/templates/terms_and_conditions.html:54
+msgid "Additionally, you agree not to:"
+msgstr "此外，您同意不："
+
+#: app/templates/terms_and_conditions.html:55
+msgid ""
+"Use Service in any manner that could disable, overburden, damage, or "
+"impair Service or interfere with any other party’s use of Service, "
+"including their ability to engage in real time activities through "
+"Service."
+msgstr "以任何可能禁用、负担过重、损坏或损害服务或干扰任何其他方使用服务的方式使用服务，包括他们通过服务参与实时活动的能力。"
+
+#: app/templates/terms_and_conditions.html:56
+msgid ""
+"Use any robot, spider, or other automatic device, process, or means to "
+"access Service for any purpose, including monitoring or copying any of "
+"the material on Service."
+msgstr "出于任何目的使用任何机器人、爬虫或其他自动设备、流程或手段访问服务，包括监控或复制服务上的任何材料。"
+
+#: app/templates/terms_and_conditions.html:57
+msgid ""
+"Use any manual process to monitor or copy any of the material on Service "
+"or for any other unauthorized purpose without our prior written consent."
+msgstr "未经我们事先书面同意，使用任何手动流程监控或复制服务上的任何材料或用于任何其他未经授权的目的。"
+
+#: app/templates/terms_and_conditions.html:58
+msgid ""
+"Use any device, software, or routine that interferes with the proper "
+"working of Service."
+msgstr "使用任何干扰服务正常工作的设备、软件或例程。"
+
+#: app/templates/terms_and_conditions.html:59
+msgid ""
+"Introduce any viruses, trojan horses, worms, logic bombs, or other "
+"material which is malicious or technologically harmful."
+msgstr "引入任何病毒、特洛伊木马、蠕虫、逻辑炸弹或其他恶意或技术有害的材料。"
+
+#: app/templates/terms_and_conditions.html:60
+msgid ""
+"Attempt to gain unauthorized access to, interfere with, damage, or "
+"disrupt any parts of Service, the server on which Service is stored, or "
+"any server, computer, or database connected to Service."
+msgstr "试图未经授权访问、干扰、损坏或破坏服务的任何部分、存储服务的服务器或连接到服务的任何服务器、计算机或数据库。"
+
+#: app/templates/terms_and_conditions.html:61
+msgid ""
+"Attack Service via a denial-of-service attack or a distributed denial-of-"
+"service attack."
+msgstr "通过拒绝服务攻击或分布式拒绝服务攻击攻击服务。"
+
+#: app/templates/terms_and_conditions.html:62
+msgid "Take any action that may damage or falsify Company rating."
+msgstr "采取任何可能损害或篡改公司评级的行动。"
+
+#: app/templates/terms_and_conditions.html:63
+msgid "Otherwise attempt to interfere with the proper working of Service."
+msgstr "否则试图干扰服务的正常工作。"
+
+#: app/templates/terms_and_conditions.html:65
+msgid "Analytics"
+msgstr "分析"
+
+#: app/templates/terms_and_conditions.html:66
+msgid ""
+"We may use third-party Service Providers to monitor and analyze the use "
+"of our Service."
+msgstr "我们可能会使用第三方服务提供商来监控和分析我们服务的使用情况。"
+
+#: app/templates/terms_and_conditions.html:68
+msgid "Accounts"
+msgstr "帐户"
+
+#: app/templates/terms_and_conditions.html:69
+msgid ""
+"When you create an account with us, you guarantee that the information "
+"you provide us is accurate, complete, and current at all times. "
+"Inaccurate, incomplete, or obsolete information may result in the "
+"immediate termination of your account on Service."
+msgstr "当您在我们这里创建帐户时，您保证您提供给我们的信息在任何时候都是准确、完整和最新的。不准确、不完整或过时的信息可能会导致您的服务帐户立即终止"
+
+#: app/templates/terms_and_conditions.html:69
+msgid ""
+"You are responsible for maintaining the confidentiality of your account "
+"and password, including but not limited to the restriction of access to "
+"your computer and/or account. You agree to accept responsibility for any "
+"and all activities or actions that occur under your account and/or "
+"password, whether your password is with our Service or a third-party "
+"service. You must notify us immediately upon becoming aware of any breach"
+" of security or unauthorized use of your account."
+msgstr "您有责任维护您的帐户和密码的机密性，包括但不限于限制访问您的计算机和/或帐户。您同意对在您的帐户和/或密码下发生的任何和所有活动或行为承担责任，无论您的密码是使用我们的服务还是第三方服务。在发现任何违反安全性或未经授权使用您的帐户时，您必须立即通知我们。"
+
+#: app/templates/terms_and_conditions.html:69
+msgid ""
+"You may not use as a username the name of another person or entity or "
+"that is not lawfully available for use, a name or trademark that is "
+"subject to any rights of another person or entity other than you, without"
+" appropriate authorization. You may not use as a username any name that "
+"is offensive, vulgar or obscene."
+msgstr "未经适当授权，您不得将其他人或实体的名称或非法使用的名称、受除您之外的其他人或实体的任何权利约束的名称或商标用作用户名。您不得使用任何具有攻击性、粗俗或淫秽的名称作为用户名。"
+
+#: app/templates/terms_and_conditions.html:69
+msgid ""
+"We reserve the right to refuse service, terminate accounts, remove or "
+"edit content, or cancel orders in our sole discretion."
+msgstr "我们保留自行决定拒绝服务、终止帐户、删除或编辑内容或取消订单的权利。"
+
+#: app/templates/terms_and_conditions.html:71
+msgid "Intellectual Property"
+msgstr "知识产权"
+
+#: app/templates/terms_and_conditions.html:72
+msgid ""
+"Service and its original content (excluding Content provided by users), "
+"features and functionality are and will remain the exclusive property of "
+"Geo Memoir and its licensors. Service is protected by copyright, "
+"trademark, and other laws of  and foreign countries. Our trademarks may "
+"not be used in connection with any product or service without the prior "
+"written consent of Geo Memoir."
+msgstr ""
+"服务及其原始内容（不包括用户提供的内容）、特性和功能是并将继续是 Geo Memoir "
+"及其许可方的专有财产。服务受国内外版权、商标和其他法律的保护。未经 Geo Memoir 事先书面同意，我们的商标不得用于任何产品或服务。"
+
+#: app/templates/terms_and_conditions.html:74
+msgid "Copyright Policy"
+msgstr "版权政策"
+
+#: app/templates/terms_and_conditions.html:75
+msgid ""
+"We respect the intellectual property rights of others. It is our policy "
+"to respond to any claim that Content posted on Service infringes on the "
+"copyright or other intellectual property rights (“Infringement”) of any "
+"person or entity."
+msgstr "我们尊重他人的知识产权。我们的政策是回应发布在服务上的内容侵犯任何个人或实体的版权或其他知识产权（“侵权”）的任何索赔。"
+
+#: app/templates/terms_and_conditions.html:76
+msgid ""
+"If you are a copyright owner, or authorized on behalf of one, and you "
+"believe that the copyrighted work has been copied in a way that "
+"constitutes copyright infringement, please submit your claim via email to"
+" travelwithgeomemo@gmail.com, with the subject line: “Copyright "
+"Infringement” and include in your claim a detailed description of the "
+"alleged Infringement as detailed below, under “DMCA Notice and Procedure "
+"for Copyright Infringement Claims”"
+msgstr ""
+"如果您是版权所有者或代表版权所有者，并且您认为版权作品的复制方式构成侵犯版权，请通过电子邮件将您的索赔提交至 "
+"travelwithgeomemo@gmail.com，主题行： “侵犯版权”，并在您的索赔中包含对涉嫌侵权的详细描述，详见“DMCA "
+"版权侵权索赔通知和程序"
+
+#: app/templates/terms_and_conditions.html:77
+msgid ""
+"You may be held accountable for damages (including costs and attorneys’ "
+"fees) for misrepresentation or bad-faith claims on the infringement of "
+"any Content found on and/or through Service on your copyright."
+msgstr "您可能要对因在您的版权上和/或通过服务中发现的任何内容的侵权行为的失实陈述或恶意索赔而造成的损害（包括费用和律师费）负责。"
+
+#: app/templates/terms_and_conditions.html:79
+msgid "DMCA Notice and Procedure for Copyright Infringement Claims"
+msgstr "DMCA 版权侵权索赔通知和程序"
+
+#: app/templates/terms_and_conditions.html:80
+msgid ""
+"You may submit a notification pursuant to the Digital Millennium "
+"Copyright Act (DMCA) by providing our Copyright Agent with the following "
+"information in writing (see 17 U.S.C 512(c)(3) for further detail):"
+msgstr "您可以根据数字千年版权法案 (DMCA) 提交通知，向我们的版权代理提供以下书面信息（有关详细信息，请参阅 17 USC 512(c)(3)）："
+
+#: app/templates/terms_and_conditions.html:81
+msgid ""
+"an electronic or physical signature of the person authorized to act on "
+"behalf of the owner of the copyright’s interest;"
+msgstr "被授权代表版权所有者行事的人的电子或物理签名；"
+
+#: app/templates/terms_and_conditions.html:82
+msgid ""
+"a description of the copyrighted work that you claim has been infringed, "
+"including the URL (i.e., web page address) of the location where the "
+"copyrighted work exists or a copy of the copyrighted work;"
+msgstr "您声称受到侵权的版权作品的描述，包括版权作品所在位置的 URL（即网页地址）或版权作品的副本；"
+
+#: app/templates/terms_and_conditions.html:83
+msgid ""
+"identification of the URL or other specific location on Service where the"
+" material that you claim is infringing is located;"
+msgstr "识别您声称侵权的材料所在的 URL 或服务上的其他特定位置；"
+
+#: app/templates/terms_and_conditions.html:84
+msgid "your address, telephone number, and email address;"
+msgstr "您的地址、电话号码和电子邮件地址；"
+
+#: app/templates/terms_and_conditions.html:85
+msgid ""
+"a statement by you that you have a good faith belief that the disputed "
+"use is not authorized by the copyright owner, its agent, or the law;"
+msgstr "您声明您有充分的理由相信有争议的使用未经版权所有者、其代理人或法律授权；"
+
+#: app/templates/terms_and_conditions.html:86
+msgid ""
+"a statement by you, made under penalty of perjury, that the above "
+"information in your notice is accurate and that you are the copyright "
+"owner or authorized to act on the copyright owner’s behalf."
+msgstr "您在作伪证处罚的情况下作出的声明，即您通知中的上述信息是准确的，并且您是版权所有者或被授权代表版权所有者行事。"
+
+#: app/templates/terms_and_conditions.html:87
+msgid ""
+"You can contact our Copyright Agent via email at "
+"travelwithgeomemo@gmail.com."
+msgstr "您可以通过电子邮件 travelwithgeomemo@gmail.com 联系我们的版权代理。"
+
+#: app/templates/terms_and_conditions.html:89
+msgid "Error Reporting and Feedback"
+msgstr "错误报告和反馈"
+
+#: app/templates/terms_and_conditions.html:90
+msgid ""
+"You may provide us either directly at travelwithgeomemo@gmail.com or via "
+"third party sites and tools with information and feedback concerning "
+"errors, suggestions for improvements, ideas, problems, complaints, and "
+"other matters related to our Service (“Feedback”). You acknowledge and "
+"agree that: (i) you shall not retain, acquire or assert any intellectual "
+"property right or other right, title or interest in or to the Feedback; "
+"(ii) Company may have development ideas similar to the Feedback; (iii) "
+"Feedback does not contain confidential information or proprietary "
+"information from you or any third party; and (iv) Company is not under "
+"any obligation of confidentiality with respect to the Feedback. In the "
+"event the transfer of the ownership to the Feedback is not possible due "
+"to applicable mandatory laws, you grant Company and its affiliates an "
+"exclusive, transferable, irrevocable, free-of-charge, sub-licensable, "
+"unlimited and perpetual right to use (including copy, modify, create "
+"derivative works, publish, distribute and commercialize) Feedback in any "
+"manner and for any purpose."
+msgstr ""
+"您可以直接通过 travelwithgeomemo@gmail.com "
+"或通过第三方网站和工具向我们提供有关错误、改进建议、想法、问题、投诉以及与我们的服务相关的其他事项的信息和反馈（“反馈”）。您承认并同意： (i)"
+" 您不得保留、获取或主张反馈中的任何知识产权或其他权利、所有权或利益；(ii) 公司可能有与反馈类似的发展思路；(iii) "
+"反馈不包含来自您或任何第三方的机密信息或专有信息；(iv) "
+"公司对反馈不承担任何保密义务。如果由于适用的强制性法律无法将所有权转让给反馈，您授予公司及其关联公司专有的、可转让的、不可撤销的、免费的、可再许可的、无限的和永久的使用权（包括复制、修改、创建衍生作品、发布、分发和商业化）以任何方式和出于任何目的的反馈。"
+
+#: app/templates/terms_and_conditions.html:92
+msgid "Links To Other Web Sites"
+msgstr "链接到其他网站"
+
+#: app/templates/terms_and_conditions.html:93
+msgid ""
+"Our Service may contain links to third party web sites or services that "
+"are not owned or controlled by Geo Memoir."
+msgstr "我们的服务可能包含指向非 Geo Memoir 拥有或控制的第三方网站或服务的链接。"
+
+#: app/templates/terms_and_conditions.html:94
+msgid ""
+"Geo Memoir has no control over, and assumes no responsibility for the "
+"content, privacy policies, or practices of any third party web sites or "
+"services. We do not warrant the offerings of any of these "
+"entities/individuals or their websites."
+msgstr "Geo Memoir 无法控制任何第三方网站或服务的内容、隐私政策或做法，也不承担任何责任。我们不保证任何这些实体/个人或其网站的产品。"
+
+#: app/templates/terms_and_conditions.html:95
+msgid "For example, the outlined"
+msgstr "例如，概述的"
+
+#: app/templates/terms_and_conditions.html:95
+msgid "Terms of Use"
+msgstr "使用条款"
+
+#: app/templates/terms_and_conditions.html:95
+msgid "have been created using"
+msgstr "是使用"
+
+#: app/templates/terms_and_conditions.html:95
+msgid ", a free web application for generating high-quality legal documents."
+msgstr "创建的，这是一个免费的网络应用程序，用于生成高质量的法律文件。"
+
+#: app/templates/terms_and_conditions.html:95
+msgid "PolicyMaker’s"
+msgstr "PolicyMaker 的"
+
+#: app/templates/terms_and_conditions.html:95
+msgid "Terms and Conditions generator"
+msgstr "条款和条件生成器"
+
+#: app/templates/terms_and_conditions.html:95
+msgid ""
+"is an easy-to-use free tool for creating an excellent standard Terms of "
+"Service template for a website, blog, e-commerce store or app."
+msgstr "是一个易于使用的免费工具，用于为网站、博客、电子商务商店或应用程序创建出色的标准服务条款模板。"
+
+#: app/templates/terms_and_conditions.html:96
+msgid ""
+"YOU ACKNOWLEDGE AND AGREE THAT COMPANY SHALL NOT BE RESPONSIBLE OR "
+"LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED "
+"TO BE CAUSED BY OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH "
+"CONTENT, GOODS OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY "
+"WEB SITES OR SERVICES."
+msgstr "您承认并同意，对于因使用或依赖任何此类内容、商品或服务而导致或被声称导致或与之相关的任何损害或损失，本公司概不直接或间接负责或承担任何责任或义务。此类第三方网站或服务。"
+
+#: app/templates/terms_and_conditions.html:97
+msgid ""
+"WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY POLICIES "
+"OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT."
+msgstr "我们强烈建议您阅读您访问的任何第三方网站或服务的服务条款和隐私政策。"
+
+#: app/templates/terms_and_conditions.html:99
+msgid "Disclaimer Of Warranty"
+msgstr "免责声明"
+
+#: app/templates/terms_and_conditions.html:100
+msgid ""
+"THESE SERVICES ARE PROVIDED BY COMPANY ON AN “AS IS” AND “AS AVAILABLE” "
+"BASIS. COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, "
+"EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES, OR THE "
+"INFORMATION, CONTENT OR MATERIALS INCLUDED THEREIN. YOU EXPRESSLY AGREE "
+"THAT YOUR USE OF THESE SERVICES, THEIR CONTENT, AND ANY SERVICES OR ITEMS"
+" OBTAINED FROM US IS AT YOUR SOLE RISK."
+msgstr "这些服务由公司在“原样”和“可用”的基础上提供。公司对其服务的运营或其中包含的信息、内容或材料不作任何形式的明示或暗示的陈述或保证。您明确同意，您对这些服务、其内容以及从我们获得的任何服务或物品的使用由您自行承担风险。"
+
+#: app/templates/terms_and_conditions.html:101
+msgid ""
+"NEITHER COMPANY NOR ANY PERSON ASSOCIATED WITH COMPANY MAKES ANY WARRANTY"
+" OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, "
+"RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE SERVICES. WITHOUT "
+"LIMITING THE FOREGOING, NEITHER COMPANY NOR ANYONE ASSOCIATED WITH "
+"COMPANY REPRESENTS OR WARRANTS THAT THE SERVICES, THEIR CONTENT, OR ANY "
+"SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL BE ACCURATE, "
+"RELIABLE, ERROR-FREE, OR UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, "
+"THAT THE SERVICES OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE OF "
+"VIRUSES OR OTHER HARMFUL COMPONENTS OR THAT THE SERVICES OR ANY SERVICES "
+"OR ITEMS OBTAINED THROUGH THE SERVICES WILL OTHERWISE MEET YOUR NEEDS OR "
+"EXPECTATIONS."
+msgstr "公司或与公司有关联的任何人均不对服务的完整性、安全性、可靠性、质量、准确性或可用性作出任何保证或陈述。在不限制上述规定的情况下，公司或与公司相关的任何人均不声明或保证服务、其内容或通过服务获得的任何服务或项目将是准确、可靠、无错误或不间断的，缺陷将得到纠正，服务或使其可用的服务器没有病毒或其他有害组件，或者服务或通过服务获得的任何服务或项目将满足您的需求或期望。"
+
+#: app/templates/terms_and_conditions.html:102
+msgid ""
+"COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR "
+"IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY "
+"WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR "
+"PARTICULAR PURPOSE."
+msgstr "公司在此不提供任何形式的保证，无论是明示的或暗示的、法定的或其他的，包括但不限于对适销性、非侵权性和特定用途适用性的任何保证。"
+
+#: app/templates/terms_and_conditions.html:103
+msgid ""
+"THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE EXCLUDED OR "
+"LIMITED UNDER APPLICABLE LAW."
+msgstr "上述内容不影响任何根据适用法律不得排除或限制的保证。"
+
+#: app/templates/terms_and_conditions.html:105
+msgid "Limitation Of Liability"
+msgstr "责任限制"
+
+#: app/templates/terms_and_conditions.html:106
+msgid ""
+"EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS, "
+"DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY INDIRECT, PUNITIVE, "
+"SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT ARISES "
+"(INCLUDING ATTORNEYS’ FEES AND ALL RELATED COSTS AND EXPENSES OF "
+"LITIGATION AND ARBITRATION, OR AT TRIAL OR ON APPEAL, IF ANY, WHETHER OR "
+"NOT LITIGATION OR ARBITRATION IS INSTITUTED), WHETHER IN AN ACTION OF "
+"CONTRACT, NEGLIGENCE, OR OTHER TORTIOUS ACTION, OR ARISING OUT OF OR IN "
+"CONNECTION WITH THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ANY CLAIM "
+"FOR PERSONAL INJURY OR PROPERTY DAMAGE, ARISING FROM THIS AGREEMENT AND "
+"ANY VIOLATION BY YOU OF ANY FEDERAL, STATE, OR LOCAL LAWS, STATUTES, "
+"RULES, OR REGULATIONS, EVEN IF COMPANY HAS BEEN PREVIOUSLY ADVISED OF THE"
+" POSSIBILITY OF SUCH DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS "
+"LIABILITY FOUND ON THE PART OF COMPANY, IT WILL BE LIMITED TO THE AMOUNT "
+"PAID FOR THE PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL "
+"THERE BE CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE "
+"EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL OR CONSEQUENTIAL DAMAGES,"
+" SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU."
+msgstr ""
+"除非法律禁止，否则您将让我们和我们的管理人员、董事、员工和代理人免受任何间接、惩罚性、特殊、偶然或后果性损害，无论其产生如何（包括律师费和所有相关成本和费用）诉讼和仲裁，或在审判或上诉中，如果有的话，无论是否提起诉讼或仲裁），无论是在合同、疏忽或其他侵权行为中，还是由本协议引起或与本协议有关，包括不限于因本协议和您违反任何联邦、州或地方法律、法规、规则或法规而引起的任何人身伤害或财产损失索赔，即使公司事先已被告知此类损失的可能性."
+" "
+"除非法律禁止，如果发现公司有责任，将仅限于为产品和/或服务支付的金额，并且在任何情况下都不会产生后果性或惩罚性的损害。某些州不允许排除或限制惩罚性、附带或后果性损害，因此之前的限制或排除可能不适用于您。"
+
+#: app/templates/terms_and_conditions.html:108
+msgid "Termination"
+msgstr "终止"
+
+#: app/templates/terms_and_conditions.html:109
+msgid ""
+"We may terminate or suspend your account and bar access to Service "
+"immediately, without prior notice or liability, under our sole "
+"discretion, for any reason whatsoever and without limitation, including "
+"but not limited to a breach of Terms."
+msgstr "我们可以自行决定出于任何原因且不受限制地（包括但不限于违反条款）立即终止或暂停您的帐户并禁止访问服务，恕不另行通知或承担责任。"
+
+#: app/templates/terms_and_conditions.html:110
+msgid ""
+"If you wish to terminate your account, you may simply discontinue using "
+"Service."
+msgstr "如果您想终止您的帐户，您可以直接停止使用服务。"
+
+#: app/templates/terms_and_conditions.html:111
+msgid ""
+"All provisions of Terms which by their nature should survive termination "
+"shall survive termination, including, without limitation, ownership "
+"provisions, warranty disclaimers, indemnity and limitations of liability."
+msgstr "根据其性质应在终止后继续有效的所有条款规定应在终止后继续有效，包括但不限于所有权规定、保证免责声明、赔偿和责任限制。"
+
+#: app/templates/terms_and_conditions.html:113
+msgid "Governing Law"
+msgstr "准据法"
+
+#: app/templates/terms_and_conditions.html:114
+msgid ""
+"These Terms shall be governed and construed in accordance with the laws "
+"of Taiwan, which governing law applies to agreement without regard to its"
+" conflict of law provisions."
+msgstr "这些条款应受台湾法律管辖和解释，该法律适用于协议，不考虑其法律冲突规定。"
+
+#: app/templates/terms_and_conditions.html:115
+msgid ""
+"Our failure to enforce any right or provision of these Terms will not be "
+"considered a waiver of those rights. If any provision of these Terms is "
+"held to be invalid or unenforceable by a court, the remaining provisions "
+"of these Terms will remain in effect. These Terms constitute the entire "
+"agreement between us regarding our Service and supersede and replace any "
+"prior agreements we might have had between us regarding Service."
+msgstr "我们未能执行这些条款的任何权利或规定将不被视为放弃这些权利。如果这些条款的任何规定被法院裁定为无效或不可执行，则这些条款的其余规定将继续有效。这些条款构成我们之间关于我们的服务的完整协议，并取代和替换我们之前可能就服务达成的任何协议。"
+
+#: app/templates/terms_and_conditions.html:117
+msgid "Changes To Service"
+msgstr "服务变更"
+
+#: app/templates/terms_and_conditions.html:118
+msgid ""
+"We reserve the right to withdraw or amend our Service, and any service or"
+" material we provide via Service, in our sole discretion without notice. "
+"We will not be liable if for any reason all or any part of Service is "
+"unavailable at any time or for any period. From time to time, we may "
+"restrict access to some parts of Service, or the entire Service, to "
+"users, including registered users."
+msgstr "我们保留自行决定撤销或修改我们的服务以及我们通过服务提供的任何服务或材料的权利，恕不另行通知。如果由于任何原因在任何时间或任何时期无法使用全部或任何部分服务，我们将不承担任何责任。有时，我们可能会限制用户（包括注册用户）访问服务的某些部分或整个服务。"
+
+#: app/templates/terms_and_conditions.html:120
+msgid "Amendments To Terms"
+msgstr "条款修改"
+
+#: app/templates/terms_and_conditions.html:121
+msgid ""
+"We may amend Terms at any time by posting the amended terms on this site."
+" It is your responsibility to review these Terms periodically."
+msgstr "我们可以随时通过在本网站上发布修改后的条款来修改条款。您有责任定期查看这些条款。"
+
+#: app/templates/terms_and_conditions.html:122
+msgid ""
+"Your continued use of the Platform following the posting of revised Terms"
+" means that you accept and agree to the changes. You are expected to "
+"check this page frequently so you are aware of any changes, as they are "
+"binding on you."
+msgstr "您在发布修订条款后继续使用平台意味着您接受并同意这些更改。您应该经常查看此页面，以便了解任何更改，因为它们对您具有约束力。"
+
+#: app/templates/terms_and_conditions.html:123
+msgid ""
+"By continuing to access or use our Service after any revisions become "
+"effective, you agree to be bound by the revised terms. If you do not "
+"agree to the new terms, you are no longer authorized to use Service."
+msgstr "在任何修订生效后继续访问或使用我们的服务，即表示您同意受修订条款的约束。如果您不同意新条款，您将不再被授权使用服务。"
+
+#: app/templates/terms_and_conditions.html:125
+msgid "Waiver And Severability"
+msgstr "弃权和可分割性"
+
+#: app/templates/terms_and_conditions.html:126
+msgid ""
+"No waiver by Company of any term or condition set forth in Terms shall be"
+" deemed a further or continuing waiver of such term or condition or a "
+"waiver of any other term or condition, and any failure of Company to "
+"assert a right or provision under Terms shall not constitute a waiver of "
+"such right or provision."
+msgstr "公司对条款中规定的任何条款或条件的弃权不应被视为对该条款或条件的进一步或持续弃权或对任何其他条款或条件的弃权，并且公司未能根据条款主张权利或规定应不构成对此类权利或规定的放弃。"
+
+#: app/templates/terms_and_conditions.html:127
+msgid ""
+"If any provision of Terms is held by a court or other tribunal of "
+"competent jurisdiction to be invalid, illegal or unenforceable for any "
+"reason, such provision shall be eliminated or limited to the minimum "
+"extent such that the remaining provisions of Terms will continue in full "
+"force and effect."
+msgstr "如果有管辖权的法院或其他法庭因任何原因认定条款的任何规定无效、非法或无法执行，则应取消或限制该规定的最低限度，以使条款的其余规定继续完全有效和效果。"
+
+#: app/templates/terms_and_conditions.html:129
+msgid "Acknowledgement"
+msgstr "承认"
+
+#: app/templates/terms_and_conditions.html:130
+msgid ""
+"BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE THAT "
+"YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY THEM."
+msgstr "通过使用我们提供的服务或其他服务，您承认您已阅读这些服务条款并同意受其约束。"
+
+#: app/templates/terms_and_conditions.html:133
+msgid ""
+"Please send your feedback, comments, requests for technical support by "
+"email: <b>travelwithgeomemo@gmail.com</b>."
+msgstr "请通过电子邮件发送您的反馈、意见和技术支持请求：<b>travelwithgeomemo@gmail.com</b>。"
+

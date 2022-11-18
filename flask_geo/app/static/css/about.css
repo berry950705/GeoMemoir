@@ -1,0 +1,120 @@
+nav {
+        background: rgba(185, 181, 181, 0.5);
+}
+
+
+.jumbotron{
+        height: 70vh;
+        background-image: url('/static/media/bg/tree.jpg');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        text-align: center;
+        margin-bottom: 0;
+}
+
+.title_one{
+        color: #4fe8aff2;
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        font-size: 3.6rem;
+}
+
+.title_two{
+        color:#f7f9cf;
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        font-size: 2.2rem;
+}
+
+/* about_section */
+.about_section{
+        min-height: 70vh;
+        padding: 50px;
+        margin: 0;
+}
+
+/* globe */
+.globe{
+        padding-top: 50px;
+}
+.globe img{
+        width: 100%;
+        height: auto;
+}
+
+
+/* content */
+ul>li{
+        list-style-type: none;
+}
+
+@media (max-width:992px) {
+        .jumbotron{
+                height: 65vh;
+        }
+
+        .title_one{
+                font-size: 3rem;
+        }        
+
+        .title_two{
+                font-size: 2rem;
+        }
+
+        .about_section{
+                padding: 0;
+        }
+
+        .globe{
+                padding-left: 150px;
+        }
+
+        .globe img{
+                width: 85%;
+        }
+
+        .about{
+                padding-top: 0;
+        }
+
+        .about_one{
+                padding-top: 0;
+        }
+}
+
+@media (max-width:768px) {
+        .jumbotron{
+                height: 60vh;
+        }
+
+        .title_one{
+                font-size: 2.4rem;
+        }        
+
+        .title_two{
+                font-size: 1.6rem;
+        }
+
+        .globe{
+                padding-left: 50px;
+        }
+}
+
+@media (max-width:400px) {
+        .jumbotron{
+                height: 60vh;
+        }
+
+        .title_one{
+                font-size: 2rem;
+        }        
+
+        .title_two{
+                font-size: 1.2rem;
+                margin: 0 !important;
+        }
+
+}
+

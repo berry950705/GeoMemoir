@@ -1,0 +1,1928 @@
+# English translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-09-27 13:50+0800\n"
+"PO-Revision-Date: 2022-09-07 16:10+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: app/templates/about.html:13 app/templates/about.html:24
+#: app/templates/index.html:50 app/templates/index.html:304
+msgid "About"
+msgstr ""
+
+#: app/templates/about.html:21 app/templates/signup.html:42
+msgid "Welcome to Geo Memoir!"
+msgstr ""
+
+#: app/templates/about.html:37
+msgid "About Geo Memoir.."
+msgstr ""
+
+#: app/templates/about.html:39
+msgid ""
+"Geo Memoir provides a friendly platform for travel lovers to share their "
+"stories."
+msgstr ""
+
+#: app/templates/about.html:40
+msgid ""
+"When you start writing your experience, you start creating your travel "
+"memoir too."
+msgstr ""
+
+#: app/templates/about.html:41
+msgid "If you are a travel buff, don't hesitate to join us and give it a try."
+msgstr ""
+
+#: app/templates/about.html:42
+msgid "Let's TRAVEL, EXPLORE, and SHARE!"
+msgstr ""
+
+#: app/templates/about.html:46
+msgid "Explore Our Travel Stories. Broaden Your Perspective."
+msgstr ""
+
+#: app/templates/about.html:48
+msgid "The world is like a huge book and you will never finish reading it."
+msgstr ""
+
+#: app/templates/about.html:49
+msgid ""
+"If you want to plan your next vacation but don't know where to start, you"
+" may get some inspiration from some of our experienced travelers."
+msgstr ""
+
+#: app/templates/about.html:50
+msgid "Every time we travel, we change the shape of our thoughts."
+msgstr ""
+
+#: app/templates/about.html:51
+msgid ""
+"Be ready to appreciate different cultures and add new experiences to your"
+" life!"
+msgstr ""
+
+#: app/templates/about.html:55
+msgid "Show Us The World In Your Eyes"
+msgstr ""
+
+#: app/templates/about.html:57
+msgid ""
+"There is beauty in every corner of the world. Some of them may have been "
+"visited by you."
+msgstr ""
+
+#: app/templates/about.html:58
+msgid ""
+"We hope to learn from your traveling experience. It doesn't need to be a "
+"perfect sharing or an enchanting story."
+msgstr ""
+
+#: app/templates/about.html:59
+msgid ""
+"Every one of us is a life storyteller. Be our eyes and show us the world "
+"in your way."
+msgstr ""
+
+#: app/templates/americas.html:12 app/templates/americas.html:21
+#: app/templates/destinations.html:76 app/templates/edit_stories.html:40
+#: app/templates/index.html:56 app/templates/index.html:313
+#: app/templates/new_stories.html:39
+msgid "The Americas"
+msgstr ""
+
+#: app/templates/americas.html:18
+msgid "Welcome to The Americas "
+msgstr ""
+
+#: app/templates/americas.html:19 app/templates/asia_pacific.html:19
+#: app/templates/europe.html:19 app/templates/middle_east_africa.html:19
+msgid "Find your travel inspiration and start your journey"
+msgstr ""
+
+#: app/templates/americas.html:28 app/templates/asia_pacific.html:29
+#: app/templates/europe.html:29 app/templates/gallery.html:30
+#: app/templates/middle_east_africa.html:29
+#: app/templates/my_travel_profile.html:82
+msgid "All"
+msgstr ""
+
+#: app/templates/americas.html:29 app/templates/asia_pacific.html:30
+#: app/templates/edit_stories.html:62 app/templates/europe.html:30
+#: app/templates/gallery.html:31 app/templates/middle_east_africa.html:30
+#: app/templates/my_travel_profile.html:83 app/templates/new_stories.html:61
+msgid "Tourist Attraction"
+msgstr ""
+
+#: app/templates/americas.html:30 app/templates/asia_pacific.html:31
+#: app/templates/edit_stories.html:66 app/templates/europe.html:31
+#: app/templates/gallery.html:32 app/templates/middle_east_africa.html:31
+#: app/templates/my_travel_profile.html:84 app/templates/new_stories.html:65
+msgid "Cuisine"
+msgstr ""
+
+#: app/templates/americas.html:31 app/templates/asia_pacific.html:32
+#: app/templates/europe.html:32 app/templates/gallery.html:33
+#: app/templates/middle_east_africa.html:32
+#: app/templates/my_travel_profile.html:85
+msgid "Accomodation"
+msgstr ""
+
+#: app/templates/asia_pacific.html:12 app/templates/destinations.html:82
+#: app/templates/edit_stories.html:44 app/templates/index.html:57
+#: app/templates/index.html:314 app/templates/new_stories.html:43
+msgid "Asia Pacific"
+msgstr ""
+
+#: app/templates/asia_pacific.html:18
+msgid "Welcome to Asia Pacific"
+msgstr ""
+
+#: app/templates/asia_pacific.html:21
+msgid "Asia Pacific "
+msgstr ""
+
+#: app/templates/change_email.html:22 app/templates/change_email.html:74
+#: app/templates/index.html:107
+msgid "Change Email"
+msgstr ""
+
+#: app/templates/change_email.html:36
+msgid "Want to change your email?"
+msgstr ""
+
+#: app/templates/change_email.html:37
+msgid "Please check your"
+msgstr ""
+
+#: app/templates/change_email.html:37
+msgid "NEW EMAIL"
+msgstr ""
+
+#: app/templates/change_email.html:38
+msgid "for the verification code once you click send."
+msgstr ""
+
+#: app/templates/change_email.html:53
+msgid "Your Current Email"
+msgstr ""
+
+#: app/templates/change_email.html:58
+msgid "New Email"
+msgstr ""
+
+#: app/templates/change_email.html:59
+msgid " Enter your new email"
+msgstr ""
+
+#: app/templates/change_email.html:64
+msgid "Verification Code"
+msgstr ""
+
+#: app/templates/change_email.html:66
+msgid " Enter code"
+msgstr ""
+
+#: app/templates/change_email.html:68
+msgid "Send Code"
+msgstr ""
+
+#: app/templates/change_password.html:22 app/templates/change_password.html:86
+#: app/templates/index.html:108
+msgid "Change Password"
+msgstr ""
+
+#: app/templates/change_password.html:36
+msgid "Change Your Password"
+msgstr ""
+
+#: app/templates/change_password.html:38
+#: app/templates/forgot_password_reset.html:36 app/templates/signup.html:95
+msgid "Your password must contain at least:"
+msgstr ""
+
+#: app/templates/change_password.html:39
+#: app/templates/forgot_password_reset.html:37 app/templates/signup.html:97
+msgid "An"
+msgstr ""
+
+#: app/templates/change_password.html:40
+#: app/templates/forgot_password_reset.html:38 app/templates/signup.html:97
+msgid "uppercase"
+msgstr ""
+
+#: app/templates/change_password.html:40 app/templates/change_password.html:42
+#: app/templates/forgot_password_reset.html:38
+#: app/templates/forgot_password_reset.html:40 app/templates/signup.html:98
+#: app/templates/signup.html:102
+msgid "letter"
+msgstr ""
+
+#: app/templates/change_password.html:41 app/templates/change_password.html:43
+#: app/templates/forgot_password_reset.html:39
+#: app/templates/forgot_password_reset.html:41 app/templates/signup.html:101
+#: app/templates/signup.html:105
+msgid "A"
+msgstr ""
+
+#: app/templates/change_password.html:42
+#: app/templates/forgot_password_reset.html:40 app/templates/signup.html:101
+msgid "lowercase"
+msgstr ""
+
+#: app/templates/change_password.html:44
+#: app/templates/forgot_password_reset.html:42 app/templates/signup.html:105
+msgid "number"
+msgstr ""
+
+#: app/templates/change_password.html:45
+#: app/templates/forgot_password_reset.html:43 app/templates/signup.html:108
+msgid "Minimum"
+msgstr ""
+
+#: app/templates/change_password.html:46
+#: app/templates/forgot_password_reset.html:44 app/templates/signup.html:108
+msgid "8 characters"
+msgstr ""
+
+#: app/templates/change_password.html:61
+msgid "Old Password"
+msgstr ""
+
+#: app/templates/change_password.html:69
+#: app/templates/forgot_password_reset.html:60
+msgid "New Password"
+msgstr ""
+
+#: app/templates/change_password.html:78
+#: app/templates/forgot_password_reset.html:69 app/templates/signup.html:115
+msgid "Confirm Password"
+msgstr ""
+
+#: app/templates/contact.html:103 app/templates/index.html:75
+msgid "Contact"
+msgstr ""
+
+#: app/templates/contact.html:110 app/templates/index.html:286
+#: app/templates/privacy_policy.html:105
+#: app/templates/terms_and_conditions.html:132
+msgid "Contact Us"
+msgstr ""
+
+#: app/templates/contact.html:114
+msgid "Your Name"
+msgstr ""
+
+#: app/templates/contact.html:119
+msgid "Email Address"
+msgstr ""
+
+#: app/templates/contact.html:126
+msgid "Your Message"
+msgstr ""
+
+#: app/templates/contact.html:128
+msgid " Let us know what's on your mind!"
+msgstr ""
+
+#: app/templates/contact.html:132
+msgid "Send Message"
+msgstr ""
+
+#: app/templates/destinations.html:20
+msgid "Choose Your Destination To Explore"
+msgstr ""
+
+#: app/templates/destinations.html:22
+msgid "Continent"
+msgstr ""
+
+#: app/templates/destinations.html:28
+msgid "Current Weather & Time Of Frequently Visited Cities"
+msgstr ""
+
+#: app/templates/destinations.html:30
+msgid "Hover over to see the details"
+msgstr ""
+
+#: app/templates/destinations.html:88 app/templates/edit_stories.html:48
+#: app/templates/europe.html:12 app/templates/index.html:58
+#: app/templates/index.html:315 app/templates/new_stories.html:47
+msgid "Europe"
+msgstr ""
+
+#: app/templates/destinations.html:94
+msgid "Middle East"
+msgstr ""
+
+#: app/templates/destinations.html:94
+msgid "Africa"
+msgstr ""
+
+#: app/templates/edit_profile.html:20 app/templates/index.html:71
+msgid "Edit My Profile"
+msgstr ""
+
+#: app/templates/edit_profile.html:30 app/templates/edit_profile.html:42
+msgid "Change"
+msgstr ""
+
+#: app/templates/edit_profile.html:30 app/templates/privacy_policy.html:44
+msgid "Avatar"
+msgstr ""
+
+#: app/templates/edit_profile.html:31 app/templates/edit_profile.html:43
+#: app/templates/edit_stories.html:91 app/templates/new_stories.html:90
+msgid "Clear"
+msgstr ""
+
+#: app/templates/edit_profile.html:42
+msgid "Background"
+msgstr ""
+
+#: app/templates/edit_profile.html:51
+msgid "Profile Name"
+msgstr ""
+
+#: app/templates/edit_profile.html:56
+msgid "Motto"
+msgstr ""
+
+#: app/templates/edit_profile.html:61
+msgid "Self-Introduction"
+msgstr ""
+
+#: app/templates/edit_profile.html:66
+msgid "Update Profile"
+msgstr ""
+
+#: app/templates/edit_stories.html:24
+msgid "Edit My Story"
+msgstr ""
+
+#: app/templates/edit_stories.html:31 app/templates/new_stories.html:30
+msgid "Story Title"
+msgstr ""
+
+#: app/templates/edit_stories.html:36 app/templates/new_stories.html:35
+msgid "Traveling Area"
+msgstr ""
+
+#: app/templates/edit_stories.html:52 app/templates/new_stories.html:51
+msgid "Middle East / Africa"
+msgstr ""
+
+#: app/templates/edit_stories.html:58 app/templates/new_stories.html:57
+msgid "Category"
+msgstr ""
+
+#: app/templates/edit_stories.html:70 app/templates/new_stories.html:69
+msgid "Accommodation"
+msgstr ""
+
+#: app/templates/edit_stories.html:76 app/templates/new_stories.html:75
+msgid "What is the country you visited?"
+msgstr ""
+
+#: app/templates/edit_stories.html:78 app/templates/new_stories.html:77
+msgid "Choose"
+msgstr ""
+
+#: app/templates/edit_stories.html:85 app/templates/new_stories.html:84
+msgid "Upload the photo you'd like to share"
+msgstr ""
+
+#: app/templates/edit_stories.html:90 app/templates/new_stories.html:89
+msgid "Upload"
+msgstr ""
+
+#: app/templates/edit_stories.html:97
+msgid "Update the description to the photo"
+msgstr ""
+
+#: app/templates/edit_stories.html:106 app/templates/edit_stories.html:112
+#: app/templates/edit_stories.html:118
+msgid "Update Your Travel Story"
+msgstr ""
+
+#: app/templates/edit_stories.html:125
+msgid "Switch Editor Language: "
+msgstr ""
+
+#: app/templates/edit_stories.html:133
+msgid "Update Story"
+msgstr ""
+
+#: app/templates/europe.html:18
+msgid "Welcome to Europe"
+msgstr ""
+
+#: app/templates/europe.html:21 app/templates/middle_east_africa.html:21
+msgid "Destination"
+msgstr ""
+
+#: app/templates/forgot_password.html:22
+msgid "Forgot Password"
+msgstr ""
+
+#: app/templates/forgot_password.html:33
+msgid "Forgot your password?"
+msgstr ""
+
+#: app/templates/forgot_password.html:34
+msgid "Please check your email for the password reset link once you click send."
+msgstr ""
+
+#: app/templates/forgot_password.html:47 app/templates/index.html:330
+#: app/templates/privacy_policy.html:43 app/templates/signup.html:82
+msgid "Email"
+msgstr ""
+
+#: app/templates/forgot_password.html:49
+msgid " Email signed up for Geo Memoir"
+msgstr ""
+
+#: app/templates/forgot_password.html:54
+msgid "Send Password Reset Link"
+msgstr ""
+
+#: app/templates/forgot_password_reset.html:21
+#: app/templates/forgot_password_reset.html:76
+msgid "Reset Password"
+msgstr ""
+
+#: app/templates/forgot_password_reset.html:34
+msgid "Reset Your Password"
+msgstr ""
+
+#: app/templates/gallery.html:20
+msgid "Photography is the beauty of life captured."
+msgstr ""
+
+#: app/templates/gallery.html:23
+msgid "Photo Gallery"
+msgstr ""
+
+#: app/templates/index.html:53
+msgid "Destinations"
+msgstr ""
+
+#: app/templates/index.html:55 app/templates/index.html:312
+msgid "Weather & Time"
+msgstr ""
+
+#: app/templates/index.html:59 app/templates/index.html:316
+msgid "Middle East/Africa"
+msgstr ""
+
+#: app/templates/index.html:63 app/templates/index.html:317
+msgid "Gallery"
+msgstr ""
+
+#: app/templates/index.html:66
+msgid "My Memoir"
+msgstr ""
+
+#: app/templates/index.html:68
+msgid "My Travel Profile"
+msgstr ""
+
+#: app/templates/index.html:69
+msgid "Write New Stories"
+msgstr ""
+
+#: app/templates/index.html:70
+msgid "My List of Stories"
+msgstr ""
+
+#: app/templates/index.html:94 app/templates/signup.html:123
+msgid "Sign up"
+msgstr ""
+
+#: app/templates/index.html:97 app/templates/login.html:68
+msgid "Sign in"
+msgstr ""
+
+#: app/templates/index.html:105
+msgid "Account Settings"
+msgstr ""
+
+#: app/templates/index.html:110 app/templates/index.html:121
+msgid "Sign out"
+msgstr ""
+
+#: app/templates/index.html:118
+msgid "Sign in as"
+msgstr ""
+
+#: app/templates/index.html:139
+msgid "TRAVEL . EXPLORE . SHARE ."
+msgstr ""
+
+#: app/templates/index.html:140
+msgid ""
+"Every one of us can be an excellent storyteller. Choose your path now and"
+" start your journey."
+msgstr ""
+
+#: app/templates/index.html:142
+msgid "Get travel inspiration"
+msgstr ""
+
+#: app/templates/index.html:143
+msgid "Share travel stories"
+msgstr ""
+
+#: app/templates/index.html:162
+msgid "Australia"
+msgstr ""
+
+#: app/templates/index.html:166
+msgid "Germany"
+msgstr ""
+
+#: app/templates/index.html:170 app/templates/index.html:190
+msgid "Egypt"
+msgstr ""
+
+#: app/templates/index.html:174
+msgid "The Philippines"
+msgstr ""
+
+#: app/templates/index.html:178
+msgid "Turkey"
+msgstr ""
+
+#: app/templates/index.html:182
+msgid "Canada"
+msgstr ""
+
+#: app/templates/index.html:186
+msgid "The United States"
+msgstr ""
+
+#: app/templates/index.html:205
+msgid "Do you need some inspiration for your travel plan?"
+msgstr ""
+
+#: app/templates/index.html:206
+msgid ""
+"Choose your destination and start exploring the stories shared by our "
+"experienced travelers!"
+msgstr ""
+
+#: app/templates/index.html:207
+msgid "Explore Now"
+msgstr ""
+
+#: app/templates/index.html:239
+msgid "Geo Memoir Gallery"
+msgstr ""
+
+#: app/templates/index.html:240
+msgid "Every picture has its story. Visit the gallery and choose your favorite."
+msgstr ""
+
+#: app/templates/index.html:241
+msgid "Proceed to the Gallery"
+msgstr ""
+
+#: app/templates/index.html:265
+msgid "Create Your Own Travel Memoir"
+msgstr ""
+
+#: app/templates/index.html:266
+msgid ""
+"Life is made up of a series of short stories. Create your own to hold the"
+" moment you want to remember."
+msgstr ""
+
+#: app/templates/index.html:267
+msgid "Create Now"
+msgstr ""
+
+#: app/templates/index.html:278
+msgid "ANY"
+msgstr ""
+
+#: app/templates/index.html:279
+msgid "THOUGHTS"
+msgstr ""
+
+#: app/templates/index.html:280
+msgid "IN"
+msgstr ""
+
+#: app/templates/index.html:281
+msgid "YOUR"
+msgstr ""
+
+#: app/templates/index.html:282
+msgid "MIND"
+msgstr ""
+
+#: app/templates/index.html:283
+msgid "NOW"
+msgstr ""
+
+#: app/templates/index.html:305
+msgid "About Geo Memoir"
+msgstr ""
+
+#: app/templates/index.html:306 app/templates/terms_and_conditions.html:17
+msgid "Terms & Conditions"
+msgstr ""
+
+#: app/templates/index.html:307 app/templates/privacy_policy.html:17
+msgid "Privacy Policy"
+msgstr ""
+
+#: app/templates/index.html:311
+msgid "Explore"
+msgstr ""
+
+#: app/templates/index.html:323
+msgid "Join us to get monthly update!"
+msgstr ""
+
+#: app/templates/index.html:326
+msgid "Full Name"
+msgstr ""
+
+#: app/templates/index.html:333
+msgid "Subscribe"
+msgstr ""
+
+#: app/templates/login.html:41
+msgid "Welcome back to Geo Memoir!"
+msgstr ""
+
+#: app/templates/login.html:42
+msgid "Sign in now and start sharing your journey."
+msgstr ""
+
+#: app/templates/login.html:55 app/templates/signup.html:72
+msgid "Username"
+msgstr ""
+
+#: app/templates/login.html:60 app/templates/signup.html:89
+msgid "Password"
+msgstr ""
+
+#: app/templates/login.html:64
+msgid "Forgot Password?"
+msgstr ""
+
+#: app/templates/login.html:73 app/templates/signup.html:129
+msgid "or continue with"
+msgstr ""
+
+#: app/templates/login.html:81
+msgid "Do not have an account?"
+msgstr ""
+
+#: app/templates/login.html:82
+msgid "Create Account"
+msgstr ""
+
+#: app/templates/middle_east_africa.html:12
+msgid "Middle East & Africa"
+msgstr ""
+
+#: app/templates/middle_east_africa.html:18
+msgid "Welcome to Middle East/Africa"
+msgstr ""
+
+#: app/templates/my_travel_profile.html:33
+msgid "I have written"
+msgstr ""
+
+#: app/templates/my_travel_profile.html:35
+#: app/templates/my_travel_profile.html:48
+#: app/templates/my_travel_profile.html:53
+#: app/templates/my_travel_profile.html:58
+#: app/templates/my_travel_profile.html:63
+msgid "Stories"
+msgstr ""
+
+#: app/templates/my_travel_profile.html:38
+msgid "About me"
+msgstr ""
+
+#: app/templates/my_travel_profile.html:45
+msgid "My Travel Experience"
+msgstr ""
+
+#: app/templates/my_travel_profile.html:49
+msgid "THE AMERICAS"
+msgstr ""
+
+#: app/templates/my_travel_profile.html:54
+msgid "ASIA PACIFIC"
+msgstr ""
+
+#: app/templates/my_travel_profile.html:59
+msgid "EUROPE"
+msgstr ""
+
+#: app/templates/my_travel_profile.html:64
+msgid "MIDDLE EAST/AFRICA"
+msgstr ""
+
+#: app/templates/my_travel_profile.html:68
+msgid "Countries"
+msgstr ""
+
+#: app/templates/my_travel_profile.html:69
+msgid "VISITED"
+msgstr ""
+
+#: app/templates/new_stories.html:24
+msgid "Share A New Story"
+msgstr ""
+
+#: app/templates/new_stories.html:96
+msgid "Give a brief description to the photo"
+msgstr ""
+
+#: app/templates/new_stories.html:105 app/templates/new_stories.html:111
+#: app/templates/new_stories.html:117
+msgid "Your Travel Story"
+msgstr ""
+
+#: app/templates/new_stories.html:124
+msgid "Switch Editor Language:"
+msgstr ""
+
+#: app/templates/new_stories.html:132
+msgid "Post New Story"
+msgstr ""
+
+#: app/templates/privacy_policy.html:24
+msgid "PRIVACY POLICY"
+msgstr ""
+
+#: app/templates/privacy_policy.html:26
+#: app/templates/terms_and_conditions.html:29
+msgid "Last updated"
+msgstr ""
+
+#: app/templates/privacy_policy.html:27
+msgid "Your privacy is important to us.  "
+msgstr ""
+
+#: app/templates/privacy_policy.html:27
+msgid ""
+"It is Geo Memoir's policy to respect your privacy and comply with any "
+"applicable law and regulation regarding any personal information we may "
+"collect about you, including across our website,"
+msgstr ""
+
+#: app/templates/privacy_policy.html:29
+msgid ", and other sites we own and operate. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:30
+msgid ""
+"This policy is effective as of <b> 1 September 2022</b> and was last "
+"updated on <b>1 September 2022</b>. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:32
+msgid "Information We Collect"
+msgstr ""
+
+#: app/templates/privacy_policy.html:33
+msgid ""
+"Information we collect includes both information you knowingly and "
+"actively provide us when using or participating in any of our services "
+"and promotions, and any information automatically sent by your devices in"
+" the course of accessing our products and services. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:35
+msgid "Log Data"
+msgstr ""
+
+#: app/templates/privacy_policy.html:36
+msgid ""
+"When you visit our website, our servers may automatically log the "
+"standard data provided by your web browser.  "
+msgstr ""
+
+#: app/templates/privacy_policy.html:36
+msgid ""
+"It may include your device's Internet Protocol (IP) address, your browser"
+" type and version, the pages you visit, the time and date of your visit, "
+"the time spent on each page, other details about your visit, and "
+"technical details that occur in conjunction with any errors you may "
+"encounter. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:37
+msgid ""
+"Please be aware that while this information may not be personally "
+"identifying by itself, it may be possible to combine it with other data "
+"to personally identify individual persons. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:39
+msgid "Personal Information"
+msgstr ""
+
+#: app/templates/privacy_policy.html:40
+msgid ""
+"We may ask for personal information which may include one or more of the "
+"following:"
+msgstr ""
+
+#: app/templates/privacy_policy.html:42
+msgid "Name"
+msgstr ""
+
+#: app/templates/privacy_policy.html:47
+msgid "Legitimate Reasons for Processing Your Personal Information"
+msgstr ""
+
+#: app/templates/privacy_policy.html:48
+msgid ""
+"We only collect and use your personal information when we have a "
+"legitimate reason for doing so.  "
+msgstr ""
+
+#: app/templates/privacy_policy.html:48
+msgid ""
+"In which instance, we only collect personal information that is "
+"reasonably necessary to provide our services to you. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:50
+msgid "Collection and Use of Information"
+msgstr ""
+
+#: app/templates/privacy_policy.html:51
+msgid ""
+"We may collect personal information from you when you do any of the "
+"following on our website:"
+msgstr ""
+
+#: app/templates/privacy_policy.html:53
+msgid "Sign up to receive updates from us via email or social media channels"
+msgstr ""
+
+#: app/templates/privacy_policy.html:54
+msgid "Use a mobile device or web browser to access our content"
+msgstr ""
+
+#: app/templates/privacy_policy.html:55
+msgid "Contact us via email, social media, or on any similar technologies"
+msgstr ""
+
+#: app/templates/privacy_policy.html:56
+msgid "When you mention us on social media"
+msgstr ""
+
+#: app/templates/privacy_policy.html:58
+msgid ""
+"We may collect, hold, use, and disclose information for the following "
+"purposes, and personal information will not be further processed in a "
+"manner that is incompatible with these purposes:"
+msgstr ""
+
+#: app/templates/privacy_policy.html:60
+msgid "to contact and communicate with you"
+msgstr ""
+
+#: app/templates/privacy_policy.html:61
+msgid ""
+"to enable you to access and use our website, associated applications, and"
+" associated social media platforms"
+msgstr ""
+
+#: app/templates/privacy_policy.html:62
+msgid "for internal record keeping and administrative purposes"
+msgstr ""
+
+#: app/templates/privacy_policy.html:63
+msgid ""
+"for security and fraud prevention, and to ensure that our sites and apps "
+"are safe, secure, and used in line with our terms of use"
+msgstr ""
+
+#: app/templates/privacy_policy.html:65
+msgid ""
+"Please be aware that we may combine information we collect about you with"
+" general information or research data we receive from other trusted "
+"sources. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:67
+msgid "Security of Your Personal Information"
+msgstr ""
+
+#: app/templates/privacy_policy.html:68
+msgid ""
+"When we collect and process personal information, and while we retain "
+"this information, we will protect it within commercially acceptable means"
+" to prevent loss and theft, as well as unauthorized access, disclosure, "
+"copying, use, or modification."
+msgstr ""
+
+#: app/templates/privacy_policy.html:69
+#, python-format
+msgid ""
+"Although we will do our best to protect the personal information you "
+"provide to us, we advise that no method of electronic transmission or "
+"storage is 100% secure, and no one can guarantee absolute data security."
+msgstr ""
+
+#: app/templates/privacy_policy.html:69
+msgid "We will comply with laws applicable to us in respect of any data breach. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:70
+msgid ""
+"You are responsible for selecting any password and its overall security "
+"strength, ensuring the security of your own information within the bounds"
+" of our services. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:72
+msgid "How Long We Keep Your Personal Information"
+msgstr ""
+
+#: app/templates/privacy_policy.html:73
+msgid "We keep your personal information only for as long as we need to. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:73
+msgid ""
+" This time period may depend on what we are using your information for, "
+"in accordance with this privacy policy. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:73
+msgid ""
+"If your personal information is no longer required, we will delete it or "
+"make it anonymous by removing all details that identify you. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:74
+msgid ""
+"However, if necessary, we may retain your personal information for our "
+"compliance with a legal, accounting, or reporting obligation or for "
+"archiving purposes in the public interest, scientific, or historical "
+"research purposes or statistical purposes. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:76
+msgid "Disclosure of Personal Information to Third Parties"
+msgstr ""
+
+#: app/templates/privacy_policy.html:77
+msgid "We may disclose personal information to: "
+msgstr ""
+
+#: app/templates/privacy_policy.html:79
+msgid "a parent, subsidiary, or affiliate of our company"
+msgstr ""
+
+#: app/templates/privacy_policy.html:80
+msgid ""
+"third party service providers for the purpose of enabling them to provide"
+" their services, for example, IT service providers, data storage, hosting"
+" and server providers, advertisers, or analytics platforms"
+msgstr ""
+
+#: app/templates/privacy_policy.html:81
+msgid "our employees, contractors, and/or related entities"
+msgstr ""
+
+#: app/templates/privacy_policy.html:82
+msgid "our existing or potential agents or business partners"
+msgstr ""
+
+#: app/templates/privacy_policy.html:83
+msgid "sponsors or promoters of any competition, sweepstakes, or promotion we run"
+msgstr ""
+
+#: app/templates/privacy_policy.html:84
+msgid ""
+"courts, tribunals, regulatory authorities, and law enforcement officers, "
+"as required by law, in connection with any actual or prospective legal "
+"proceedings, or in order to establish, exercise, or defend our legal "
+"rights"
+msgstr ""
+
+#: app/templates/privacy_policy.html:85
+msgid ""
+"third parties, including agents or sub-contractors, who assist us in "
+"providing information, products, services, or direct marketing to you "
+"third parties to collect and process data"
+msgstr ""
+
+#: app/templates/privacy_policy.html:88
+msgid "International Transfers of Personal Information"
+msgstr ""
+
+#: app/templates/privacy_policy.html:89
+msgid ""
+"The personal information we collect is stored and/or processed where we "
+"or our partners, affiliates, and third-party providers maintain "
+"facilities.  "
+msgstr ""
+
+#: app/templates/privacy_policy.html:89
+msgid ""
+"Please be aware that the locations to which we store, process, or "
+"transfer your personal information may not have the same data protection "
+"laws as the country in which you initially provided the information. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:89
+msgid ""
+" If we transfer your personal information to third parties in other "
+"countries: "
+msgstr ""
+
+#: app/templates/privacy_policy.html:89
+msgid ""
+"(i) we will perform those transfers in accordance with the requirements "
+"of applicable law; and (ii) we will protect the transferred personal "
+"information in accordance with this privacy policy. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:91
+msgid "Your Rights and Controlling Your Personal Information"
+msgstr ""
+
+#: app/templates/privacy_policy.html:92
+msgid ""
+"You always retain the right to withhold personal information from us, "
+"with the understanding that your experience of our website may be "
+"affected. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:92
+msgid ""
+"We will not discriminate against you for exercising any of your rights "
+"over your personal information. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:92
+msgid ""
+" If you do provide us with personal information you understand that we "
+"will collect, hold, use and disclose it in accordance with this privacy "
+"policy.  "
+msgstr ""
+
+#: app/templates/privacy_policy.html:92
+msgid ""
+" You retain the right to request details of any personal information we "
+"hold about you. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:93
+msgid ""
+"If we receive personal information about you from a third party, we will "
+"protect it as set out in this privacy policy. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:93
+msgid ""
+" If you are a third party providing personal information about somebody "
+"else, you represent and warrant that you have such person's consent to "
+"provide the personal information to us. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:94
+msgid ""
+"If you have previously agreed to us using your personal information for "
+"direct marketing purposes, you may change your mind at any time. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:94
+msgid ""
+"We will provide you with the ability to unsubscribe from our email-"
+"database or opt out of communications.  "
+msgstr ""
+
+#: app/templates/privacy_policy.html:94
+msgid ""
+"Please be aware we may need to request specific information from you to "
+"help us confirm your identity. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:95
+msgid ""
+"If you believe that any information we hold about you is inaccurate, out "
+"of date, incomplete, irrelevant, or misleading, please contact us using "
+"the details provided in this privacy policy. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:95
+msgid ""
+"We will take reasonable steps to correct any information found to be "
+"inaccurate, incomplete, misleading, or out of date. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:96
+msgid ""
+"If you believe that we have breached a relevant data protection law and "
+"wish to make a complaint, please contact us using the details below and "
+"provide us with full details of the alleged breach. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:96
+msgid ""
+"We will promptly investigate your complaint and respond to you, in "
+"writing, setting out the outcome of our investigation and the steps we "
+"will take to deal with your complaint.  "
+msgstr ""
+
+#: app/templates/privacy_policy.html:96
+msgid ""
+"You also have the right to contact a regulatory body or data protection "
+"authority in relation to your complaint. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:98
+msgid "Limits of Our Policy"
+msgstr ""
+
+#: app/templates/privacy_policy.html:99
+msgid "Our website may link to external sites that are not operated by us.  "
+msgstr ""
+
+#: app/templates/privacy_policy.html:99
+msgid ""
+"Please be aware that we have no control over the content and policies of "
+"those sites, and cannot accept responsibility or liability for their "
+"respective privacy practices."
+msgstr ""
+
+#: app/templates/privacy_policy.html:101
+msgid "Changes to This Policy"
+msgstr ""
+
+#: app/templates/privacy_policy.html:102
+msgid ""
+"At our discretion, we may change our privacy policy to reflect updates to"
+" our business processes, current acceptable practices, or legislative or "
+"regulatory changes. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:102
+msgid ""
+"If we decide to change this privacy policy, we will post the changes here"
+" at the same link by which you are accessing this privacy policy. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:103
+msgid ""
+"If required by law, we will get your permission or give you the "
+"opportunity to opt in to or opt out of, as applicable, any new uses of "
+"your personal information. "
+msgstr ""
+
+#: app/templates/privacy_policy.html:106
+msgid ""
+"For any questions or concerns regarding your privacy, you may contact us "
+"using the following details: "
+msgstr ""
+
+#: app/templates/signup.html:43
+msgid "Sign up now and start creating your travel memoir."
+msgstr ""
+
+#: app/templates/signup.html:58
+msgid "First Name"
+msgstr ""
+
+#: app/templates/signup.html:65
+msgid "Last Name"
+msgstr ""
+
+#: app/templates/signup.html:75
+msgid "letters and numbers only; min. 6 char"
+msgstr ""
+
+#: app/templates/signup.html:140
+msgid "Already have an account?"
+msgstr ""
+
+#: app/templates/signup.html:141
+msgid "Sign in now"
+msgstr ""
+
+#: app/templates/story_detail.html:13
+msgid "Story Page"
+msgstr ""
+
+#: app/templates/story_detail.html:25
+msgid "Like the story"
+msgstr ""
+
+#: app/templates/story_detail.html:29
+msgid "Unike the story"
+msgstr ""
+
+#: app/templates/story_detail.html:47
+msgid " Leave your comment here.. "
+msgstr ""
+
+#: app/templates/story_detail.html:49
+msgid "Comment"
+msgstr ""
+
+#: app/templates/story_detail.html:51
+msgid "Cancel"
+msgstr ""
+
+#: app/templates/story_list.html:12
+msgid "List of Stories"
+msgstr ""
+
+#: app/templates/story_list.html:22
+msgid "List of Travel Stories"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:27
+msgid "TERMS AND CONDITIONS"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:30
+msgid "Introduction"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:31
+msgid "Welcome to"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:31
+msgid "“Company”, “we”, “our”, “us”"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:34
+msgid ""
+"These Terms of Service (“Terms”, “Terms of Service”) govern your use of "
+"our website located at <b>geomemo.com</b> (together or individually "
+"“Service”) operated by <b>Geo Memoir</b>."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:35
+msgid ""
+"Our Privacy Policy also governs your use of our Service and explains how "
+"we collect, safeguard and disclose information that results from your use"
+" of our web pages."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:36
+msgid ""
+"Your agreement with us includes these Terms and our Privacy Policy "
+"(“Agreements”). You acknowledge that you have read and understood "
+"Agreements, and agree to be bound of them."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:37
+msgid ""
+"If you do not agree with (or cannot comply with) Agreements, then you may"
+" not use the Service, but please let us know by emailing at "
+"<b>travelwithgeomemo@gmail.com</b> so we can try to find a solution. "
+"These Terms apply to all visitors, users and others who wish to access or"
+" use Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:39
+msgid "Communications"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:40
+msgid ""
+"By using our Service, you agree to subscribe to newsletters, marketing or"
+" promotional materials and other information we may send. However, you "
+"may opt out of receiving any, or all, of these communications from us by "
+"following the unsubscribe link or by emailing at "
+"travelwithgeomemo@gmail.com."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:42
+msgid "Content"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:43
+msgid ""
+"Our Service allows you to post, link, store, share and otherwise make "
+"available certain information, text, graphics, videos, or other material "
+"(“Content”). You are responsible for Content that you post on or through "
+"Service, including its legality, reliability, and appropriateness."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:43
+msgid ""
+"By posting Content on or through Service, You represent and warrant that:"
+" (i) Content is yours (you own it) and/or you have the right to use it "
+"and the right to grant us the rights and license as provided in these "
+"Terms, and (ii) that the posting of your Content on or through Service "
+"does not violate the privacy rights, publicity rights, copyrights, "
+"contract rights or any other rights of any person or entity. We reserve "
+"the right to terminate the account of anyone found to be infringing on a "
+"copyright."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:43
+msgid ""
+"You retain any and all of your rights to any Content you submit, post or "
+"display on or through Service and you are responsible for protecting "
+"those rights. We take no responsibility and assume no liability for "
+"Content you or any third party posts on or through Service. However, by "
+"posting Content using Service you grant us the right and license to use, "
+"modify, publicly perform, publicly display, reproduce, and distribute "
+"such Content on and through Service. You agree that this license includes"
+" the right for us to make your Content available to other users of "
+"Service, who may also use your Content subject to these Terms."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:43
+msgid ""
+"Geo Memoir has the right but not the obligation to monitor and edit all "
+"Content provided by users."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:43
+msgid ""
+"In addition, Content found on or through this Service are the property of"
+" Geo Memoir or used with permission. You may not distribute, modify, "
+"transmit, reuse, download, repost, copy, or use said Content, whether in "
+"whole or in part, for commercial purposes or for personal gain, without "
+"express advance written permission from us."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:45
+msgid "Prohibited Uses"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:46
+msgid ""
+"You may use Service only for lawful purposes and in accordance with "
+"Terms. You agree not to use Service:"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:47
+msgid ""
+"In any way that violates any applicable national or international law or "
+"regulation."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:48
+msgid ""
+"For the purpose of exploiting, harming, or attempting to exploit or harm "
+"minors in any way by exposing them to inappropriate content or otherwise."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:49
+msgid ""
+"To transmit, or procure the sending of, any advertising or promotional "
+"material, including any “junk mail”, “chain letter,” “spam,” or any other"
+" similar solicitation."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:50
+msgid ""
+"To impersonate or attempt to impersonate Company, a Company employee, "
+"another user, or any other person or entity."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:51
+msgid ""
+"In any way that infringes upon the rights of others, or in any way is "
+"illegal, threatening, fraudulent, or harmful, or in connection with any "
+"unlawful, illegal, fraudulent, or harmful purpose or activity."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:52
+msgid ""
+"To engage in any other conduct that restricts or inhibits anyone’s use or"
+" enjoyment of Service, or which, as determined by us, may harm or offend "
+"Company or users of Service or expose them to liability."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:54
+msgid "Additionally, you agree not to:"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:55
+msgid ""
+"Use Service in any manner that could disable, overburden, damage, or "
+"impair Service or interfere with any other party’s use of Service, "
+"including their ability to engage in real time activities through "
+"Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:56
+msgid ""
+"Use any robot, spider, or other automatic device, process, or means to "
+"access Service for any purpose, including monitoring or copying any of "
+"the material on Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:57
+msgid ""
+"Use any manual process to monitor or copy any of the material on Service "
+"or for any other unauthorized purpose without our prior written consent."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:58
+msgid ""
+"Use any device, software, or routine that interferes with the proper "
+"working of Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:59
+msgid ""
+"Introduce any viruses, trojan horses, worms, logic bombs, or other "
+"material which is malicious or technologically harmful."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:60
+msgid ""
+"Attempt to gain unauthorized access to, interfere with, damage, or "
+"disrupt any parts of Service, the server on which Service is stored, or "
+"any server, computer, or database connected to Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:61
+msgid ""
+"Attack Service via a denial-of-service attack or a distributed denial-of-"
+"service attack."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:62
+msgid "Take any action that may damage or falsify Company rating."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:63
+msgid "Otherwise attempt to interfere with the proper working of Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:65
+msgid "Analytics"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:66
+msgid ""
+"We may use third-party Service Providers to monitor and analyze the use "
+"of our Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:68
+msgid "Accounts"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:69
+msgid ""
+"When you create an account with us, you guarantee that the information "
+"you provide us is accurate, complete, and current at all times. "
+"Inaccurate, incomplete, or obsolete information may result in the "
+"immediate termination of your account on Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:69
+msgid ""
+"You are responsible for maintaining the confidentiality of your account "
+"and password, including but not limited to the restriction of access to "
+"your computer and/or account. You agree to accept responsibility for any "
+"and all activities or actions that occur under your account and/or "
+"password, whether your password is with our Service or a third-party "
+"service. You must notify us immediately upon becoming aware of any breach"
+" of security or unauthorized use of your account."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:69
+msgid ""
+"You may not use as a username the name of another person or entity or "
+"that is not lawfully available for use, a name or trademark that is "
+"subject to any rights of another person or entity other than you, without"
+" appropriate authorization. You may not use as a username any name that "
+"is offensive, vulgar or obscene."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:69
+msgid ""
+"We reserve the right to refuse service, terminate accounts, remove or "
+"edit content, or cancel orders in our sole discretion."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:71
+msgid "Intellectual Property"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:72
+msgid ""
+"Service and its original content (excluding Content provided by users), "
+"features and functionality are and will remain the exclusive property of "
+"Geo Memoir and its licensors. Service is protected by copyright, "
+"trademark, and other laws of  and foreign countries. Our trademarks may "
+"not be used in connection with any product or service without the prior "
+"written consent of Geo Memoir."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:74
+msgid "Copyright Policy"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:75
+msgid ""
+"We respect the intellectual property rights of others. It is our policy "
+"to respond to any claim that Content posted on Service infringes on the "
+"copyright or other intellectual property rights (“Infringement”) of any "
+"person or entity."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:76
+msgid ""
+"If you are a copyright owner, or authorized on behalf of one, and you "
+"believe that the copyrighted work has been copied in a way that "
+"constitutes copyright infringement, please submit your claim via email to"
+" travelwithgeomemo@gmail.com, with the subject line: “Copyright "
+"Infringement” and include in your claim a detailed description of the "
+"alleged Infringement as detailed below, under “DMCA Notice and Procedure "
+"for Copyright Infringement Claims”"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:77
+msgid ""
+"You may be held accountable for damages (including costs and attorneys’ "
+"fees) for misrepresentation or bad-faith claims on the infringement of "
+"any Content found on and/or through Service on your copyright."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:79
+msgid "DMCA Notice and Procedure for Copyright Infringement Claims"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:80
+msgid ""
+"You may submit a notification pursuant to the Digital Millennium "
+"Copyright Act (DMCA) by providing our Copyright Agent with the following "
+"information in writing (see 17 U.S.C 512(c)(3) for further detail):"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:81
+msgid ""
+"an electronic or physical signature of the person authorized to act on "
+"behalf of the owner of the copyright’s interest;"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:82
+msgid ""
+"a description of the copyrighted work that you claim has been infringed, "
+"including the URL (i.e., web page address) of the location where the "
+"copyrighted work exists or a copy of the copyrighted work;"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:83
+msgid ""
+"identification of the URL or other specific location on Service where the"
+" material that you claim is infringing is located;"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:84
+msgid "your address, telephone number, and email address;"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:85
+msgid ""
+"a statement by you that you have a good faith belief that the disputed "
+"use is not authorized by the copyright owner, its agent, or the law;"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:86
+msgid ""
+"a statement by you, made under penalty of perjury, that the above "
+"information in your notice is accurate and that you are the copyright "
+"owner or authorized to act on the copyright owner’s behalf."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:87
+msgid ""
+"You can contact our Copyright Agent via email at "
+"travelwithgeomemo@gmail.com."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:89
+msgid "Error Reporting and Feedback"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:90
+msgid ""
+"You may provide us either directly at travelwithgeomemo@gmail.com or via "
+"third party sites and tools with information and feedback concerning "
+"errors, suggestions for improvements, ideas, problems, complaints, and "
+"other matters related to our Service (“Feedback”). You acknowledge and "
+"agree that: (i) you shall not retain, acquire or assert any intellectual "
+"property right or other right, title or interest in or to the Feedback; "
+"(ii) Company may have development ideas similar to the Feedback; (iii) "
+"Feedback does not contain confidential information or proprietary "
+"information from you or any third party; and (iv) Company is not under "
+"any obligation of confidentiality with respect to the Feedback. In the "
+"event the transfer of the ownership to the Feedback is not possible due "
+"to applicable mandatory laws, you grant Company and its affiliates an "
+"exclusive, transferable, irrevocable, free-of-charge, sub-licensable, "
+"unlimited and perpetual right to use (including copy, modify, create "
+"derivative works, publish, distribute and commercialize) Feedback in any "
+"manner and for any purpose."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:92
+msgid "Links To Other Web Sites"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:93
+msgid ""
+"Our Service may contain links to third party web sites or services that "
+"are not owned or controlled by Geo Memoir."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:94
+msgid ""
+"Geo Memoir has no control over, and assumes no responsibility for the "
+"content, privacy policies, or practices of any third party web sites or "
+"services. We do not warrant the offerings of any of these "
+"entities/individuals or their websites."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:95
+msgid "For example, the outlined"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:95
+msgid "Terms of Use"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:95
+msgid "have been created using"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:95
+msgid ", a free web application for generating high-quality legal documents."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:95
+msgid "PolicyMaker’s"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:95
+msgid "Terms and Conditions generator"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:95
+msgid ""
+"is an easy-to-use free tool for creating an excellent standard Terms of "
+"Service template for a website, blog, e-commerce store or app."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:96
+msgid ""
+"YOU ACKNOWLEDGE AND AGREE THAT COMPANY SHALL NOT BE RESPONSIBLE OR "
+"LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED "
+"TO BE CAUSED BY OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH "
+"CONTENT, GOODS OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY "
+"WEB SITES OR SERVICES."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:97
+msgid ""
+"WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY POLICIES "
+"OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:99
+msgid "Disclaimer Of Warranty"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:100
+msgid ""
+"THESE SERVICES ARE PROVIDED BY COMPANY ON AN “AS IS” AND “AS AVAILABLE” "
+"BASIS. COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, "
+"EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES, OR THE "
+"INFORMATION, CONTENT OR MATERIALS INCLUDED THEREIN. YOU EXPRESSLY AGREE "
+"THAT YOUR USE OF THESE SERVICES, THEIR CONTENT, AND ANY SERVICES OR ITEMS"
+" OBTAINED FROM US IS AT YOUR SOLE RISK."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:101
+msgid ""
+"NEITHER COMPANY NOR ANY PERSON ASSOCIATED WITH COMPANY MAKES ANY WARRANTY"
+" OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, "
+"RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE SERVICES. WITHOUT "
+"LIMITING THE FOREGOING, NEITHER COMPANY NOR ANYONE ASSOCIATED WITH "
+"COMPANY REPRESENTS OR WARRANTS THAT THE SERVICES, THEIR CONTENT, OR ANY "
+"SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL BE ACCURATE, "
+"RELIABLE, ERROR-FREE, OR UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, "
+"THAT THE SERVICES OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE OF "
+"VIRUSES OR OTHER HARMFUL COMPONENTS OR THAT THE SERVICES OR ANY SERVICES "
+"OR ITEMS OBTAINED THROUGH THE SERVICES WILL OTHERWISE MEET YOUR NEEDS OR "
+"EXPECTATIONS."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:102
+msgid ""
+"COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR "
+"IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY "
+"WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR "
+"PARTICULAR PURPOSE."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:103
+msgid ""
+"THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE EXCLUDED OR "
+"LIMITED UNDER APPLICABLE LAW."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:105
+msgid "Limitation Of Liability"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:106
+msgid ""
+"EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS, "
+"DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY INDIRECT, PUNITIVE, "
+"SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT ARISES "
+"(INCLUDING ATTORNEYS’ FEES AND ALL RELATED COSTS AND EXPENSES OF "
+"LITIGATION AND ARBITRATION, OR AT TRIAL OR ON APPEAL, IF ANY, WHETHER OR "
+"NOT LITIGATION OR ARBITRATION IS INSTITUTED), WHETHER IN AN ACTION OF "
+"CONTRACT, NEGLIGENCE, OR OTHER TORTIOUS ACTION, OR ARISING OUT OF OR IN "
+"CONNECTION WITH THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ANY CLAIM "
+"FOR PERSONAL INJURY OR PROPERTY DAMAGE, ARISING FROM THIS AGREEMENT AND "
+"ANY VIOLATION BY YOU OF ANY FEDERAL, STATE, OR LOCAL LAWS, STATUTES, "
+"RULES, OR REGULATIONS, EVEN IF COMPANY HAS BEEN PREVIOUSLY ADVISED OF THE"
+" POSSIBILITY OF SUCH DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS "
+"LIABILITY FOUND ON THE PART OF COMPANY, IT WILL BE LIMITED TO THE AMOUNT "
+"PAID FOR THE PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL "
+"THERE BE CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE "
+"EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL OR CONSEQUENTIAL DAMAGES,"
+" SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:108
+msgid "Termination"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:109
+msgid ""
+"We may terminate or suspend your account and bar access to Service "
+"immediately, without prior notice or liability, under our sole "
+"discretion, for any reason whatsoever and without limitation, including "
+"but not limited to a breach of Terms."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:110
+msgid ""
+"If you wish to terminate your account, you may simply discontinue using "
+"Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:111
+msgid ""
+"All provisions of Terms which by their nature should survive termination "
+"shall survive termination, including, without limitation, ownership "
+"provisions, warranty disclaimers, indemnity and limitations of liability."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:113
+msgid "Governing Law"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:114
+msgid ""
+"These Terms shall be governed and construed in accordance with the laws "
+"of Taiwan, which governing law applies to agreement without regard to its"
+" conflict of law provisions."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:115
+msgid ""
+"Our failure to enforce any right or provision of these Terms will not be "
+"considered a waiver of those rights. If any provision of these Terms is "
+"held to be invalid or unenforceable by a court, the remaining provisions "
+"of these Terms will remain in effect. These Terms constitute the entire "
+"agreement between us regarding our Service and supersede and replace any "
+"prior agreements we might have had between us regarding Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:117
+msgid "Changes To Service"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:118
+msgid ""
+"We reserve the right to withdraw or amend our Service, and any service or"
+" material we provide via Service, in our sole discretion without notice. "
+"We will not be liable if for any reason all or any part of Service is "
+"unavailable at any time or for any period. From time to time, we may "
+"restrict access to some parts of Service, or the entire Service, to "
+"users, including registered users."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:120
+msgid "Amendments To Terms"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:121
+msgid ""
+"We may amend Terms at any time by posting the amended terms on this site."
+" It is your responsibility to review these Terms periodically."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:122
+msgid ""
+"Your continued use of the Platform following the posting of revised Terms"
+" means that you accept and agree to the changes. You are expected to "
+"check this page frequently so you are aware of any changes, as they are "
+"binding on you."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:123
+msgid ""
+"By continuing to access or use our Service after any revisions become "
+"effective, you agree to be bound by the revised terms. If you do not "
+"agree to the new terms, you are no longer authorized to use Service."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:125
+msgid "Waiver And Severability"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:126
+msgid ""
+"No waiver by Company of any term or condition set forth in Terms shall be"
+" deemed a further or continuing waiver of such term or condition or a "
+"waiver of any other term or condition, and any failure of Company to "
+"assert a right or provision under Terms shall not constitute a waiver of "
+"such right or provision."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:127
+msgid ""
+"If any provision of Terms is held by a court or other tribunal of "
+"competent jurisdiction to be invalid, illegal or unenforceable for any "
+"reason, such provision shall be eliminated or limited to the minimum "
+"extent such that the remaining provisions of Terms will continue in full "
+"force and effect."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:129
+msgid "Acknowledgement"
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:130
+msgid ""
+"BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE THAT "
+"YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY THEM."
+msgstr ""
+
+#: app/templates/terms_and_conditions.html:133
+msgid ""
+"Please send your feedback, comments, requests for technical support by "
+"email: <b>travelwithgeomemo@gmail.com</b>."
+msgstr ""
+
+#~ msgid " Children's Privacy "
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We do not aim any of our "
+#~ "products or services directly at "
+#~ "children under the age of 13, and"
+#~ " we do not knowingly collect personal"
+#~ " information about children under 13. \n"
+#~ ""
+#~ "\n"
+#~ msgstr ""
+
+#~ msgid "Welcome to The Americas!"
+#~ msgstr ""
+
+#~ msgid "Welcome to Asia Pacific! "
+#~ msgstr ""
+
+#~ msgid "Welcome to Europe! "
+#~ msgstr ""
+
+#~ msgid "Welcome to Middle East/Africa!"
+#~ msgstr ""
+

@@ -1,0 +1,455 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<head>
+        <link rel="stylesheet" href="/static/css/my_travel_profile.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet"> 
+
+
+</head>
+{% endblock %}
+
+{% block title%}Geo Memoir_My Travel Profile{% endblock%}
+
+{% block body_content %}
+
+<header class="header">
+        <img id="header_img" src="/static/media/bg/river_reflection.png" alt="" class="img-fluid">
+</header>
+
+<div class="container-fluid profile_info">
+        <div class="author_wrap">
+                <img id="avatar" src="/static/media/bg/avatar.png">
+                <div class="author">
+                        <span id="profile_name"></span> 
+                        <span id="motto"></span> 
+                </div>                
+        </div>
+
+        <div class="self_introduction row">
+                <div class="story_count col-lg-2 mx-3 p-3">
+                        <h4 class="about">{{_('I have written')}} ..</h4>
+                        <span id="total_stories" class="total_num"></span>
+                        <h4 class="about">{{_('Stories')}}</h4>
+                </div>
+                <div class="intro_content col-lg-8 mx-3 p-3">
+                        <h5 class="about">{{_('About me')}} ..</h5>
+                        <p id="self_intro"></p>
+                </div>
+        </div>
+        
+
+<div class="travel_experience">
+        <h3>{{_('My Travel Experience')}}</h3>
+        <div class="row experience_count d-flex">
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                        <span id='area_count1' class="count"></span>{{_('Stories')}}
+                        <p class="experience">{{_('THE AMERICAS')}}</p> 
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                        <span id='area_count2' class="count"></span>{{_('Stories')}}
+                        <p class="experience">{{_('ASIA PACIFIC')}}</p>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                        <span id='area_count3' class="count"></span>{{_('Stories')}}                     
+                        <p id='area_count3' class="experience">{{_('EUROPE')}}</p>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                        <span id='area_count4' class="count"></span>{{_('Stories')}}                      
+                        <p class="experience">{{_('MIDDLE EAST/AFRICA')}} </p>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                        <span id="visited_count" class="count"></span>{{_('Countries')}}                 
+                        <p class="experience">{{_('VISITED')}} </p>
+                </div>
+
+        </div>
+</div>
+
+</div>
+
+
+
+<div class="container-fluid p-0">
+        <div class="row w-100 m-0">
+                <ul class="filters text-center">
+                        <li class="active" data-filter="all">{{_('All')}} </li>
+                        <li data-filter="place">{{_('Tourist Attraction')}} </li>
+                        <li data-filter="food">{{_('Cuisine')}} </li>
+                        <li data-filter="housing">{{_('Accomodation')}} </li>
+                </ul>
+
+                <div class="container-fluid stories py-5 ">
+                        <div id="stories_content" class="row w-100 stories_list m-0">
+
+                                
+
+                        </div>
+                </div>
+        </div>
+</div>
+
+
+<!-- pagination -->
+<nav class="page_navigation" aria-label="page_navigation">
+        <ul id="pagination_area" class="pagination">
+
+        </ul>
+</nav>
+
+<script>
+        var baseUrl = 'https://geomemoir.fun/api/';
+        var imgUrl = 'https://geomemoir.fun/media/'
+        var username = window.localStorage.getItem('geo_username')
+        var geo_token = window.localStorage.getItem('geo_token')
+        var google_token = window.localStorage.getItem('google_token')
+        if (geo_token){
+                var token = geo_token
+        }else if (google_token){
+                var token = google_token
+        }
+
+        var header_img = $('#header_img');
+        var avatar = $('#avatar');
+        var profile_name = $('#profile_name');
+        var motto = $('#motto');
+        var total_stories = $('#total_stories');
+        var self_intro = $('#self_intro');
+        var area_count1 = $('#area_count1');
+        var area_count2= $('#area_count2');
+        var area_count3 = $('#area_count3');
+        var area_count4 = $('#area_count4');
+        var visited_count = $('#visited_count');
+        var stories_content = $('#stories_content');
+        var pagination_area = $('#pagination_area')
+        var filter_btns = $('.filters > li')
+
+        var url = window.location.toString().split('//')[1]
+        var cur_lang = url.split('/')[1]
+        var blog_username = url.split('/')[2]
+
+
+        $.ajax({
+
+                type: 'get',
+                url: baseUrl+ cur_lang + '/v1/users/'+blog_username+'?page_num=1',
+                dataType: 'json',
+                beforeSend: function(request){
+                        request.setRequestHeader("Authorization", token)
+                },
+                success: function(response){
+                        if (response.code==200){
+                        
+                                var author = response.data['author']
+
+                                if (author['background_img']){
+                                        header_img.attr('src', imgUrl+author['background_img'])
+                                }
+                                if (author['avatar']){
+                                        avatar.attr('src', imgUrl+author['avatar'])
+                                }
+                                profile_name.text(author['profile_name'])
+                                motto.text(author['motto'])
+                                total_stories.text(author['total_stories'])
+                                self_intro.text(author['self_intro'])
+                                area_count1.text(author['area_count1'])
+                                area_count2.text(author['area_count2'])
+                                area_count3.text(author['area_count3'])
+                                area_count4.text(author['area_count4'])
+                                visited_count.text(author['visited_count'])
+                
+                                var  data = response.data['stories_data']
+                                var stories_list = data['stories_in_list']                   
+                                console.log('print stories_list')
+                                console.log(stories_list)
+                                
+                                if (stories_list.length>0){
+                                        var html = `${stories_list.map(storyTemplate).join('')}`                        
+                                }else{
+                                        var html = '<h4 class="col-12 text-center">Start to share your travel experience now!</h4>'
+                                }
+
+                                function storyTemplate(story){
+                                                        var photo_desc_cont = story.photo_desc
+                                                        var photo_desc_len = photo_desc_cont.length
+                                                        if (photo_desc_len>20){
+                                                                var photo_desc = photo_desc_cont.substring(0,100) + '...';
+                                                        }else{
+                                                                var photo_desc = photo_desc_cont;
+                                                        }        
+                                                        return `
+                                                                <div class="col-xl-4 col-md-6  my-3 story ${story.category}">
+                                                                        <div class="card mb-4 box-shadow">
+                                                                                <a href="/${cur_lang}/${story.username}/story/${story.id}"><img class="card-img-top" src="${imgUrl}${story.photo}" alt="Story Photo"></a>
+                                                                                <div class="card-body" height="220px">
+                                                                                        <a href="/${cur_lang}/${story.username}/story/${story.id}"><p class="h4 card-title">${story.title}</p></a>
+                                                                                        <p class="photo_desc">${photo_desc}</p><hr>
+                                                                                        <div class="justify-content-between align-items-center">
+                                                                                                <div class="row">
+                                                                                                        <div class="col-7">
+                                                                                                                <img src="https://img.icons8.com/color/48/000000/place-marker--v2.png" class="icon" /><p class="country text-muted">${story.country}</p>
+                                                                                                        </div>
+                                                                                                        <div class="col-5">
+                                                                                                                <img src="https://img.icons8.com/color/48/000000/time-card.png" class="icon"/><p class="published_time text-muted">${story.created_time}</p>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                        <div class="col-7">
+                                                                                                                <img src="https://img.icons8.com/color/48/000000/visible--v1.png" class="icon"/><p class="view_total text-muted">${story.view}</p>
+                                                                                                        </div>
+                                                                                                        <div class="col-5">
+                                                                                                                <img src="https://img.icons8.com/color/48/000000/hearts.png"  class="icon"/><p class="like_total text-muted">${story.like}</p>
+                                                                                                        </div>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        `
+                                                }
+                                
+                                stories_content.text(''); 
+                                stories_content.append(html);
+
+                                var pages = ''
+                                                        
+                                if (data['has_previous']){
+                                        pages +=  `
+                                                <li class="page-item">
+                                                        <a class="page-link" onclick="get_page_data(${data.previous_page_num})"><</a>
+                                                </li>
+                                        `
+                                }else{
+                                        pages += `
+                                                <li class="page-item disabled">
+                                                        <a class="page-link" tabindex="-1" ><</a>
+                                                </li>
+                                        `
+                                }
+
+                                for (var i=1; i < data['total_page']+1; i++){
+                                        var current_page_num = data['current_page_num']
+                                        if (i==current_page_num){
+                                                pages += `
+                                                        <li class="page-item active">
+                                                        <a class="page-link" onclick="get_page_data(${i})">${i}</a>
+                                                        </li>
+                                                `
+                                        }else{
+                                                pages +=  `
+                                                        <li class="page-item">
+                                                        <a class="page-link"  onclick="get_page_data(${i})">${i}</a>
+                                                        </li>
+                                                `
+                                        }                                           
+                                }
+
+                                if (data['has_next']){
+                                        pages += `
+                                                <li class="page-item">
+                                                        <a class="page-link"  onclick="get_page_data(${data.next_page_num})">></a>
+                                                </li>
+                                        `
+                                }else{
+                                        pages += `
+                                                <li class="page-item disabled">
+                                                        <a class="page-link " tabindex="-1">></a>
+                                                </li>
+                                        ` 
+                                }
+
+                                pagination_area.text('')
+                                pagination_area.append(pages)
+
+                                filter_btns.each(function(){
+                                        $(this).removeClass('active')
+                                        if($(this).attr('data-filter')=='all'){
+                                                $(this).addClass('active')
+                                        }
+                                })
+                                
+                                filter_btns.click(function(){
+                                        filter_btns.removeClass('active');
+                                        $(this).addClass('active');
+                                        category = $(this).attr('data-filter')
+                                
+                                        $('.story').each(function(){
+                                                $(this).hide()
+                                                if ($(this).hasClass(category) || category == 'all'){
+                                                        $(this).show()
+                                                }
+                                        })      
+                                })
+                                
+                        }else{
+                                alert(response.msg)
+                        }
+                }
+        })        
+
+        
+        function get_page_data(page){
+                $.ajax({
+
+                        type: 'get',
+                        url: baseUrl + cur_lang + '/v1/users/'+blog_username+'?page_num='+page,
+                        dataType: 'json',
+                        beforeSend: function(request){
+                                request.setRequestHeader("Authorization", token)
+                        },
+                        success: function(response){                               
+                                var author = response.data['author']         
+                                var  data = response.data['stories_data']
+                                var stories_list = data['stories_in_list']                   
+                                
+                                var html = `${stories_list.map(storyTemplate).join('')}`
+                                function storyTemplate(story){
+                                        var photo_desc_cont = story.photo_desc
+                                        var photo_desc_len = photo_desc_cont.length
+                                        if (photo_desc_len>20){
+                                                var photo_desc = photo_desc_cont.substring(0,100) + '...';
+                                        }else{
+                                                var photo_desc = photo_desc_cont;
+                                        }        
+                                        return `
+                                                <div class="col-xl-4 col-md-6  my-3 story ${story.category}">
+                                                        <div class="card mb-4 box-shadow">
+                                                                <a href="/${story.username}/story/${story.id}"><img class="card-img-top" src="${imgUrl}${story.photo}" alt="Story Photo"></a>
+                                                                <div class="card-body" height="220px">
+                                                                        <a href="/${story.username}/story/${story.id}"><p class="h4 card-title">${story.title}</p></a>
+                                                                        <p class="photo_desc">${photo_desc}</p><hr>
+                                                                        <div class="justify-content-between align-items-center">
+                                                                                <div class="row">
+                                                                                        <div class="col-7">
+                                                                                                <img src="https://img.icons8.com/color/48/000000/place-marker--v2.png" class="icon" /><p class="country text-muted">${story.country}</p>
+                                                                                        </div>
+                                                                                        <div class="col-5">
+                                                                                                <img src="https://img.icons8.com/color/48/000000/time-card.png" class="icon"/><p class="published_time text-muted">${story.created_time}</p>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                        <div class="col-7">
+                                                                                                <img src="https://img.icons8.com/color/48/000000/visible--v1.png" class="icon"/><p class="view_total text-muted">${story.view}</p>
+                                                                                        </div>
+                                                                                        <div class="col-5">
+                                                                                                <img src="https://img.icons8.com/color/48/000000/hearts.png"  class="icon"/><p class="like_total text-muted">${story.like}</p>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        `
+                                }
+
+                                stories_content.text('');
+                                stories_content.append(html);
+        
+                                var pages = ''
+                                                
+                                if (data['has_previous']){
+                                        pages +=  `
+                                                <li class="page-item">
+                                                        <a class="page-link" onclick="get_page_data(${data.previous_page_num})"><</a>
+                                                </li>
+                                        `
+                                }else{
+                                        pages += `
+                                                <li class="page-item disabled">
+                                                        <a class="page-link" tabindex="-1" ><</a>
+                                                </li>
+                                        `
+                                }
+
+                                for (var i=1; i < data['total_page']+1; i++){
+                                        var current_page_num = data['current_page_num']
+                                        if (i==current_page_num){
+                                                pages += `
+                                                        <li class="page-item active">
+                                                        <a class="page-link" onclick="get_page_data(${i})">${i}</a>
+                                                        </li>
+                                                `
+                                        }else{
+                                                pages +=  `
+                                                        <li class="page-item">
+                                                        <a class="page-link"  onclick="get_page_data(${i})">${i}</a>
+                                                        </li>
+                                                `
+                                        }                                           
+                                }
+
+                                if (data['has_next']){
+                                        pages += `
+                                                <li class="page-item">
+                                                        <a class="page-link"  onclick="get_page_data(${data.next_page_num})">></a>
+                                                </li>
+                                        `
+                                }else{
+                                        pages += `
+                                                <li class="page-item disabled">
+                                                        <a class="page-link " tabindex="-1">></a>
+                                                </li>
+                                        ` 
+                                }
+
+                                pagination_area.text('')
+                                pagination_area.append(pages)
+
+                                filter_btns.each(function(){
+                                        $(this).removeClass('active')
+                                        if($(this).attr('data-filter')=='all'){
+                                                $(this).addClass('active')
+                                        }
+                                })
+                                
+                                filter_btns.click(function(){
+                                        filter_btns.removeClass('active');
+                                        $(this).addClass('active');
+                                        category = $(this).attr('data-filter')
+                                
+                                        $('.story').each(function(){
+                                                $(this).hide()
+                                                if ($(this).hasClass(category) || category == 'all'){
+                                                        $(this).show()
+                                                }
+                                        })      
+                                })
+                        },
+                        error: function(response){
+                                alert (response.msg)
+                        }
+                })        
+        }
+        
+
+</script>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

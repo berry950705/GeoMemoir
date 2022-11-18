@@ -1,0 +1,206 @@
+.jumbotron{
+        height: 70vh;
+        background-image: url('/static/media/bg/middle_east.jpg');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        text-align: center;
+        margin-bottom: 0;
+}
+
+.greet_one{
+        color: #541480f0;
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        font-size: 4rem;
+}
+
+.greet_two{
+        color: #7886ae;
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        font-size: 2.6rem;
+}
+
+.continent{
+        color:#fff;
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        font-size: 2rem;
+}
+
+@media (max-width:992px) {
+        .jumbotron{
+                height: 65vh;
+        }
+        .greet_one{
+                font-size: 3rem;
+        }
+        .greet_two{
+                font-size: 2.3rem;
+        }
+        .continent{
+                font-size: 1.8rem;
+        }
+}
+@media (max-width:768px) {
+        .jumbotron{
+                height: 60vh;
+        }
+        .greet_one{
+                font-size: 2.4rem;
+                margin-bottom: 10px !important;
+        }
+        .greet_two{
+                font-size: 2rem;
+                margin-bottom: 30px !important;
+        }
+        .continent{
+                font-size: 1.4rem;
+        }
+}
+
+@media (max-width:500px) {
+        .jumbotron{
+                height: 56vh;
+        }
+
+        .filters{
+                padding: 30px 10px !important;
+        }
+
+        .greet_one{
+                font-size: 1.8rem;
+        }
+        .greet_two{
+                font-size: 1.2rem;
+        }
+        .continent{
+                font-size: 1rem;
+        }
+        .stories{
+                padding: 15px !important;
+        }
+        hr.my-4{
+                margin: 0 !important;
+        }
+        .filters > li{
+                font-size: medium !important;
+        }
+}
+
+
+/* gallery_area   Isotope */
+.filters{
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 30px 0;
+        background-color: rgba(8, 6, 70, 0.77);
+}
+
+.filters > li{
+        display: inline-block;
+        color:aliceblue ;
+        text-decoration: none;
+        padding: 5px 20px;
+        font-size: large;
+        font-weight: bold;
+}
+
+.filters >li:hover{
+        background-color: #9ab3af;
+}
+
+.filters > li.active{
+        color: #fff;
+        background-color: #54af95;
+}
+
+
+/* stories_section */
+.stories{
+        margin: 0;
+        padding: 127px;
+        background-color: rgba(230, 212, 197, 0.2);
+}
+
+.stories_list {
+        height: inherit !important;
+}
+
+@media (max-width:1400px) {
+        .stories{
+                padding: 60px;
+        }
+}
+
+
+.stories > .container{
+        max-width: 1600px;
+}
+
+.card > a{
+        overflow: hidden;
+}
+.card-body > a{
+        text-decoration: none;
+        color: #434e5e;
+}
+
+.card-img-top{
+        height: 300px;
+}
+
+.card-img-top:hover{
+        transform: scale(1.1);
+}
+
+.card-title{
+        margin-bottom: 1rem;
+}
+.card-title:hover{
+        color:rgb(14, 128, 181);
+}
+
+.photo_desc{
+        color: gray;
+}
+
+.icon{
+        width: 22px;
+}
+
+.country, .view_total, .published_time, .like_total{
+        display: inline;
+        bottom: 0;
+}
+
+
+
+
+/* page_navigation */
+.page_navigation{
+        background-color: rgba(8, 6, 70, 0.77);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.page-item.active .page-link{
+        background-color: #54af95;
+        border-color: #54af95;
+}
+
+.pagination{
+        margin: 30px;
+}
+
+a:not([href]):not([tabindex]) {
+        color: #323235;
+}
+
+a:hover:not([href]):not([tabindex]) {
+        color: #323235;
+}

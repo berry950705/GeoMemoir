@@ -1,0 +1,269 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<head>
+        <link rel="stylesheet" href="/static/css/new_stories.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+         <!-- include summernote css/js -->
+         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+
+
+</head>
+{% endblock %}
+
+{% block title%}Geo Memoir_Edit Stories{% endblock%}
+
+
+
+{% block body_content %}
+
+
+<div class="container-fluid new_story d-flex row">
+        <h2 class="display-4 m-4 form_title">{{_('Edit My Story')}}</h2>
+
+
+
+        <form action="" class="row g-3">
+                
+                <div class="col-12 m-3 title item">
+                        <label for="storyTitle" class="form-label mb-1">{{_('Story Title')}}</label>
+                        <input type="text" class="form-control" id="storyTitle" value="" >
+                </div>
+
+                <div class="col-12 m-3 area item">
+                        <label class="form-label mb-1 d-inline">{{_('Traveling Area')}}</label>
+                        <div class="">
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="area" id="area1" value="The Americas">
+                                        <label class="form-check-label area1" for="area1">{{_('The Americas')}}</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="area" id="area2" value="Asia Pacific">
+                                        <label class="form-check-label  area2" for="area2">{{_('Asia Pacific')}}</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="area" id="area3" value="Europe">
+                                        <label class="form-check-label  area3" for="area3">{{_('Europe')}}</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="area" id="area4" value="Middle East / Africa">
+                                        <label class="form-check-label  area4" for="area4">{{_('Middle East / Africa')}}</label>
+                                </div>
+                        </div>
+                </div>
+
+                <div class="col-12 m-3 category item">
+                        <label class="form-label mr-1 d-inline">{{_('Category')}}</label>
+                        <div class="">
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="category" id="category1" value="place">
+                                        <label class="form-check-label category1" for="category1">{{_('Tourist Attraction')}}</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="category" id="category2" value="food">
+                                        <label class="form-check-label category2" for="category2">{{_('Cuisine')}}</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="category" id="category3" value="housing">
+                                        <label class="form-check-label category3" for="category3">{{_('Accommodation')}}</label>
+                                </div>
+                        </div>
+                </div>
+
+                <div class="col-12 m-3 item">
+                        <label for="countries" class="form-label mr-1 title">{{_('What is the country you visited?')}}</label>
+                        <select id="countries" class="form-select">
+                                <option disabled hidden>{{_('Choose')}}</option>
+                        </select>
+                </div>
+
+                <hr class="divider"> 
+                
+                <div class="col-12 m-3 item">                        
+                        <label class="form-label">{{_("Upload the photo you'd like to share")}}</label>
+                        <p class=" preview_img m-3 text-center">
+                                <img src="" alt="" id="show_story_img"  width="500px" height="300px" style="border: 1px solid rgb(158, 157, 157);background-color: rgba(193, 246, 246, .2);">
+                        </p>
+                        <div class="text-center">
+                                <label for="story_img" class="form-label mx-2" id="upload">{{_('Upload')}}</label>
+                                <span id="clear_img" type="button" >{{_('Clear')}}</span>
+                        </div>
+                        <input class="form-control" type="file" id="story_img">
+                </div>
+
+                <div class="col-12 m-3 item">
+                        <label for="photo_desc">{{_('Update the description to the photo')}}</label>
+                        <textarea class="form-control" id="photo_desc" rows="3" placeholder="Start your photo description here.."  maxlength="500"></textarea>
+                </div>
+
+
+                <hr class="divider">
+                
+                <!-- story editor -->
+                <div class="col-12 m-3 item" id="editor_en">
+                        <label for="story_editor_en" class="form-label">{{_('Update Your Travel Story')}}</label>
+                        <div id="story_editor_en">
+                                <textarea id="summernote_en" ></textarea>
+                        </div>
+                </div>
+                <div class="col-12 m-3 item" id="editor_tw">
+                        <label for="story_editor_tw" class="form-label">{{_('Update Your Travel Story')}}</label>
+                        <div id="story_editor_tw">
+                                <textarea id="summernote_tw"></textarea>
+                        </div>
+                </div>
+                <div class="col-12 m-3 item" id="editor_cn">
+                        <label for="story_editor_cn" class="form-label">{{_('Update Your Travel Story')}}</label>
+                        <div id="story_editor_cn">
+                                <textarea id="summernote_cn"></textarea>
+                        </div>
+                </div>
+
+                <div class="col-12 mx-3 mt-0 mb-3">
+                        <span style="color: rgb(78, 76, 76);">{{_('Switch Editor Language: ')}}</span>
+                        <button id='lang_en' type="button" class="btn-sm btn-outline-info m-1 chosen_lang">EN</button>
+                        <button id='lang_tw' type="button" class="btn-sm btn-outline-info  m-1">TW</button>
+                        <button id='lang_cn' type="button" class="btn-sm btn-outline-info  m-1">CN</button>
+                </div>
+               
+
+                <div class="button_area col-12">
+                        <button type="button" id="update_btn" class="btn btn-info m-2">{{_('Update Story')}}</button>
+                </div>
+
+        </form>
+</div>
+
+
+
+<script>
+
+        // preview story image
+        let show_storyImage = document.getElementById("show_story_img")
+        let story_img = document.getElementById("story_img")
+        story_img.onchange = () =>{
+                var reader = new FileReader();
+                reader.readAsDataURL(story_img.files[0]);
+                console.log(story_img.files[0]);
+                reader.onload = () => {
+                        show_story_img.setAttribute('src', reader.result)
+                };
+        
+        }
+
+        $('#clear_img').on('click', function() { 
+                $('#story_img').val(''); 
+                $('#show_story_img').attr('src', '')
+        });
+
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<script src="/static/js/summernote-zh-TW.js"></script>
+<script src="/static/js/summernote-zh-CN.js"></script>
+<script>
+        $('#summernote_en').summernote({
+          placeholder: 'Start your story here..',
+          tabsize: 2,
+          height: 120,
+          toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'italic','strikethrough', 'clear']],
+            ['font-name', ['fontname']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video', 'hr']],
+            ['view', [ 'codeview', 'help']]
+          ],
+          height: 250,
+        });
+
+        $('#summernote_tw').summernote({
+          placeholder: '開始您的故事...',
+          tabsize: 2,
+          height: 120,
+          toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'italic','strikethrough', 'clear']],
+            ['font-name', ['fontname']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video', 'hr']],
+            ['view', [ 'codeview', 'help']]
+          ],
+          height: 250,
+          lang: 'zh-TW',
+        });
+
+        $('#summernote_cn').summernote({
+                placeholder: '开始您的故事...',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'italic','strikethrough', 'clear']],
+                ['font-name', ['fontname']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video', 'hr']],
+                ['view', [ 'codeview', 'help']]
+                ],
+                height: 250,
+                lang: 'zh-CN',
+        });
+
+
+        var btn_en = $('#lang_en')
+        var btn_tw = $('#lang_tw')
+        var btn_cn = $('#lang_cn')
+        var editor_en = $('#editor_en')
+        var editor_tw = $('#editor_tw')
+        var editor_cn = $('#editor_cn')
+
+        btn_en.on('click', function(){
+                editor_en.show();
+                editor_tw.hide();
+                editor_cn.hide();
+                btn_tw.removeClass('chosen_lang');
+                btn_cn.removeClass('chosen_lang');
+                btn_en.addClass('chosen_lang');
+        });
+        
+        btn_tw.on('click', function(){
+                editor_cn.hide();
+                editor_en.hide();
+                editor_tw.show();
+                btn_cn.removeClass('chosen_lang');
+                btn_en.removeClass('chosen_lang');
+                btn_tw.addClass('chosen_lang');
+        });
+
+        btn_cn.on('click', function(){
+                editor_tw.hide();
+                editor_en.hide();
+                editor_cn.show();
+                btn_tw.removeClass('chosen_lang');
+                btn_en.removeClass('chosen_lang');
+                btn_cn.addClass('chosen_lang');
+        });
+
+</script>
+<script src="/static/js/edit_stories.js" ></script>
+
+
+
+{% endblock %}
+
+

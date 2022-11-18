@@ -1,0 +1,114 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<head>
+        <link rel="stylesheet" href="/static/css/edit_profile.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+{% endblock %}
+
+{% block title%}Geo Memoir_Edit Profile{% endblock%}
+
+
+
+{% block body_content %}
+
+
+<div class="container-fluid profile d-flex row">
+        <h2 class="display-4 mb-4 mt-5 form_title">{{_('Edit My Profile')}}</h2>
+
+
+
+        <form action="" class="row g-3">
+                <p class=" preview_img">
+                        <img src="/static/media/bg/avatar.png" alt="" id="avatar_img" class="rounded-circle" width="150px" height="150px" style="border: 1px solid rgb(158, 157, 157);">
+                </p>
+
+                <div class="col-12 m-3 item text-center">
+                        <label for="avatar" class="avatar_label form-label">{{_('Change')}} &nbsp; {{_('Avatar')}}</label>
+                        <span id="clear_avatar" type="button" >{{_('Clear')}}</span>
+                        <input  id="avatar" class="form-control" type="file">
+                </div>
+
+                <hr class="divider">
+
+                <p class=" preview_img m-3 ">
+                        <img src="/static/media/bg/river_reflection.png" alt="" id="bg_img"  width="500px" height="200px" style="border: 1px solid rgb(158, 157, 157);">
+                </p>
+
+                <div class="col-12 m-3 item  text-center">
+                        <label for="background" class="bg_label form-label ">{{_('Change')}} &nbsp; {{_('Background')}}</label>
+                        <span id="clear_bg" type="button" >{{_('Clear')}}</span>
+                        <input  id="background" class="form-control" type="file">
+                </div>
+                
+                <hr class="divider">
+
+
+                <div class="col-12 m-3 item">
+                        <label for="profile_name" class="form-label mb-1">{{_('Profile Name')}}</label>
+                        <input id="profile_name" type="text" class="form-control">
+                </div>
+
+                <div class="col-12 m-3 item">
+                        <label for="motto" class="form-label mb-1">{{_('Motto')}}</label>
+                        <input type="text" class="form-control" id="motto">
+                </div>
+                      
+                <div class="col-12 m-3 item">
+                        <label for="self_introduction">{{_('Self-Introduction')}}</label>
+                        <textarea class="form-control" id="self_introduction" rows="7" placeholder="Start your self-introduction here.."></textarea>
+                </div>
+
+                <div class="submit_btn col-12">
+                        <button type="button" id="update_submit"  class="btn btn-info m-2">{{_('Update Profile')}}</button>
+                </div>
+
+        </form>
+</div>
+
+<script src="/static/js/edit_profile.js"></script>
+<script>
+        // preview avatar image
+        let avatar = document.getElementById("avatar")
+        let avatar_img = document.getElementById("avatar_img")
+        avatar.onchange = () =>{
+                var reader = new FileReader();
+                reader.readAsDataURL(avatar.files[0]);
+                console.log(avatar.files[0]);
+                reader.onload = () => {
+                        avatar_img.setAttribute('src', reader.result)
+                };
+        }
+        
+        // preview background image
+        let background = document.getElementById("background")
+        let bg_img = document.getElementById("bg_img")
+        background.onchange = () =>{
+                var reader = new FileReader();
+                reader.readAsDataURL(background.files[0]);
+                console.log(background.files[0]);
+                reader.onload = () => {
+                        bg_img.setAttribute('src', reader.result)
+                };        
+        }
+
+        $('#clear_avatar').on('click', function() { 
+                $('#avatar').val(''); 
+                $('#avatar_img').attr('src', '')
+        });
+
+        $('#clear_bg').on('click', function() { 
+                $('#background').val(''); 
+                $('#bg_img').attr('src', '')
+        });
+
+</script>
+
+
+
+{% endblock %}
+
+

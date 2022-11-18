@@ -1,0 +1,148 @@
+nav{
+        background-color: #c1bf2463;
+}
+
+.form_title{
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        color: #2a2b02e3;
+        margin-top: 3rem;
+}
+
+.profile{
+        min-height: 120vh;
+        width: 100%;
+        padding: 100px 0 100px 0;
+        margin: 0;
+        background-image: url(/static/media/bg/tree_b.jpg);
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+
+.profile>form{
+        background-color: rgba(208, 208,208, 0.55);
+        padding: 30px;
+        width: 60%;
+        border-radius: 10px;
+        position: relative;
+}
+
+.preview_img{
+        width: 100%;
+        text-align: center;
+        position: relative;
+}
+.profile_img>button{
+        position: absolute;
+        bottom: 0;
+}
+.profile_label{
+        text-align: center;
+} 
+
+.item{
+        flex-direction: column;
+        font-size: larger !important;
+}
+.item>label{
+        color: rgb(12, 13, 90);
+        font-weight: bold;
+}
+
+.divider{
+        width: 80%;
+}
+.submit_btn{
+        text-align: center;
+}
+
+
+#avatar, #background{
+        display: none;
+}
+
+.avatar_label, .bg_label{
+        background-color:#3b9aca ;
+        width: 300px;
+        padding: 10px;
+        text-align: center;
+        color: white !important;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+}
+
+.avatar_label:hover, .bg_label:hover{
+        background-color:#2b7ea8 ;
+}
+
+#clear_bg, #clear_avatar{
+        background-color:#ca5959 ;
+        padding: 12px;
+        text-align: center;
+        color: rgb(0, 0, 0) !important;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+}
+
+#clear_bg:hover, #clear_avatar:hover{
+        background-color:#be2929 ;
+}
+
+
+@media (max-width:1400px) {
+        .profile>form{
+                width: 70%;
+        }
+}
+@media (max-width:1200px) {
+        .profile>form{
+                width: 80%;
+        }
+}
+@media (max-width:992px) {
+        .profile>form{
+                width: 90%;
+        }
+        .form_title{
+                font-size: 2.6rem;
+        }
+}
+@media (max-width:768px) {
+        #bg_img{
+                width: 300px !important;
+                height: 150px !important;
+        }
+        #avatar_img{
+                width: 125px !important;
+                height: 125px !important;
+        }
+        .form_title{
+                font-size: 2.4rem;
+        }
+}
+
+@media (max-width:500px) {
+        .form_title{
+                font-size: 2.2rem;
+        }
+        .avatar_label, .bg_label{
+                width: 240px;
+        }
+        .preview_img{
+                margin: 0 !important;
+        }
+        .profile>form{
+                padding: 10px;
+        }
+        .col-12.m-3.item{
+                margin-left: 0 !important;
+        }
+}

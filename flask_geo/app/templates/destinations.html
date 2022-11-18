@@ -1,0 +1,395 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<head>
+        <link rel="stylesheet" href="/static/css/destinations.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+</head>
+{% endblock %}
+
+{% block title%}Geo Memoir_Destinations{% endblock%}
+
+{% block body_content %}
+
+<div class="jumbotron">
+        <div class="container">
+                <h1 class="mb-2 greet"> {{_('Choose Your Destination To Explore')}} </h1>
+                <hr class="my-4">
+                <h4  class="continent mb-3 mt-5"> -  {{_('Continent')}}  -</4>
+        </div>
+</div>
+
+<div class="container-fluid row weather_intro" id="weather_intro">
+        <h3 id="intro1">
+                {{_('Current Weather & Time Of Frequently Visited Cities')}}
+        </h3>
+        <h5 id="intro2">- {{_('Hover over to see the details')}} -</h5>
+</div>
+
+<div class="container-fluid weather_area" id="weather_area">                
+                <div class="content-container" id="weather_info" >
+                        <img src="/static/media/destination/world.png" id="world" class="img-fluid"/>                        
+                        <img src="/static/media/destination/singapore.png"  id="singapore" class="map_item "/>
+                        <img src="/static/media/destination/london.png"  id="london" class="map_item "/>
+                        <img src="/static/media/destination/taipei.png" id="taipei" class="map_item "/>
+                        <img src="/static/media/destination/bangkok.png" id="bangkok" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/beijing.png" id="beijing" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/seoul.png" id="seoul" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/barcelona.png" id="barcelona" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/paris.png" id="paris" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/fuji.png" id="tokyo" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/lima.png" id="lima" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/dubai.png" id="dubai" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/seattle.png" id="seattle" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/istanbul.png" id="istanbul" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/milan.png" id="milan" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/cairo.png" id="cairo" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/new_york.png" id="new_york" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/hong_kong.png" id="hong_kong" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/bali.png" id="bali" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/toronto.png" id="toronto" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/rio_de_janeiro.png" id="rio_de_janeiro" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/kuala_lumpur.png" id="kuala_lumpur" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/sydney.png" id="sydney" class="map_item img-fluid"/>
+                        <img src="/static/media/destination/cape.png" id="cape" class="map_item img-fluid"/>
+
+                </div>
+
+                <div class="mode_change ">
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label for="checkbox" class="label">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                                <div class="ball"></div>
+                        </label>
+                </div>
+</div>
+
+        <div class="container-fluid row destinations_area">
+                <div class="image_item col-lg-3 col-sm-6 my-3">
+                        <img class="destination_img img-fluid" src="/static/media/destination/01_USA.jpg" alt="">
+                        <div class="img_overlay">
+                                <a  href="{{ url_for('locales.americas') }}"><p class="overlay_title">{{_('The Americas')}}</p></a>
+                        </div>
+                </div>
+                <div class="image_item  col-lg-3 col-sm-6 my-3 ">
+                        <img class="destination_img img-fluid" src="/static/media/destination/02_Asia.jpg" alt="">
+                        <div class="img_overlay">
+                                <a  href="{{ url_for('locales.asia_pacific') }}"><p class="overlay_title">{{_('Asia Pacific')}}</p></a>
+                        </div>
+                </div>
+                <div class="image_item  col-lg-3  col-sm-6 my-3">
+                        <img class="destination_img img-fluid" src="/static/media/destination/03_Europe.jpg" alt="">
+                        <div class="img_overlay">
+                                <a  href="{{ url_for('locales.europe') }}"><p class="overlay_title">{{_('Europe')}}</p></a>
+                        </div>
+                </div>
+                <div class="image_item  col-lg-3 col-sm-6 my-3">
+                        <img class="destination_img img-fluid" src="/static/media/destination/04_MiddleEast.jpg" alt="">
+                        <div class="img_overlay">
+                                <a  href="{{ url_for('locales.middle_east_africa') }}"><p class="overlay_title">{{_('Middle East')}}<br>/ {{_('Africa')}}</p></a>
+                        </div>
+                </div>
+        </div>
+&nbsp;
+
+<script src="https://moment.github.io/luxon/global/luxon.min.js"></script>
+<script>
+
+        var baseUrl = 'https://geomemoir.fun/api/'
+        var url = window.location.toString().split('//')[1]
+        var cur_lang = url.split('/')[1]
+        var weather_info = $('#weather_info')
+
+        $.ajax({
+                type:'get',
+                url:baseUrl+ cur_lang +'/v1/weather/info',
+                dataType: 'json',
+                success:function(response){
+                        var data = response.data
+                        if(response.code==200){                                
+                                var html = ''
+                  
+                                html += '<div class="weather_box" data-filter="singapore" id="singapore_w" data-timezone="Asia/Singapore"><table><tr><th>'+w_box[0][cur_lang]+'</th> <td>Singapore</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th> <td>'+ data['Singapore']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th> <td>'+data['Singapore']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th> <td>'+data['Singapore']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th> <td>'+data['Singapore']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th> <td>'+data['Singapore']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th> <td>00:00:00</td></tr></table></div>'
+
+                                html += ' <div class="weather_box" data-filter="london"  id="london_w" data-timezone="Europe/London"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>London</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['London']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['London']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['London']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['London']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['London']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+                                
+                                html += '<div class="weather_box" data-filter="taipei" id="taipei_w" data-timezone="Asia/Taipei"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Taipei</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Taipei']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Taipei']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Taipei']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Taipei']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Taipei']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+                             
+                                html += '<div class="weather_box" data-filter="bangkok" id="bangkok_w" data-timezone="Asia/Bangkok"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Bangkok</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Bangkok']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Bangkok']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Bangkok']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Bangkok']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Bangkok']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += ' <div class="weather_box" data-filter="beijing" id="beijing_w" data-timezone="Asia/Shanghai"> <table><tr><th>'+w_box[0][cur_lang]+'</th><td>Beijing</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Beijing']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Beijing']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Beijing']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Beijing']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Beijing']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += ' <div class="weather_box" data-filter="seoul" id="seoul_w" data-timezone="Asia/Seoul"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Seoul</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Seoul']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Seoul']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Seoul']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Seoul']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Seoul']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '  <div class="weather_box" data-filter="barcelona" id="barcelona_w" data-timezone="Europe/Madrid"><table><tr><th>'+w_box[0][cur_lang]+'</th>   <td>Barcelona</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Barcelona']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Barcelona']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Barcelona']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Barcelona']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Barcelona']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '  <div class="weather_box" data-filter="paris" id="paris_w" data-timezone="Europe/Paris"><table><tr> <th>'+w_box[0][cur_lang]+'</th><td>Paris</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Paris']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Paris']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Paris']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Paris']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Paris']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '  <div class="weather_box" data-filter="tokyo" id="tokyo_w" data-timezone="Asia/Tokyo"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Tokyo</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Tokyo']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Tokyo']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Tokyo']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Tokyo']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Tokyo']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '  <div class="weather_box" data-filter="lima" id="lima_w" data-timezone="America/Lima"><table><tr> <th>'+w_box[0][cur_lang]+'</th><td>Lima</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Lima']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Lima']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Lima']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Lima']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Lima']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="dubai"  id="dubai_w" data-timezone="Asia/Dubai"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Dubai</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Dubai']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Dubai']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Dubai']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Dubai']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Dubai']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="seattle" id="seattle_w" data-timezone="America/Los_Angeles"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Seattle</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Seattle']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Seattle']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Seattle']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Seattle']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Seattle']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="istanbul" id="istanbul_w" data-timezone="Asia/Istanbul"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Istanbul</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Istanbul']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Istanbul']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Istanbul']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Istanbul']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Istanbul']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="milan" id="milan_w" data-timezone="Europe/Rome"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Milan</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Milan']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Milan']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Milan']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Milan']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Milan']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="cairo" id="cairo_w" data-timezone="Africa/Cairo"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Cairo</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Cairo']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Cairo']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Cairo']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Cairo']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Cairo']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="new_york" id="new_york_w" data-timezone="America/New_York"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>New York</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['New York']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['New York']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['New York']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['New York']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['New York']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="hong_kong" id="hong_kong_w" data-timezone="Asia/Hong_Kong"><table> <tr> <th>'+w_box[0][cur_lang]+'</th><td>Hong Kong</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Hong Kong']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Hong Kong']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Hong Kong']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Hong Kong']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Hong Kong']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="bali" id="bali_w" data-timezone="Asia/Makassar"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Denpasar</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Denpasar']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Denpasar']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Denpasar']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Denpasar']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Denpasar']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += ' <div class="weather_box" data-filter="toronto" id="toronto_w" data-timezone="America/Toronto"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Toronto</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Toronto']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Toronto']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Toronto']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Toronto']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Toronto']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="rio_de_janeiro"  id="rio_de_janeiro_w" data-timezone="America/Argentina/Cordoba"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Rio de Janeiro</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Rio de Janeiro']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Rio de Janeiro']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Rio de Janeiro']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Rio de Janeiro']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Rio de Janeiro']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="kuala_lumpur" id="kuala_lumpur_w" data-timezone="Asia/Kuala_Lumpur"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Kuala Lumpur</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Kuala Lumpur']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Kuala Lumpur']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Kuala Lumpur']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Kuala Lumpur']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Kuala Lumpur']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="sydney" id="sydney_w" data-timezone="Australia/Sydney"><table><tr> <th>'+w_box[0][cur_lang]+'</th><td>Sydney</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Sydney']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Sydney']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Sydney']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Sydney']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Sydney']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                html += '<div class="weather_box" data-filter="cape"  id="cape_w" data-timezone="Africa/Maputo"><table><tr><th>'+w_box[0][cur_lang]+'</th><td>Cape</td></tr>'
+                                html += '<tr><th>'+w_box[1][cur_lang]+'</th><td>'+ data['Cape Town']['location']+'</td></tr>'
+                                html += '<tr><th>'+w_box[2][cur_lang]+'</th><td>'+data['Cape Town']['weather_info']+'</td></tr>'
+                                html += '<tr><th>'+w_box[3][cur_lang]+'</th><td>'+data['Cape Town']['temperature']+'</td></tr>'
+                                html += '<tr><th>'+w_box[4][cur_lang]+'</th><td>'+data['Cape Town']['humidity']+'</td></tr>'
+                                html += '<tr><th>'+w_box[5][cur_lang]+'</th><td>'+data['Cape Town']['date']+'</td></tr>'
+                                html += '<tr><th>'+w_box[6][cur_lang]+'</th><td>00:00:00</td></tr></table></div>'
+
+                                weather_info.append(html)
+
+                                $('.map_item').each(function(li){
+                                        var value = $(this).attr('id');
+                                        $(this).mouseenter(function(){
+                                                $('.weather_box').each(function(){
+                                                        if ($(this).attr('data-filter') == value){
+                                                                $(this).show();
+                                                        }
+                                                })
+                                        }).mouseleave(function(){
+                                                $('.weather_box').each(function(){
+                                                        if ($(this).attr('data-filter') == value){
+                                                                $(this).hide();
+                                                        }
+                                                })
+                                        })
+                                })        
+                        
+                                //update time
+                                function update_time(){
+                                        $('.weather_box').each(function(){
+                                                timezone = $(this).attr('data-timezone')
+                                                const now = luxon.DateTime.now().setZone(timezone)
+                                                if (cur_lang == 'en'){
+                                                        $(this).find('td').eq(5).text(now.toFormat('MMMM dd, yyyy'))
+                                                }else{
+                                                        $(this).find('td').eq(5).text(luxon.DateTime.now().setLocale('zh').toLocaleString(luxon.DateTime.DATE_MED)) 
+                                                }
+                                                $(this).find('td').eq(6).text(now.toFormat('HH:mm:ss'))
+                                        })
+                                }
+                                
+                                setInterval(function(){
+                                        update_time()
+                                }, 1000)                   
+
+                        }                        
+                },     
+                error: function(error){
+                        console.log(error.msg)
+                }                        
+        })
+
+        // day night toggle button        
+        $('#checkbox').on('change', () => {
+                $('#weather_area').toggleClass('daytime_bg');      
+                $('#weather_intro').toggleClass('daytime_bg');  
+                $('#intro1').toggleClass('daytime_intro1');
+                $('#intro2').toggleClass('daytime_intro2');                
+        })
+
+        const w_box = [
+                {
+                'en': 'City',
+                'zh_Hant_TW': '城市',
+                'zh_Hans_CN': '城市'        
+                },
+                {
+                'en': 'Location',
+                'zh_Hant_TW': '地點',
+                'zh_Hans_CN': '地点'        
+                },
+                {
+                'en': 'Weather',
+                'zh_Hant_TW': '天氣',
+                'zh_Hans_CN': '天气'        
+                },
+                {
+                'en': 'Temperature',
+                'zh_Hant_TW': '氣溫',
+                'zh_Hans_CN': '气温'        
+                },
+                {
+                'en': 'Humidity',
+                'zh_Hant_TW': '濕氣',
+                'zh_Hans_CN': '湿气'        
+                },
+                {
+                'en': 'Date',
+                'zh_Hant_TW': '日期',
+                'zh_Hans_CN': '日期'        
+                },
+                {
+                'en': 'Time',
+                'zh_Hant_TW': '時間',
+                'zh_Hans_CN': '时间'        
+                }
+        ]
+
+</script>
+
+
+{% endblock %}
+    

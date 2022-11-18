@@ -1,0 +1,56 @@
+ 
+ -------------- celery@ip-172-31-7-229 v5.1.2 (sun-harmonics)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-1078-aws-x86_64-with-Ubuntu-18.04-bionic 2022-09-27 02:32:42
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         geo_memoir/user:0x7f3698c78c50
+- ** ---------- .> transport:   redis://127.0.0.1:6379/1
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[2022-09-27 02:32:42,454: WARNING/MainProcess] /home/ubuntu/.local/lib/python3.6/site-packages/celery/app/utils.py:206: CDeprecationWarning: 
+    The 'BROKER_URL' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the broker_url instead
+
+  alternative=f'Use the {_TO_NEW_KEY[setting]} instead')
+
+[2022-09-27 02:32:42,455: WARNING/MainProcess] Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+[2022-09-27 02:32:43,549: WARNING/MainProcess] /home/ubuntu/.local/lib/python3.6/site-packages/celery/fixups/django.py:204: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+
+
+Restarting celery worker (/home/ubuntu/.local/bin/celery -A geo_memoir worker)
+ 
+ -------------- celery@ip-172-31-7-229 v5.1.2 (sun-harmonics)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-1078-aws-x86_64-with-Ubuntu-18.04-bionic 2022-09-27 02:48:11
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         geo_memoir/user:0x7fcfb9f3dd30
+- ** ---------- .> transport:   redis://127.0.0.1:6379/1
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 1 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[2022-09-27 02:48:11,379: WARNING/MainProcess] /home/ubuntu/.local/lib/python3.6/site-packages/celery/app/utils.py:206: CDeprecationWarning: 
+    The 'BROKER_URL' setting is deprecated and scheduled for removal in
+    version 6.0.0. Use the broker_url instead
+
+  alternative=f'Use the {_TO_NEW_KEY[setting]} instead')
+
+[2022-09-27 02:48:11,380: WARNING/MainProcess] Please run `celery upgrade settings path/to/settings.py` to avoid these warnings and to allow a smoother upgrade to Celery 6.0.
+[2022-09-27 02:48:12,564: WARNING/MainProcess] /home/ubuntu/.local/lib/python3.6/site-packages/celery/fixups/django.py:204: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  leak, never use this setting in production environments!''')
+

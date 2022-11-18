@@ -1,0 +1,57 @@
+nav{
+        background-color: rgba(33, 136, 136,0.6);
+}
+
+.story_list{
+        padding: 140px 40px 50px;
+        background-color: rgb(241, 248, 255);
+}
+
+.edit_icon:hover, .delete_icon:hover{
+        transform: scale(1.1);
+}
+
+.table-hover tbody tr:hover{
+        background-color:rgba(46, 60, 57, 0.35);
+}
+
+/* story_title */
+td>a:hover{
+        text-decoration: none;
+        color: darkblue;
+}
+
+
+
+
+
+/* pagination */
+/* page_navigation */
+.page_navigation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.page-item.active .page-link{
+        background-color: #126f79;
+        border-color: #126f79;
+}
+
+.pagination{
+        margin: 30px;
+}
+
+a:not([href]):not([tabindex]) {
+        color: #323235;
+}
+
+a:hover:not([href]):not([tabindex]) {
+        color: #323235;
+}
+
+@media(max-width:992px){
+        .story_list{
+                padding: 140px 10px 50px;
+        }
+}

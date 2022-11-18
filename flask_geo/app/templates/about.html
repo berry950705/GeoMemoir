@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<head>
+        <link rel="stylesheet" href="/static/css/about.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+{% endblock %}
+
+{% block title%}Geo Memoir_{{_('About')}}{% endblock%}
+
+{% block body_content %}
+
+
+
+<div class="jumbotron">
+        <div class="container">
+                <h1 class="mb-5 title_one"> {{_('Welcome to Geo Memoir!')}} </h1>
+                <br>
+                <br>
+                <h4  class="mb-3 mt-5 title_two "> -  {{_('About')}}  -</4>
+        </div>
+</div>
+
+
+        <div class="container-fluid about_section row">
+
+                <div class="globe col-lg-4">
+                        <img src="/static/media/bg/globe2.gif" alt="">
+                </div>
+                <div class="about col-lg-6">
+                        <ul>
+                                <li class="my-5 about_one">
+                                        <h4>{{_('About Geo Memoir..')}}</h4>
+                                        <p>
+                                                {{_('Geo Memoir provides a friendly platform for travel lovers to share their stories.')}} 
+                                                {{_('When you start writing your experience, you start creating your travel memoir too.')}} 
+                                                {{_("If you are a travel buff, don't hesitate to join us and give it a try.")}} 
+                                                {{_("Let's TRAVEL, EXPLORE, and SHARE!")}}
+                                        </p>
+                                </li>
+                                <li class="my-5">
+                                        <h4>{{_('Explore Our Travel Stories. Broaden Your Perspective.')}}</h4>
+                                        <p>
+                                                {{_('The world is like a huge book and you will never finish reading it.')}}  
+                                                {{_("If you want to plan your next vacation but don't know where to start, you may get some inspiration from some of our experienced travelers.")}} 
+                                                {{_('Every time we travel, we change the shape of our thoughts.')}} 
+                                                {{_('Be ready to appreciate different cultures and add new experiences to your life!')}}
+                                        </p>
+                                </li>
+                                <li class="my-5">
+                                        <h4>{{_('Show Us The World In Your Eyes')}}</h4>
+                                        <p>
+                                                {{_('There is beauty in every corner of the world. Some of them may have been visited by you.')}} 
+                                                {{_("We hope to learn from your traveling experience. It doesn't need to be a perfect sharing or an enchanting story.")}} 
+                                                {{_('Every one of us is a life storyteller. Be our eyes and show us the world in your way.')}}
+                                        </p>
+                                </li>
+
+                        </ul>
+
+                </div>
+
+        </div>
+
+
+
+{% endblock %}

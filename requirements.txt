@@ -1,0 +1,8 @@
+Django==3.2.15
+Flask==0.12.2
+Flask_Babel==2.0.0
+itemadapter==0.7.0
+protobuf==4.21.9
+PyJWT==2.6.0
+PyMySQL==1.0.2
+Scrapy==2.6.2

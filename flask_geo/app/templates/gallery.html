@@ -1,0 +1,211 @@
+{% extends 'index.html' %}
+
+{% block head %}
+        <link rel="stylesheet" href="/static/css/gallery.css">
+        <link rel="stylesheet" href="/static/css/lightbox.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+{% endblock %}
+
+{% block title%}Geo Memoir_Gallery{% endblock%}
+
+{% block body_content %}
+
+
+<div class="jumbotron">
+        <div class="container">
+                <h1 class="display-2 mb-4 quote"> “ {{_('Photography is the beauty of life captured.')}}”</h1>
+                <h1  class="display-5 mb-4 quoter"> by Tara Chisholm </h1>
+                <hr class="my-4">
+                <h4  class="mb-3 mt-5 title"> -  {{_('Photo Gallery')}}  -</4>
+        </div>
+</div>
+
+<div class="container-fluid">
+        <div class="row">
+                        <ul class="filters text-center">
+                                <li class="active" data-filter="all">{{_('All')}}</li>
+                                <li data-filter="place">{{_('Tourist Attraction')}}</li>
+                                <li data-filter="food">{{_('Cuisine')}}</li>
+                                <li data-filter="housing">{{_('Accomodation')}}</li>
+                        </ul>
+
+                        <div class="container-fluid gallery_photos p-0">
+                                <div class="row w-100 no-gutters" id="photos">
+                                </div>                        
+                        </div>       
+                </div>
+</div>
+
+ 
+<!-- pagination -->
+<nav class="page_navigation" aria-label="page_navigation">
+        <ul id="pagination_area" class="pagination">
+        </ul>
+</nav>
+
+
+<script src="/static/js/lightbox.js"></script>
+<script>
+
+        var baseUrl = 'https://geomemoir.fun/api/'
+        var imageUrl = 'https://geomemoir.fun/media/'
+        var url = window.location.toString().split('//')[1]
+        var cur_lang = url.split('/')[1]
+
+        var gallery_area = $('.gallery_area');
+        var photos = $('#photos')
+        var pagination_area = $('#pagination_area')
+        var filter_btns = $('.filters > li')
+        
+
+        function get_page_data(page){
+                $.ajax({
+                        type:'get',
+                        url:  baseUrl +cur_lang+'/v1/gallery?page_num='+page,
+                        dataType: 'json',
+                        success: function(response){
+                                var data = response.data
+                                var photo_list = response.data['photos_in_list']
+                                html = `${photo_list.map(photoTemplate).join('')}`
+
+                                function photoTemplate(photo){
+                                        var photoUrl = imageUrl + photo.photo
+                                        var filename = photo.photo.split('/')[1]
+
+                                        return `
+                                                <div class="col-xl-3 col-lg-4 col-sm-6 photo ${photo.category}">
+                                                        <a href="${photoUrl}" data-lightbox="mygallery" data-title="${photo.title}"><img src="${photoUrl}" class="art img-fluid"></a>
+                                                        <div class="card-hover">
+                                                                <div class="author_wrap">
+                                                                        <a href="/${cur_lang}/${photo.username}/my_travel_profile">
+                                                                                <img src="${imageUrl}${photo.avatar}" alt="" class="profile-img">                     
+                                                                                <h6 class="author d-inline-block">${photo.author}</h6>
+                                                                        </a>
+                                                                        <h6 class="country">${photo.country}</h6>
+                                                                </div>
+                                                                <button class="btn btn-info" id="dnld_btn" onclick="download('${photoUrl}','${filename}')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path></svg></button>
+                                                        </div>
+                                                </div>
+                                        `
+                                }
+
+                                photos.text('')
+                                photos.append(html)
+        
+                                // paginator
+                                var pages = ''
+                                                
+                                if (data['has_previous']){
+                                        pages +=  `
+                                                <li class="page-item">
+                                                        <a class="page-link" onclick="get_page_data(${data.previous_page_num})"><</a>
+                                                </li>
+                                        `
+                                }else{
+                                        pages += `
+                                                <li class="page-item disabled">
+                                                        <a class="page-link" tabindex="-1" ><</a>
+                                                </li>
+                                        `
+                                }
+
+                                for (var i=1; i < data['total_page']+1; i++){
+                                        var current_page_num = data['current_page_num']
+                                        if (i==current_page_num){
+                                                pages += `
+                                                        <li class="page-item active">
+                                                        <a class="page-link" onclick="get_page_data(${i})">${i}</a>
+                                                        </li>
+                                                `
+                                        }else{
+                                                pages +=  `
+                                                        <li class="page-item">
+                                                        <a class="page-link"  onclick="get_page_data(${i})">${i}</a>
+                                                        </li>
+                                                `
+                                        }                                           
+                                }
+
+                                if (data['has_next']){
+                                        pages += `
+                                                <li class="page-item">
+                                                        <a class="page-link"  onclick="get_page_data(${data.next_page_num})">></a>
+                                                </li>
+                                        `
+                                }else{
+                                        pages += `
+                                                <li class="page-item disabled">
+                                                        <a class="page-link " tabindex="-1">></a>
+                                                </li>
+                                        ` 
+                                }
+
+                                pagination_area.text('')
+                                pagination_area.append(pages)
+
+                                filter_btns.each(function(){
+                                        $(this).removeClass('active')
+                                        if($(this).attr('data-filter')=='all'){
+                                                $(this).addClass('active')
+                                        }
+                                })
+
+                                filter_btns.click(function(){
+                                        filter_btns.removeClass('active');
+                                        $(this).addClass('active');
+                                        category = $(this).attr('data-filter')
+                                        console.log('filter category', category)
+                                
+                                        $('.photo').each(function(){
+                                                console.log('has class?', $(this).hasClass(category))
+                                                $(this).hide()
+                                                if ($(this).hasClass(category) || category == 'all'){
+                                                        $(this).show()
+                                                }
+                                        })      
+                                })
+
+                                //card hoveover
+                                $('.photo').mouseover(function(){
+                                        $(this).find('.card-overlay').css({'top':'-100%'});
+                                        $(this).find('.card-hover').css({'top':'75%'});
+                                }).mouseleave(function(){
+                                        $(this).find('.card-overlay').css({'top':'0'});
+                                        $(this).find('.card-hover').css({'top':'100%'});                
+                                });                       
+                        },
+                })
+        }
+        
+        get_page_data(1)
+
+        function download(photoUrl, filename) {
+                console.log('Photo download button is clicked~~~')
+                axios({
+                        url: photoUrl,
+                        method: 'GET',
+                        responseType: "blob"
+                }).then(response => {
+                        const url = window.URL.createObjectURL(new Blob([response.data]));
+                        const link = document.createElement('a');
+                        link.href = url;
+                        link.setAttribute('download', filename);
+                        document.body.appendChild(link);
+                        link.click();
+                })
+        }       
+
+	if (cur_lang=='zh_Hant_TW'){
+		$('.quote').text('" 攝影即是捕捉生活之美。"')
+	}
+
+
+</script>
+{% endblock %}
+
+
+

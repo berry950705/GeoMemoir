@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-24 00:48+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: comment/views.py:27 comment/views.py:82
+msgid "Story does not exist."
+msgstr "用戶不存在"
+
+#: comment/views.py:99 comment/views.py:119
+msgid "Comment to be deleted does not exist."
+msgstr "您要刪除的留言不存在"
+
+#: comment/views.py:107 comment/views.py:126
+msgid "Comment to be deleted is not specified."
+msgstr "您要刪除的留言未指定"
+
+#: contact/views.py:21
+msgid "Contact information is incomplete."
+msgstr "聯絡訊息填寫不完整"
+
+#: contact/views.py:27 subscribe/views.py:26 user/views.py:119
+msgid "Invalid email! Please check again."
+msgstr "信箱地址無效, 請再次查看!"
+
+#: gtoken/views.py:43
+msgid "Username or password is wrong."
+msgstr "用戶名或密碼錯誤"
+
+#: gtoken/views.py:51
+msgid "Username or password is wrong"
+msgstr "用戶名或密碼錯誤"
+
+#: gtoken/views.py:85 user/views.py:139 user/views.py:315
+msgid "This email has already been registered."
+msgstr "此信箱已被註冊"
+
+#: story/views.py:25 story/views.py:109
+msgid "Author does not exist!"
+msgstr "用戶不存在"
+
+#: story/views.py:30
+msgid "Story is not specified!"
+msgstr "未指定故事"
+
+#: story/views.py:36
+msgid "Story does not exist!"
+msgstr "故事不存在"
+
+#: story/views.py:114
+msgid "Story to be updated is not specified."
+msgstr "您未指定要更新的故事"
+
+#: story/views.py:120
+msgid "Story to be updated does not exist."
+msgstr "您要更新的故事不存在"
+
+#: story/views.py:144
+msgid "Story to be deleted is not specified."
+msgstr "您未指定要刪除的故事"
+
+#: story/views.py:150
+msgid "Story to be deleted does not exist."
+msgstr "您要刪除的故事不存在"
+
+#: story/views.py:170
+msgid "Destination is not specified."
+msgstr "未指定探索的目的地"
+
+#: story/views.py:178
+msgid "There are no stories for this destination."
+msgstr "此目的地無故事"
+
+#: story/views.py:219
+msgid "Story to be liked is not specified."
+msgstr "點贊的故事未指定"
+
+#: subscribe/views.py:20
+msgid "Information is incomplete."
+msgstr "訊息未填寫完全"
+
+#: user/views.py:34
+msgid "User is not defined."
+msgstr "用戶未指定"
+
+#: user/views.py:43
+msgid "User does not exist!"
+msgstr "用戶不存在"
+
+#: user/views.py:107
+msgid "First name is empty!"
+msgstr "名字不可為空"
+
+#: user/views.py:111
+msgid "Last name is empty!"
+msgstr "姓氏不可為空"
+
+#: user/views.py:115
+msgid "Invalid username! Please check again."
+msgstr "用戶名不符合規定, 請再次查看!"
+
+#: user/views.py:123
+msgid "Invalid password! Please check again."
+msgstr "密碼不符合規定, 請再次查看!"
+
+#: user/views.py:127
+msgid "Passwords do not match! Please check again."
+msgstr "密碼不匹配, 請再次查看!"
+
+#: user/views.py:134 user/views.py:155
+msgid "Username is not available."
+msgstr "此用戶名無法使用"
+
+#: user/views.py:197
+msgid "Token has expired. Please log in again!"
+msgstr "登錄時間已失效, 請再次登錄。"
+
+#: user/views.py:225
+msgid "This email has not been registered. Please check again."
+msgstr "此信箱未被註冊, 請再次確認。"
+
+#: user/views.py:239 user/views.py:325
+msgid "Server is busy. Please try again later."
+msgstr "系統繁忙, 請稍後再試。"
+
+#: user/views.py:250
+msgid "Code required for password reset is missing."
+msgstr "無法取得代碼, 密碼更換失敗。"
+
+#: user/views.py:257
+msgid "Code has expired!"
+msgstr "驗證碼已失效"
+
+#: user/views.py:261
+msgid "Code is wrong!"
+msgstr "驗證碼錯誤"
+
+#: user/views.py:268
+msgid "User cannot be found."
+msgstr "無法找到用戶"
+
+#: user/views.py:278 user/views.py:380
+msgid "Passwords do not match."
+msgstr "密碼匹配失敗"
+
+#: user/views.py:289 user/views.py:392
+msgid "New password is invalid. Please check again."
+msgstr "新密碼不符合規定，請再次查看!"
+
+#: user/views.py:339
+msgid "Email or code is missing."
+msgstr "信箱或驗證碼資料提交不完全"
+
+#: user/views.py:344
+msgid "Code has expired."
+msgstr "驗證碼已失效"
+
+#: user/views.py:349
+msgid "Code is wrong."
+msgstr "驗證碼錯誤"
+
+#: user/views.py:368
+msgid "Information required to change the password is incomplete."
+msgstr "密碼資料提交不完全"
+
+#: user/views.py:374
+msgid "Old password is wrong!"
+msgstr "舊密碼錯誤"

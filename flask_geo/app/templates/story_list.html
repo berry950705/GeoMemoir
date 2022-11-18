@@ -1,0 +1,214 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<head>
+        <link rel="stylesheet" href="/static/css/story_list.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+{% endblock %}
+
+{% block title%}Geo Memoir_{{_('List of Stories')}}{% endblock%}
+
+
+
+{% block body_content %}
+
+
+
+<div class="container-fluid story_list m-0 text-center w-100 h-100">
+
+        <h2 class="table_title">{{_('List of Travel Stories')}}</h2>
+        <div class="container-fluid table-responsive">
+                <table class="table table-info table-striped table-hover text-center" id="story_table">
+
+                </table>
+        </div>
+
+</div>
+
+<!-- pagination -->
+<nav class="page_navigation" aria-label="page_navigation">
+        <ul id="pagination_area" class="pagination">
+
+        </ul>
+</nav>
+
+
+<script>
+        var baseUrl = 'https://geomemoir.fun/api/'
+        var username = window.localStorage.getItem('geo_username');
+        var geo_token = window.localStorage.getItem('geo_token')
+        var google_token = window.localStorage.getItem('google_token')
+        if (geo_token){
+                var token = geo_token
+        }else if (google_token){
+                var token = google_token
+        }else{
+                var token = ''
+        }
+
+        var url = window.location.toString().split('//')[1]
+        var cur_lang = url.split('/')[1]
+        var story_table = $('#story_table')
+        var pagination_area = $('#pagination_area')
+
+        const headers = [
+                {
+                'en': 'Title',
+                'zh_Hant_TW': '標題',
+                'zh_Hans_CN': '标题'        
+                },
+                {
+                'en': 'Area',
+                'zh_Hant_TW': '區域',
+                'zh_Hans_CN': '区域'        
+                },
+                {
+                'en': 'Country',
+                'zh_Hant_TW': '國家',
+                'zh_Hans_CN': '国家'        
+                },
+                {
+                'en': 'Category',
+                'zh_Hant_TW': '類別',
+                'zh_Hans_CN': '类别'        
+                },
+                {
+                'en': 'Published',
+                'zh_Hant_TW': '發布日期',
+                'zh_Hans_CN': '发布日期'        
+                },
+                {
+                'en': 'Last Modified',
+                'zh_Hant_TW': '最後修改日期',
+                'zh_Hans_CN': '最后修改日期'        
+                },
+                {
+                'en': 'Edit',
+                'zh_Hant_TW': '修改',
+                'zh_Hans_CN': '修改'        
+                },
+                {
+                'en': 'Delete',
+                'zh_Hant_TW': '刪除',
+                'zh_Hans_CN': '删除'        
+                },
+        ]
+
+     
+        function get_page_data(page){
+                $.ajax({
+                        type:"get",
+                        url: baseUrl +cur_lang + '/v1/stories/'+username+'/story_list?page_num='+page,
+                        dataType: 'json',
+                        beforeSend: function(request){
+                                request.setRequestHeader('Authorization', token)
+                        },
+                        success: function(response){
+                                if (response.code==200){
+                                        data = response.data
+                                        story_list = data['stories_in_list']
+
+                                        var i = (page-1)*3
+                                        var html = ''
+                                        html += '<thead><tr><th scope="col">No.</th><th scope="col">'+headers[0][cur_lang]+'</th>'
+                                        html += '<th scope="col">'+headers[1][cur_lang]+'</th><th scope="col">'+headers[2][cur_lang]+'</th>'
+                                        html += '<th scope="col">'+headers[3][cur_lang]+'</th><th scope="col">'+headers[4][cur_lang]+'</th>'
+                                        html += '<th scope="col">'+headers[5][cur_lang]+'</th><th scope="col">'+headers[6][cur_lang]+'</th>'
+                                        html += '<th scope="col">'+headers[7][cur_lang]+'</th></tr> </thead><tbody>'
+        
+                                        for (var story in story_list){
+                                                if (story_list[story]['category'] == 'place'){
+                                                        var category = 'Tourist Attraction'
+                                                }else if(story_list[story]['category'] == 'food'){
+                                                        var category = 'Cuisine'
+                                                }else{
+                                                        var category = 'Accomodation'
+                                                }
+
+                                                i += 1
+                                                html += '<tr><th scope="row">'+i+'</th>'
+                                                html += '<td><a href="/'+cur_lang+'/'+username+'/story/'+story_list[story]['id']+'">'+story_list[story]['title']+'</a></td><td>'+story_list[story]['area']+'</td>'
+                                                html += '<td>'+story_list[story]['country']+'</td><td>'+category+'</td>'
+                                                html += '<td>'+story_list[story]['created_time']+'</td><td>'+story_list[story]['updated_time']+'</td>'
+                                                html += '<td><a href="/'+cur_lang+'/'+username+'/edit_stories/'+story_list[story]['id']+'"><img src="https://img.icons8.com/emoji/48/000000/fountain-pen-emoji.png" class="edit_icon" width="30px" /></a></td>'
+                                                html += '<td><img src="https://img.icons8.com/sf-regular-filled/48/000000/delete.png" class="delete_icon"  width="30px" del_id="'+story_list[story]['id']+'" /></td>'
+                                                html += '</tr>'
+                                        }        
+                                        html += '</tbody>'
+                                        story_table.text('')
+                                        story_table.append(html)
+                                        delete_story_func()
+                                        
+                                        
+                                        var pages = ''
+                                        
+                                        if (data['has_previous']){
+                                                pages += '<li class="page-item">'
+                                                pages += '<a class="page-link" onclick="get_page_data('+data['previous_page_num']+')"><</a></li>'
+                                        }else{
+                                                pages += '<li class="page-item disabled">'
+                                                pages += '<a class="page-link" tabindex="-1"><</a></li>'
+                                        }
+
+                                        for (var i=1; i < data['total_page']+1; i++){
+                                                var current_page_num = data['current_page_num']
+                                                if (i==current_page_num){
+                                                        pages += '<li class="page-item active">'
+                                                        pages += '<a class="page-link" onclick="get_page_data('+i+')">'+i+'</a></li>'
+                                                }else{
+                                                        pages += '<li class="page-item">'
+                                                        pages += '<a class="page-link"  onclick="get_page_data('+i+')">'+i+'</a></li>'
+                                                }                                                
+                                        }
+
+                                        if (data['has_next']){
+                                                pages += '<li class="page-item"><a class="page-link"  onclick="get_page_data('+data['next_page_num']+')">></a></li>'
+                                        }else{
+                                                pages += '<li class="page-item disabled"><a class="page-link" tabindex="-1">></a></li>'
+                                        }
+                                        pagination_area.text('')
+                                        pagination_area.append(pages)
+                                }else{
+                                        console.log(msg)
+                                }
+                        }       
+                })        
+        }        
+
+        
+        function delete_story_func(){
+                $('.delete_icon').click(function(){
+                        var story_id = $(this).attr('del_id')
+                        if (confirm('Are you sure you want to delete the story?')){                                
+                                $.ajax({
+                                        type: 'delete',
+                                        url: baseUrl +cur_lang + '/v1/stories/'+username+'/delete_story?story_num=' + story_id,
+                                        dataType: 'json',
+                                        beforeSend: function(response){
+                                                response.setRequestHeader('Authorization', token)
+                                        },
+                                        success: function(response){
+                                                if (response.code==200){        
+                                                        var total_pages = response.total_pages
+                                                        get_page_data(total_pages)
+                                                }else{
+                                                        console.log(response.msg)
+                                                }
+                                        }
+                                })
+                        }
+                })   
+        }
+
+        get_page_data(1)
+
+
+
+
+</script>
+{% endblock %}
+
+

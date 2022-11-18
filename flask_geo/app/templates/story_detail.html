@@ -1,0 +1,599 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<head>
+        <link rel="stylesheet" href="/static/css/story_detail.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet"> 
+
+</head>
+{% endblock %}
+
+{% block title%}Geo Memoir_{{_('Story Page')}} {% endblock%}
+
+{% block body_content %}
+
+<div style="height: 10vh;"></div>
+
+<div class="container-fluid " id="story_section">
+</div>
+
+<div class="like_story mt-2 mb-5 p-2">
+        <button type="button" class="btn-lg btn-outline-danger " id="like_btn" name="like"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
+                </svg>&nbsp;{{_('Like the story')}}
+        </button>
+        <button type="button" class="btn-lg btn-outline-danger liked" id="unlike_btn" name="unlike"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
+                </svg>&nbsp;{{_('Unike the story')}}
+        </button>
+</div>
+
+<!-- Comments Section -->
+<div class="container-fluid comment_section p-0">        
+        <div  class="comments">
+                <div class="container-fluid d-flex justify-content-center mb-5 mt-5">			  
+                        <div class="card">
+                                <div class="row">
+                                        <div class="col-md-12">
+                                                <h3 class="text-left mb-3" id="total_comments">
+                                                </h3>
+
+                                                <div class="comment_box">
+                                                        <img id="cmt_box_avatar" class="mr-3 rounded-circle" alt="profile_img" src="/static/media/bg/avatar.png" />
+                                                        <form>
+                                                                <textarea id="new_cmt_line" 
+                                                                placeholder="{{_(' Leave your comment here.. ' ) }}"></textarea>
+                                                                <div class="comment_btns">
+                                                                        <button class="disabled" type="button" id="new_cmt_submit" disabled>{{_('Comment')}}</button>
+                                                                        <button type="button" id="new_cmt_cancel">
+                                                                                {{_('Cancel')}}</button>
+                                                                </div>
+                                                        </form>
+                                                </div>
+
+                                                <div class="row w-100" >
+                                                        <div class="col-md-12 comments_list">
+
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
+
+<script>
+        var baseUrl = 'https://geomemoir.fun/api/'
+        var imgUrl = 'https://geomemoir.fun/media/'
+        var username = window.localStorage.getItem('geo_username')
+        var geo_token = window.localStorage.getItem('geo_token')
+        var google_token = window.localStorage.getItem('google_token')
+        if (geo_token){
+                var token = geo_token
+        }else if (google_token){
+                var token = google_token
+        }else{
+                var token = ''
+        }      
+        var url = window.location.toString().split('//')[1];
+        var cur_lang = url.split('/')[1]
+        var blog_username = url.split('/')[2]
+        var story_id = url.split('/')[4]
+        
+        var story_section = $('#story_section')
+        var like_btn = $('#like_btn');
+        var unlike_btn = $('#unlike_btn');
+        // comment
+        var new_cmt_line = $('#new_cmt_line');
+        var placeholder = new_cmt_line.attr('placeholder');
+        var comment_btns = $('.comment_btns');
+        var new_cmt_submit = $('#new_cmt_submit')
+        var new_cmt_cancel = $('#new_cmt_cancel')   
+        var new_cmt_line = $('#new_cmt_line')
+
+        // get story data
+        $.ajax({
+                type: 'get',
+                url: baseUrl +cur_lang +'/v1/stories/'+blog_username+'/get_story?story_num='+story_id+'&visit_story=true',
+                dataType: 'json',
+                beforeSend: function(request){
+                        request.setRequestHeader('Authorization', token)
+                },
+                success: function(response){
+                        var story = response.data
+                        var written_by = story_msgs[3][cur_lang]
+                        var published = story_msgs[4][cur_lang]
+
+                        console.log(story['category'])
+                        if (story['category'] == 'place'){
+                                var category = category_list[0][cur_lang]
+                        }else if(story['category'] == 'food'){
+                                var category = category_list[0][cur_lang]
+                        }else{
+                                var category = category_list[0][cur_lang]
+                        }
+
+                        if (story['like_status']==true){
+                                like_btn.hide()
+                                unlike_btn.show()  
+                        }else{
+                                like_btn.show()
+                                unlike_btn.hide()    
+                        }
+     
+                        html = `
+                                <div class="row w-100 story_header justify-content-around pb-3">
+                                        <div id="story_img" class="col-lg-12 col-xl-6">
+                                                <img src="${imgUrl}${story.photo}" alt="Story Photo" width="100%" height="100%"></div>
+                                                <div class="story_info col-lg-12 col-xl-6 mt-3">
+                                                        <span id="category">${category}</span>
+                                                <h2 id="story_title" class="mt-3 mb-3">${story.title}</h2>
+                                                <p class="photo_desc">${story.photo_desc}</p>
+                                                <div class="justify-content-between align-items-center info_items">
+                                                        <div class="row w-100">
+                                                                <div class="col-6"><img src="https://img.icons8.com/color/48/000000/place-marker--v2.png" class="icon" /><p id="country">${story.country}</p></div>
+                                                                <div class="col-6"><img src="https://img.icons8.com/color/48/000000/visible--v1.png" class="icon"/><p id="view_total">${story.view}</p></div>
+                                                        </div>
+                                                        <div class="row w-100">
+                                                                <div class="col-6"><img src="https://img.icons8.com/color/48/000000/hearts.png"  class="icon"/><p id="like_total">${story.like}</p></div>
+                                                                <div class="col-6"><img src="https://img.icons8.com/color/48/000000/comments--v1.png"  class="icon"/><p id="comment_total">${story.comment}</p></div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div><hr>
+                                <div class="story_body">
+                                        <div class="mb-4 author_publish">
+                                                <div class="mr-3 text-muted author">${written_by}   <a id="author_name" href="/${cur_lang}/${blog_username}/my_travel_profile">${story.author}</a>
+                                                </div>
+                                                <img src="/static/media/bg/dot.png" alt="">
+                                                <div id="published_time" class="ml-3 text-muted ">${published}  ${story.created_time}</div>
+                                        </div>
+                                        <div class="story">${story.content}</div>
+                                </div>
+                        `
+                        story_section.append(html)
+                }
+        
+        })
+
+        // like & unlike the story
+        like_btn.click(function(){
+                if (token == ''){
+                        message = story_msgs[0][cur_lang]
+                        alert (message)
+                        return
+                }
+                var like_status = $(this).attr('name')
+                var like_num = $(like_total).text()
+                $.ajax({
+                        type: 'post',
+                        url: baseUrl +cur_lang + '/v1/stories/'+username+'/like_story',
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        beforeSend: function(request){
+                                request.setRequestHeader('Authorization', token)
+                        },
+                        data: JSON.stringify({
+                                'story_id':story_id,
+                                'like_status': like_status,
+                        }),
+                        success: function(response){
+                                if (response.code==200){
+                                        like_btn.hide()
+                                        unlike_btn.show()   
+                                        $('#like_total').text(Number(like_num)+1)
+                                }
+                        }
+                })
+        });
+
+        unlike_btn.click(function(){
+                if (token == ''){
+                        message = story_msgs[0][cur_lang]
+                        alert (message)
+                        return
+                }
+                var like_status = $(this).attr('name')
+                var like_num = $(like_total).text()
+                $.ajax({
+                        type: 'post',
+                        url: baseUrl +cur_lang + '/v1/stories/'+username+'/like_story',
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        beforeSend: function(request){
+                                request.setRequestHeader('Authorization', token)
+                        },
+                        data: JSON.stringify({
+                                'story_id':story_id,
+                                'like_status': like_status,
+                        }),
+                        success: function(response){
+                                if (response.code==200){
+                                        like_btn.show()
+                                        unlike_btn.hide()
+                                        $('#like_total').text(Number(like_num)-1)
+                                }
+                        }
+                })
+        });
+
+
+        //get all comments of the story 
+        function get_comments(){
+                $.ajax({
+                        type: 'get',
+                        url: baseUrl +cur_lang + '/v1/comments?story_num=' + story_id,
+                        dataType: 'json',
+                        beforeSend: function(request){
+                                request.setRequestHeader('Authorization', token)
+                        },
+                        success: function(response){           
+                                var comments_total = response.comments_total
+                                var comments_list = response.data
+
+                                $('#comment_total').text(comments_total)
+                                $('#total_comments').text(story_msgs[2][cur_lang]+'('+comments_total+')')
+                                if (response.user){
+                                        var username = response.user['username']
+                                        var avatar = imgUrl + response.user['avatar']
+                                        $('#cmt_box_avatar').attr('src', avatar)                
+                                }
+
+                                var html = `${comments_list.map(cmtTemplate).join('')}`
+                                function cmtTemplate(comment){                                
+                                        var replies_list = comment.replies_list  
+                                        return `
+                                                <div class="comment mt-4">
+                                                        <a href="/${comment.commenter_uname}/my_travel_profile">
+                                                                <img class="mr-3 rounded-circle" alt="profile_img" src="${imgUrl}${comment.commenter_avatar}" />
+                                                        </a>
+                                                        <div class="comment-body"><div class="row comment_h" >
+                                                                <div class="col-8 d-flex">
+                                                                        <a href="/${comment.commenter_uname}/my_travel_profile"><h5 class="mr-4">${comment.commenter}</h5></a>
+                                                                        <span class="text-muted">${comment.created_time}</span>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                        <div class="pull-right function">
+                                                                                ${comment.commenter_uname==username? cmt_tools(comment.id) : ''}
+                                                                                <img src="https://img.icons8.com/ios-glyphs/30/000000/response.png" class="comment_icon reply_btn" r_id="${comment.id}" onclick="reply_box(this)"/></div>
+                                                                        </div>
+                                                                </div>
+                                                                <p class="cmt_line" cmt_line_id="${comment.id}">${comment.content}</p>
+                                                                <textarea  class="edit_line" cols="30" rows="10" edit_line_id="${comment.id}" style="display: none;">${comment.content}</textarea>
+                                                                <div class="edit_btns" edit_btns="${comment.id}" style="display: none;">
+                                                                        <button type="submit" class="edit_submit" edit_sub_id="${comment.id}" onclick="submit_edit(this)">Comment</button>
+                                                                        <button class="edit_cancel" edit_cnl_id="${comment.id}"  onclick="cancel_edit(this)">Cancel</button>
+                                                                </div>
+
+                                                                ${replies_list == [] ? '' : get_replies(replies_list)}
+                                                
+                                                                <div class="comment mt-3 reply_box"  repbox_id="${comment.id}">
+                                                                        <img class="mr-3 rounded-circle cmt_box_img" alt="profile_img" src="${avatar} "/>
+                                                                        <form>
+                                                                                <textarea class="rep_line" placeholder="Leave your reply.. " rep_line_id="${comment.id}" ></textarea>
+                                                                                <div class="rep_btns">
+                                                                                        <button type="button" class="rep_submit disabled" rep_sub_id="${comment.id}" onclick="submit_reply(this)" disabled>Comment</button>
+                                                                                        <button type="button" class="rep_cancel"  rep_cnl_id="${comment.id}" onclick="cancel_reply(this)">Cancel</button>
+                                                                                </div>
+                                                                        </form>
+                                                                </div>    
+                                                        </div>
+                                                </div>           
+                                        `      
+                                }   
+
+                                function cmt_tools(id){
+                                        return `
+                                                <img src="https://img.icons8.com/emoji/48/000000/fountain-pen-emoji.png" class="comment_icon  edit_btn" e_id="${id}" onclick="edit_comment(this)"/><span class='d-flex'><img src="/static/media/bg/dot.png" alt=""></span>
+                                                <img src="https://img.icons8.com/sf-regular-filled/48/000000/delete.png" class="comment_icon del_btn" d_id="${id}" onclick="delete_comment(this)"/><span class='d-flex' ><img src="/static/media/bg/dot.png" alt=""></span>                               
+                                        `        
+                                }
+
+                                function get_replies(replies_list){
+                                        return `
+                                                ${replies_list.map((reply)=>`
+                                                        <div class="comment mt-4">
+                                                                <a class="pr-3" href="/${reply.commenter_uname}/my_travel_profile">
+                                                                <img class="rounded-circle" alt="profile_img" src="${imgUrl}${reply.commenter_avatar}"/></a>
+                                                                <div class="comment-body">
+                                                                        <div class="row">     
+                                                                                <div class="col-8 d-flex">
+                                                                                        <a href="/${reply.commenter_uname}/my_travel_profile"><h5 class="mr-4">${reply.commenter}</h5></a>
+                                                                                        <span class="text-muted">${reply.created_time}</span>
+                                                                                </div>
+                                                                                ${reply.commenter_uname== username? reply_tools(reply.r_id) : ''}
+                                                                        </div>
+                                                                        <p class="cmt_line" cmt_line_id="${reply.r_id}">${reply.content}</p> 
+                                                                        <textarea  class="edit_line" cols="30" rows="10" edit_line_id="${reply.r_id}" style="display: none;">${reply.content}</textarea>
+                                                                        <div class="edit_btns" edit_btns="${reply.r_id}" style="display: none;">
+                                                                                <button type="submit" class="edit_submit" edit_sub_id="${reply.r_id}" onclick="submit_edit(this)">Comment</button>
+                                                                                <button class="edit_cancel" edit_cnl_id="${reply.r_id}"  onclick="cancel_edit(this)">Cancel</button>
+                                                                        </div>
+                                                                </div> 
+                                                        </div> 
+                                                `).join('')}
+                                        
+                                        `
+                                }
+
+                                function reply_tools(r_id){
+                                        return `
+                                                <div class="col-4 ">
+                                                        <div class="pull-right function">
+                                                                <img src="https://img.icons8.com/emoji/48/000000/fountain-pen-emoji.png" class="comment_icon edit_btn" e_id="${r_id}" onclick="edit_comment(this)"/>
+                                                                <span class='d-flex'><img src="/static/media/bg/dot.png" alt=""></span>
+                                                                <img src="https://img.icons8.com/sf-regular-filled/48/000000/delete.png" class="comment_icon  del_btn" d_id="${r_id}" onclick="delete_comment(this)"/>
+                                                        </div>
+                                                </div>                                     
+                                        `        
+                                }
+                                
+                                $('.comments_list').text('')
+                                $('.comments_list').append(html)
+                                rep_btns()
+                                edit_btns()
+                        }
+                })        
+        }
+        get_comments()
+        
+
+        // sub btns -> check if value       
+        new_cmt_line.keyup(function(){
+                if (new_cmt_line.val()){
+                        new_cmt_submit.removeAttr('disabled')        
+                        new_cmt_submit.removeClass('disabled')        
+                }else{
+                        new_cmt_submit.attr('disabled', 'disabled')
+                        new_cmt_submit.addClass('disabled')
+                }        
+        })
+        
+        function rep_btns(){
+                var reply_line = $('.rep_line')
+                reply_line.keyup(function(){
+                        id = $(this).attr('rep_line_id')
+                        var rep_sub = $('[rep_sub_id='+id+']')
+                        if ($(this).val()){
+                                rep_sub.removeAttr('disabled')        
+                                rep_sub.removeClass('disabled')        
+                                $(this).css('border-bottom', '2px solid #333')
+                        }else{
+                                rep_sub.attr('disabled', 'disabled')
+                                rep_sub.addClass('disabled')
+                                $(this).css('border-bottom', '2px solid rgb(170, 170, 170)')
+                        }        
+                })   
+        } 
+        
+        function edit_btns(){
+                $('.edit_line').keyup(function(){
+                        id = $(this).attr('edit_line_id')
+                        var edit_sub = $('[edit_sub_id='+id+']')
+                        if ($(this).val()){
+                                edit_sub.removeAttr('disabled')        
+                                edit_sub.removeClass('disabled')        
+                                $(this).css('border-bottom', '2px solid #333');   
+                        }else{
+                                edit_sub.attr('disabled', 'disabled')
+                                edit_sub.addClass('disabled')
+                                $(this).css('border-bottom', '2px solid rgb(170, 170, 170)');
+                        }                      
+                })        
+        }
+
+
+
+        // 0. new comment_area        
+        new_cmt_line.click(function(){
+                $(this).css('border-bottom', '2px solid #333');   
+                comment_btns.show();
+        });
+
+        new_cmt_cancel.click(function(){
+                new_cmt_line.css('border-bottom', '2px solid rgb(170, 170, 170)');
+                comment_btns.hide();
+        });
+
+        new_cmt_submit.click(function(){
+                if (token == ''){
+                        message = story_msgs[0][cur_lang]
+                        alert (message)
+                        return
+                }                
+                var cmts_total = $('#comment_total').text()
+                $.ajax({
+                        type: 'post',
+                        url: baseUrl +cur_lang + '/v1/comments',
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                                'story_id': story_id,
+                                'content': new_cmt_line.val(),
+                                'parent_cmt_id': 0,
+                        }),
+                        beforeSend: function(request){
+                                request.setRequestHeader('Authorization', token)
+                        },
+                        success: function(response){
+                                if (response.code==200){
+                                        get_comments()
+                                        new_cmt_line.val('')
+                                        new_cmt_line.css('border-bottom', '2px solid rgb(170, 170, 170)');
+                                        comment_btns.hide();
+                                        $('#comment_total').text(Number(cmts_total)+1)
+                                }else{
+                                        alert(response.msg)
+                                }
+                        }
+                })                
+        })
+
+
+        // 1. reply the comment -> show reply_box 
+        function reply_box(ele){
+		if (token == ''){
+                        message = story_msgs[0][cur_lang]
+                        alert (message)
+                        return
+                }      
+                var value = $(ele).attr('r_id')
+                $('[repbox_id='+value+']').show()
+        }
+        // 1-1. cancel reply -> hide reply_box
+        function cancel_reply(ele){
+                var value = $(ele).attr('rep_cnl_id')
+                $('[rep_line_id='+value+']').val('')
+                $('[repbox_id='+value+']').hide()
+        }
+        //1-2. submit reply
+        function submit_reply(ele){
+                var value = $(ele).attr('rep_sub_id')
+                var parent_cmt_id = value
+                var rep_content = $('[rep_line_id='+value+']').val()
+                var cmts_total = $('#comment_total').text()
+                $.ajax({
+                        type: 'post',
+                        url: baseUrl +cur_lang + '/v1/comments',
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                                'story_id': story_id,
+                                'content': rep_content,
+                                'parent_cmt_id': parent_cmt_id,
+                        }),
+                        beforeSend: function(request){
+                                request.setRequestHeader('Authorization', token)
+                        },
+                        success: function(response){
+                                if (response.code==200){
+                                        get_comments()
+                                        $('#comment_total').text(Number(cmts_total)+1)
+                                }else{
+                                        alert(response.msg)
+                                }
+                        }              
+                })                                  
+        }
+
+
+        //3. delete the comment
+        function delete_comment(ele){
+                var comment_id = $(ele).attr('d_id')
+                var cmts_total = $('#comment_total').text()
+                if (confirm(story_msgs[1][cur_lang])){
+                        $.ajax({
+                                type: 'delete',
+                                url: baseUrl +cur_lang + '/v1/comments?cmt_num='+comment_id,
+                                beforeSend: function(request){
+                                        request.setRequestHeader('Authorization', token)
+                                },
+                                success: function(response){
+                                        if (response.code==200){
+                                                get_comments()
+                                                $('#comment_total').text(Number(cmts_total)-1)
+                                        }else{
+                                                alert(response.msg)
+                                        }
+                                }       
+                        })  
+                }
+        }
+
+
+        // 2. Edit the comment
+        function edit_comment(ele){
+                var value = $(ele).attr('e_id')
+                $('[cmt_line_id='+value+']').css('display', 'none')
+                $('[edit_line_id='+value+']').css({'display': 'block', 'border-bottom': '2px solid #333'})
+                $('[edit_btns='+value+']').css('display', 'block')
+        }
+
+        // 2.1 cancel the edit
+        function cancel_edit(ele){
+                var value = $(ele).attr('edit_cnl_id')
+                $('[cmt_line_id='+value+']').css('display', 'block')
+                $('[edit_line_id='+value+']').css('display', 'none')
+                $('[edit_btns='+value+']').css('display', 'none')
+        }
+        
+        // 2.1 submit the edit
+        function submit_edit(ele){
+                cmt_id = $(ele).attr('edit_sub_id')
+                edit_content = $('[edit_line_id='+cmt_id+']').val()
+                $.ajax({
+                        type: 'put',
+                        url: baseUrl +cur_lang + '/v1/comments',
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                                'cmt_id': cmt_id,
+                                'content': edit_content,
+                        }),
+                        beforeSend: function(request){
+                                request.setRequestHeader('Authorization', token)
+                        },
+                        success: function(response){
+                                if (response.code==200){
+                                        get_comments()
+                                }else{
+                                        alert(response.msg)
+                                }
+                        }       
+                })  
+        }
+
+
+        const story_msgs = [
+                {
+                'en': 'Please log in to continue.',
+                'zh_Hant_TW': '請登錄以繼續操作!',
+                'zh_Hans_CN': '请登录以继续操作!'  
+                },
+                {
+                'en': 'Are you sure you want to permanently remove the comment?',
+                'zh_Hant_TW': '您是否確定要永久刪除這則評論?',
+                'zh_Hans_CN': '您是否确定要永久删除这则评论?' 
+                },
+                {
+                'en': 'Comments',
+                'zh_Hant_TW': '評論',
+                'zh_Hans_CN': '评论' 
+                },
+                {
+                'en': 'WRITTEN BY',
+                'zh_Hant_TW': '作者',
+                'zh_Hans_CN': '作者' 
+                },
+                {
+                'en': 'PUBLISHED',
+                'zh_Hant_TW': '發布時間',
+                'zh_Hans_CN': '发布时间' 
+                },
+        ]
+
+        const category_list = [
+                {  
+                'en': 'Tourist Attraction',
+                'zh_Hant_TW': '旅遊景點',
+                'zh_Hans_CN': '旅游景点'        
+                },
+                {
+                'en': 'Cuisine',
+                'zh_Hant_TW': '美食',
+                'zh_Hans_CN': '美食'        
+                },
+                {  
+                'en': 'Accommodation',
+                'zh_Hant_TW': '住宿',
+                'zh_Hans_CN': '住宿'        
+                }
+        ]
+
+</script>
+<script src="/static/js/story_detail.js"></script>
+
+
+{% endblock %}
+
+

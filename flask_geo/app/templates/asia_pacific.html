@@ -1,0 +1,218 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<head>
+        <link rel="stylesheet" href="/static/css/asian_pacific.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+{% endblock %}
+
+{% block title%}Geo Memoir_{{_('Asia Pacific')}}{% endblock%}
+
+{% block body_content %}
+
+<div class="jumbotron">
+        <div class="container">
+                <h1 class="display-1 mb-3 greet_one"> {{_('Welcome to Asia Pacific')}}</h1>
+                <h1   class="display-4 mb-5 greet_two">{{_('Find your travel inspiration and start your journey')}}</h1>
+                <hr class="my-4">
+                <h4  class="continent mb-4 mt-3" style="font-weight:bold ;"> -  {{_('Destination')}} -</4>
+        </div>
+</div>
+
+
+<div class="container-fluid p-0">
+        <div class="row w-100 m-0">
+                <ul class="filters text-center">
+                        <li class="active" data-filter="all">{{_('All')}}</li>
+                        <li data-filter="place">{{_('Tourist Attraction')}}</li>
+                        <li data-filter="food">{{_('Cuisine')}}</li>
+                        <li data-filter="housing">{{_('Accomodation')}}</li>
+                </ul>
+
+                <div class="container-fluid stories py-5 ">
+                        <div id="stories_content" class="row w-100 stories_list m-0">
+
+                        </div>
+                </div>
+        </div>
+</div>
+
+<!-- pagination -->
+<nav class="page_navigation" aria-label="page_navigation">
+        <ul id="pagination_area" class="pagination">
+
+        </ul>
+</nav>
+
+<script>
+
+        var baseUrl = 'https://geomemoir.fun/api/'
+        var imgUrl = 'https://geomemoir.fun/media/'
+        var stories_content = $('#stories_content');
+        var pagination_area = $('#pagination_area')
+        var filter_btns = $('.filters > li')
+
+
+        // check the area name from the database, should be the same 
+        var url = window.location.toString().split('//')[1];
+        var cur_lang = url.split('/')[1];
+        var destn = url.split('/')[3];
+
+        if (destn == 'americas'){
+                var continent = 'The Americas'
+        }else if(destn == 'asia_pacific'){
+                var continent = 'Asia Pacific'
+        }else if(destn == 'europe'){
+                var continent = 'Europe'
+        }else if(destn == 'middle_east_africa'){
+                var continent = 'Middle East / Africa'
+        }else{
+                var continent = ''
+        } 
+
+
+        function get_page_data(page){
+                $.ajax({
+                        type: 'get',
+                        url: baseUrl +cur_lang +'/v1/stories/destinations?destination='+continent+'&page_num='+page,
+                        dataType:'json',
+                        success: function(response){
+                                if (response.code == 200){
+                                        var data = response.data
+
+                                        var stories_list = data['stories_in_list']
+
+                                        var html = `${stories_list.map(storyTemplate).join('')}`
+
+                                        function storyTemplate(story){
+                                                var photo_desc_cont = story.photo_desc
+                                                var photo_desc_len = photo_desc_cont.length
+                                                if (photo_desc_len>20){
+                                                        var photo_desc = photo_desc_cont.substring(0,100) + '...';
+                                                }else{
+                                                        var photo_desc = photo_desc_cont;
+                                                }        
+                                                return `
+                                                        <div class="col-xl-4 col-md-6  my-3 story ${story.category}">
+                                                                <div class="card mb-4 box-shadow">
+                                                                        <a href="/${cur_lang}/${story.username}/story/${story.id}"><img class="card-img-top" src="${imgUrl}${story.photo}" alt="Story Photo"></a>
+                                                                        <div class="card-body" height="220px">
+                                                                                <a href="/${cur_lang}/${story.username}/story/${story.id}"><p class="h4 card-title">${story.title}</p></a>
+                                                                                <p class="photo_desc">${photo_desc}</p><hr>
+                                                                                <div class="justify-content-between align-items-center">
+                                                                                        <div class="row">
+                                                                                                <div class="col-7">
+                                                                                                        <img src="https://img.icons8.com/color/48/000000/place-marker--v2.png" class="icon" /><p class="country text-muted">${story.country}</p>
+                                                                                                </div>
+                                                                                                <div class="col-5">
+                                                                                                        <img src="https://img.icons8.com/color/48/000000/time-card.png" class="icon"/><p class="published_time text-muted">${story.created_time}</p>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                                <div class="col-7">
+                                                                                                        <img src="https://img.icons8.com/color/48/000000/visible--v1.png" class="icon"/><p class="view_total text-muted">${story.view}</p>
+                                                                                                </div>
+                                                                                                <div class="col-5">
+                                                                                                        <img src="https://img.icons8.com/color/48/000000/hearts.png"  class="icon"/><p class="like_total text-muted">${story.like}</p>
+                                                                                                </div>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                `
+                                        }
+                                        
+                                        stories_content.text(''); 
+                                        stories_content.append(html); 
+
+                                        var pages = ''
+                                                
+                                        if (data['has_previous']){
+                                                pages +=  `
+                                                        <li class="page-item">
+                                                                <a class="page-link" onclick="get_page_data(${data.previous_page_num})"><</a>
+                                                        </li>
+                                                `
+                                        }else{
+                                                pages += `
+                                                        <li class="page-item disabled">
+                                                                <a class="page-link" tabindex="-1" ><</a>
+                                                        </li>
+                                                `
+                                        }
+
+                                        for (var i=1; i < data['total_page']+1; i++){
+                                                var current_page_num = data['current_page_num']
+                                                if (i==current_page_num){
+                                                        pages += `
+                                                                <li class="page-item active">
+                                                                <a class="page-link" onclick="get_page_data(${i})">${i}</a>
+                                                                </li>
+                                                        `
+                                                }else{
+                                                        pages +=  `
+                                                                <li class="page-item">
+                                                                <a class="page-link"  onclick="get_page_data(${i})">${i}</a>
+                                                                </li>
+                                                        `
+                                                }                                           
+                                        }
+
+                                        if (data['has_next']){
+                                                pages += `
+                                                        <li class="page-item">
+                                                                <a class="page-link"  onclick="get_page_data(${data.next_page_num})">></a>
+                                                        </li>
+                                                `
+                                        }else{
+                                                pages += `
+                                                        <li class="page-item disabled">
+                                                                <a class="page-link " tabindex="-1">></a>
+                                                        </li>
+                                                ` 
+                                        }
+
+                                        pagination_area.text('')
+                                        pagination_area.append(pages)
+
+                                        filter_btns.each(function(){
+                                                $(this).removeClass('active')
+                                                if($(this).attr('data-filter')=='all'){
+                                                        $(this).addClass('active')
+                                                }
+                                        })
+                                        
+                                        filter_btns.click(function(){
+                                                filter_btns.removeClass('active');
+                                                $(this).addClass('active');
+                                                category = $(this).attr('data-filter')
+                                        
+                                                $('.story').each(function(){
+                                                        $(this).hide()
+                                                        if ($(this).hasClass(category) || category == 'all'){
+                                                                $(this).show()
+                                                        }
+                                                })      
+                                        })
+
+                                }else{
+                                        alert(response.msg)
+                                }
+                        }
+                })
+        }
+        
+        get_page_data(1)
+
+</script>
+<script src="/static/js/continent.js"></script>
+
+
+{% endblock %}
+
+
+

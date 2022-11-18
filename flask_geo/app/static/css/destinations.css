@@ -1,0 +1,893 @@
+nav{
+        background: rgba(170, 180, 190, 0.6);
+}
+
+
+.jumbotron{
+        height: 60vh;
+        background-image: url('/static/media/destination/header_compass.jpg');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        text-align: center;
+        margin-bottom: 0;
+        font-weight: bold;
+}
+
+.greet{
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        font-size: 3rem;
+        font-weight: bold;
+}
+
+.continent{
+        color:#fff;
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+        font-size: 2rem;
+}
+
+/* weather_intro title */
+.weather_intro{
+        color: aliceblue;
+        width: 100%;
+        height: 16vh;
+        background-color: #21006d;
+        margin: 0;
+        display: grid;
+        justify-content: center;
+}
+
+#intro1{
+        margin: 2rem;
+        color: #fbd0a2;
+}
+
+.daytime_intro1{
+        color:darkblue !important;
+}
+
+#intro2{
+        color: floralwhite;
+        text-align: center;
+}
+.daytime_intro2{
+        color:rgb(245, 245, 245) !important;;
+}
+
+/* weather-area */
+.weather_area{
+        position: relative;
+        height: 130vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #21006d;
+        transition: 1s;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+}
+
+@media (max-width:1400px) {
+        .weather_area{
+                height: 110vh;
+        }          
+}
+
+@media (max-width:1200px) {
+        .weather_area{
+                height: 95vh;
+        }        
+}
+
+@media (max-width:992px) {
+        .weather_area{
+                height: 80vh;
+        }        
+        .greet{
+                font-size: 3rem;
+        }
+        
+        .continent{
+                font-size: 2rem;
+        }
+}
+
+@media (max-width:768px) {
+        .weather_area{
+                height: 65vh;
+        }        
+        .greet{
+                font-size: 2.4rem;
+        }
+        
+        .continent{
+                font-size: 1.6rem;
+        }
+        #intro1{
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+        }
+        #intro2{
+                font-size: 1rem;
+        }
+        .weather_intro{
+                height: 14vh;
+        }
+}
+
+@media (max-width:576px) {
+        .weather_area{
+                height: 50vh;
+        }        
+}
+
+@media (max-width:500px) {
+        .weather_area{
+                height: 50vh;
+        }        
+        .greet{
+                font-size: 1.6rem;
+        }        
+        .continent{
+                font-size: 0.8rem;
+                margin-bottom: 0 !important;
+        }
+        #intro1{
+                text-align: center;
+                font-size: 1rem;
+                margin-top: 0.8rem !important;
+                margin-bottom: 0 !important;
+                margin-left: 0;
+                margin-right: 0;
+        }
+        #intro2{
+                font-size: 0.8rem;
+        }
+        .img_overlay{
+                opacity: 1 !important;
+                background-color: rgba(61, 92, 96, 0.5) !important;
+        }
+	.jumbotron{
+		height: 50vh;
+	}
+
+}
+
+.daytime_bg{
+        background-color: #0eefff;
+        transition: 1s;
+}
+
+.weather_box th{
+        padding-right: 10px;
+}
+
+#world, .map_item{ 
+        position: absolute; 
+        display: block; 
+        margin: 0px; 
+        border: none; 
+        padding: 0px; 
+}
+.map_item:hover{
+        scale: 1.3;
+}
+
+#world {
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+}
+
+/* cities and weather_box*/
+/* .city{
+        position: absolute;
+} */
+.weather_box{
+        border-radius: 5px;
+        padding: 12px;
+        position: absolute;
+        background-color: #1c1e1de6;
+        color: #fff;
+        display: none;
+}
+
+#singapore {
+        top: 62%;
+        left: 77%;
+        width: 3%;
+        height: 5%;
+}
+#singapore_w{
+        top: 40%;
+        left: 60%;
+}
+
+
+#london {
+        top: 31%;
+        left: 40%;
+        width: 3.5%;
+        height: 5%;
+}
+#london_w {
+        top: 34%;
+        left: 43%;
+}
+
+
+#taipei {
+        top: 49%;
+        left: 82.5%;
+        width: 3%;
+        height: 5.5%;
+}
+#taipei_w {
+        top: 56%;
+        left: 70%;
+}
+
+
+#bangkok {
+        top: 53%;
+        left: 73%;
+        width: 3.5%;
+        height: 5%;
+}
+#bangkok_w {
+        top: 57%;
+        left: 75%;
+}
+
+
+#beijing {
+        top: 40%;
+        left: 76.5%;
+        width: 3.5%;
+        height: 5%;
+}
+#beijing_w {
+        top: 47%;
+        left: 65.5%;
+}
+
+#seoul {
+        top: 38%;
+        left: 83%;
+        width: 2.5%;
+        height: 6.5%;
+}
+#seoul_w {
+        top: 45%;
+        left: 65%;
+}
+
+#barcelona {
+        top: 40%;
+        left: 43%;
+        width: 2.5%;
+        height: 6%;
+}
+#barcelona_w {
+        top: 44%;
+        left: 46%;
+}
+
+#paris {
+        top: 32.5%;
+        left: 45%;
+        width: 2.5%;
+        height: 7%;
+}
+#paris_w {
+        top: 38.5%;
+        left: 48%;
+}
+
+
+#tokyo {
+        top: 42%;
+        left: 86%;
+        width: 4%;
+        height: 6%;
+}
+#tokyo_w {
+        top: 48%;
+        left: 77%;
+}
+
+#lima {
+        top: 70%;
+        left: 20%;
+        width: 3.5%;
+        height: 4%;
+}
+#lima_w {
+        top: 73%;
+        left: 23%;
+}
+
+#dubai {
+        top: 50%;
+        left: 62%;
+        width: 2.5%;
+        height: 6%;
+}
+#dubai_w {
+        top: 54%;
+        left: 64%;
+}
+
+
+#seattle {
+        top: 38%;
+        left: 7.5%;
+        width: 1%;
+        height: 5.5%;
+}
+#seattle_w {
+        top: 42%;
+        left: 9%;
+}
+
+#istanbul {
+        top: 38%;
+        left: 52%;
+        width: 3.3%;
+        height: 6%;
+}
+#istanbul_w {
+        top: 43%;
+        left: 55%;
+}
+
+#milan {
+        top: 38%;
+        left: 47.5%;
+        width: 3.5%;
+        height: 4%;
+}
+#milan_w {
+        top: 41%;
+        left: 50.5%;
+}
+
+#cairo {
+        top: 48%;
+        left: 51.5%;
+        width: 3.5%;
+        height: 3.5%;
+}
+#cairo_w {
+        top: 51%;
+        left: 55.5%;
+}
+
+#new_york {
+        top: 39%;
+        left: 23%;
+        width: 3.5%;
+        height: 5%;
+}
+#new_york_w {
+        top: 42%;
+        left: 25%;
+}
+
+#hong_kong {
+        top: 50%;
+        left: 78%;
+        width: 3%;
+        height: 4.5%;
+}
+#hong_kong_w {
+        top: 55%;
+        left: 53%;
+}
+
+#bali {
+        top: 66%;
+        left: 80%;
+        width: 3.2%;
+        height: 5.5%;
+}
+#bali_w {
+        top: 44%;
+        left: 60%;
+}
+
+#toronto {
+        top: 34%;
+        left: 21%;
+        width: 2.5%;
+        height: 6.5%;
+}
+#toronto_w {
+        top: 39%;
+        left: 24%;
+}
+
+#rio_de_janeiro {
+        top: 75%;
+        left: 30%;
+        width: 3%;
+        height: 7%;
+}
+#rio_de_janeiro_w {
+        top: 74%;
+        left: 33%;
+}
+
+#kuala_lumpur {
+        top: 59%;
+        left: 74.5%;
+        width: 3%;
+        height: 4%;
+}
+#kuala_lumpur_w {
+        top: 37%;
+        left: 52%;
+}
+
+ #sydney {
+        top: 82%;
+        left: 89%;
+        width: 4.3%;
+        height: 4.5%;
+}
+#sydney_w {
+        top: 56%;
+        left: 70%;
+}
+
+#cape {
+        top: 79%;
+        left: 48%;
+        width: 4.2%;
+        height: 4.7%;
+}
+#cape_w {
+        top: 74%;
+        left: 52%;
+}
+
+@media (max-width:1200px) {
+        #sydney_w{
+                top: 59%;
+                left: 70%;
+        }       
+        #bali_w{
+                top: 40%;
+                left: 60%;
+        }
+        #cape_w {
+                top: 60%;
+                left: 53%;
+        }
+        #rio_de_janeiro_w {
+                top: 49%;
+                left: 34%;
+        }
+        #taipei_w{
+                top: 27%;
+                left: 67.5%;
+        }
+        .weather_box{
+                font-size: 0.8rem;
+        }
+}
+
+@media (max-width:992px) {
+        #singapore_w{
+                top: 35%;
+                left: 52%;
+        }                        
+
+        #taipei_w {
+                top: 23%;
+                left: 63.5%;
+        }        
+
+        #seoul_w {
+                top: 45%;
+                left: 55%;
+        }       
+        
+        #bangkok_w {
+                top: 58%;
+                left: 46%;
+        }
+
+        #tokyo_w {
+                top: 48%;
+                left: 66%;
+        }        
+
+        #lima_w {
+                top: 42%;
+                left: 25%;
+        }        
+
+        #hong_kong_w {
+                top: 55%;
+                left: 57%;
+        }
+
+        #bali_w {
+                top: 38%;
+                left: 59%;
+        }
+       
+        #kuala_lumpur_w {
+                top: 30%;
+                left: 42%;
+        }
+        
+        #sydney_w {
+                top: 54%;
+                left: 66%;
+        }
+        .weather_box{
+                font-size: 0.7rem;
+        }
+}
+
+@media (max-width:768px) {
+        #singapore_w{
+                top: 28%;
+                left: 42%;
+        }                        
+
+        #taipei_w {
+                top: 16%;
+                left: 57.5%;
+        }        
+        
+        #bangkok_w {
+                top: 58%;
+                left: 36%;
+        }
+                
+        #seoul_w {
+                top: 46%;
+                left: 46%;
+        }        
+
+        #tokyo_w {
+                top: 48%;
+                left: 64%;
+        }        
+
+        #hong_kong_w {
+                top: 56%;
+                left: 32%;
+        }
+
+        #bali_w {
+                top: 30%;
+                left: 52%;
+        }
+        
+        #kuala_lumpur_w {
+                top: 25%;
+                left: 30%;
+        }
+        
+        #sydney_w {
+                top: 48%;
+                left: 61%;
+        }
+        .weather_box{
+                font-size: 0.6rem;
+        }
+}      
+
+@media (max-width:576px) {
+        #singapore_w{
+                top: 20%;
+                left: 36%;
+        }                        
+
+        #taipei_w {
+                top: 6%;
+                left: 44.5%;
+        }        
+
+        #seoul_w {
+                top: 46%;
+                left: 20%;
+        }  
+        
+        #bangkok_w {
+                top: 53%;
+                left: 34%;
+        }
+
+        #hong_kong_w {
+                top: 55%;
+                left: 30%;
+        }
+                
+        #beijing_w {
+                top: 47%;
+                left: 52.5%;
+        }        
+
+        #tokyo_w {
+                top: 48%;
+                left: 36%;
+        }        
+
+        #dubai_w {
+                top: 54%;
+                left: 22%;
+        }
+
+        #bali_w {
+                top: 20%;
+                left: 38%;
+        }
+
+        #kuala_lumpur_w {
+                top: 17%;
+                left: 27%;
+        }
+        
+        #sydney_w {
+                top: 40%;
+                left: 50%;
+        }
+
+        #istanbul_w {
+                top: 47%;
+                left: 30%;
+        }
+        
+        #cape_w {
+                top: 38%;
+                left: 25%;
+        }
+        .weather_box{
+                font-size: 0.5rem;
+        }
+}
+
+@media (max-width:500px) {
+        #singapore_w{
+                top: 40%;
+                left: 50%;
+        }                        
+
+        #taipei_w {
+                top: 30%;
+                left: 50%;
+        }        
+
+        #seoul_w {
+                top: 46%;
+                left: 55%;
+        }  
+
+        #bangkok_w {
+                top: 30%;
+                left: 45%;
+        }
+
+        #hong_kong_w {
+                top: 55%;
+                left: 60%;
+        }
+                
+        #beijing_w {
+                top: 47%;
+                left: 60%;
+        }        
+
+        #tokyo_w {
+                top: 45%;
+                left: 60%;
+        }        
+
+        #dubai_w {
+                top: 25% !important;
+                left: 30% !important;
+        }
+
+        #cairo_w {
+                top: 16%;
+                left: 30%;
+        }
+
+        #bali_w {
+                top: 45%;
+                left: 50%;
+        }
+
+        #kuala_lumpur_w {
+                top: 35%;
+                left: 40%;
+        }
+        
+        #sydney_w {
+                top: 60% !important;
+                left: 55% !important;
+        }
+
+        #london_w {
+                top: 38%;
+                left: 28%;
+        }
+
+        #barcelona_w {
+                top: 46%;
+                left: 26%;
+        }
+
+        #milan_w {
+                top: 45%;
+                left: 25%;
+        }
+
+        #istanbul_w {
+                top: 47%;
+                left: 30%;
+        }
+
+        #new_york_w {
+                top: 46%;
+                left: 18%;
+        }
+
+        #toronto_w {
+                top: 44%;
+                left: 10%;
+        }
+
+        #rio_de_janeiro_w {
+                top: 50%;
+                left: 23%;
+        }
+
+        #lima_w {
+                top: 45%;
+                left: 3%;
+        }
+        
+        #cape_w {
+                top: 50%;
+                left: 18%;
+        }
+        .weather_box{
+                font-size: 0.3rem;
+        }
+}
+
+
+/* day/night toggle */
+.mode_change{
+        position: absolute;
+        margin: 0;
+        bottom: 50px;
+        left: 30px;
+        box-sizing: border-box;
+}
+@media (max-width:992px) {
+        .mode_change{
+                bottom: 13px;
+                left: 11px;
+        }
+}
+
+.label{
+        background-color: rgb(13, 5, 51);
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        border-radius: 50px;
+        height: 26px;
+        width: 50px;
+        padding: 5px;
+        position: relative;
+}
+
+.ball{
+        background-color: antiquewhite;
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        position: absolute;
+        transition: .5s;
+}
+
+.checkbox:checked + .label .ball{
+        transform: translateX(24px);
+}
+
+.fa-moon{
+        color:rgb(200, 200, 110)
+}
+
+.fa-sun{
+        color:rgb(200, 200, 110)
+}
+
+.checkbox{
+        opacity: 0;
+        position: absolute;
+}
+
+/* destination_area */
+.destinations_area{
+        padding: 30px 40px;
+        margin: 0;
+}
+
+.image_item{
+        width: 100%;
+        height: 400px;
+        position: relative;
+}
+
+.destination_img{ 
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        border-radius: 100px;
+}
+
+.img_overlay{
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        border-radius: 100px;
+        background-color: rgba(61, 92, 96, 0.75);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        text-align: center;
+        opacity: 0;
+}
+
+.img_overlay:hover{
+        opacity: 1;
+        transition: 1s;
+}
+.overlay_title{
+        color: #fff;
+        font-size: 28px;
+}
+@media (max-width:768px) {
+        .overlay_title{
+                font-size: 22px;
+        }
+        .destination_img{ 
+                width: 85%;
+                height: 90%;
+        }
+        .img_overlay{
+                width: 85%;
+                height: 90%;
+        }
+        .image_item{
+                margin: 0 !important;
+                height: 350px;
+        }
+        .destinations_area{
+                padding: 30px 30px;
+        }
+}
+
+a:hover{
+        text-decoration: none;
+}
+
+
+

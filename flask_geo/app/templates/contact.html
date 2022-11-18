@@ -1,0 +1,226 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<head>
+        <!-- <link rel="stylesheet" href="/static/css/contact.css"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <style>
+                nav{
+                        background: rgba(170, 180, 190, 0.6);
+                }
+
+                .contact_area{
+                        min-height: 110vh;
+                        width: 100%;
+                        margin:0;
+                        background-image: url(/static/media/bg/cloud.jpg);
+                        background-size: cover;
+                        justify-content: center;
+                        align-content: center;
+                        flex-direction: column;
+			align-items:center;
+                }
+
+                .contact_area>h2{
+                        color: #db9207;
+                        margin-top: 50px;
+                        text-align: center;
+                        font-family: 'Dancing Script', cursive;
+                        font-weight: bold;
+                        font-size: 3rem;
+                }
+
+                .form_wrap{
+                        width: 40%;
+                        top: 200px;
+                        padding: 30px;
+                        background-color: rgba(134, 136, 136, 0.6);
+                        font-size: 20px;
+                        color: floralwhite;
+                }
+
+                .button_area{
+                        width: 90%;
+                        display: flex;
+                        justify-content: center;
+                }
+
+                #emailHelp{
+                        display: none;
+                }
+
+                .s_invalid{
+                        color: rgb(211, 4, 4);
+                }
+                .s_invalid:before{
+                        content:"✖";
+                }
+                
+                .s_valid{
+                        color: green;
+                }
+                .s_valid:before{
+                        content:  "✔";
+                }
+
+                @media (max-width:1400px) {
+                        .contact_area>form{
+                                width: 50%;
+                        }
+                }
+                @media (max-width:1200px) {
+                        .contact_area>form{
+                                width: 60%;
+                        }
+                }
+                @media (max-width:992px) {
+                        .contact_area>form{
+                                width: 70%;
+                        }
+                        .contact_area>h2{
+                                font-size: 2.6rem;
+                        }
+                }
+                @media (max-width:768px) {
+                        .contact_area>form{
+                                width: 90%;
+                        }
+                        .contact_area>h2{
+                                font-size: 2.4rem;
+                        }
+                }
+                @media (max-width:500px) {
+                        .contact_area>h2{
+                                margin-top: 75px !important;
+                                font-size: 1.8rem;
+                        }
+                }
+        </style>
+</head>
+{% endblock %}
+
+{% block title%}Geo Memoir_{{_('Contact')}}{% endblock%}
+
+{% block body_content %}
+
+
+<div class="container-fluid contact_area d-flex row">
+
+        <h2 class="mb-3 mt-4 form_title">{{_('Contact Us')}}</h2> 
+
+                <form class="form_wrap row">
+                        <div class="form-group col-12">
+                                <label for="c_name">{{_('Your Name')}}</label>
+                                <input type="name" class="form-control" id="c_name" required>
+                        </div>
+
+                        <div class="form-group col-12">
+                                <label for="c_email">{{_('Email Address')}}</label>
+                                <input id="c_email" type="text" name="email" class="form-control" required>
+                                <small id="emailHelp" class="form-text text-right s_invalid"></small>
+                        </div>
+
+
+                        <div class="form-group col-12">
+                                <label for="message">{{_('Your Message')}}</label>
+                                <textarea class="form-control" id="message" rows="7"
+				placeholder= " {{_( " Let us know what's on your mind!" ) }}"></textarea>
+                        </div>
+                        <div class="button_area col-12">
+                                <button id="send_msg" type="button" class="btn btn-info m-2">
+                                        {{_('Send Message')}}
+                                </button>
+                        </div>
+                </form>
+</div>
+
+
+
+<script>
+
+        var baseUrl = 'https://geomemoir.fun/api/'
+        var send_btn = $('#send_msg')
+        var c_name = $('#c_name')
+        var c_email = $('#c_email')
+        var message = $('#message')
+        var emailHelp = $('#emailHelp')
+        var url = window.location.toString().split('//')[1]
+        var cur_lang = url.split('/')[1]
+
+         // email check
+        c_email.keyup(function() {
+                emailHelp.css('display', 'block');
+        })
+        c_email.keyup(function(){
+                if(/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test($('#c_email').val())){
+                        console.log('Correct')
+                        emailHelp.removeClass('s_invalid');
+                        emailHelp.addClass('s_valid');
+                }else{
+                        console.log('Not correct')
+                        emailHelp.removeClass('s_valid');
+                        emailHelp.addClass('s_invalid');
+                }
+        })
+
+        function emailCheck(){
+                return /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(c_email.val())
+        }
+
+        function infoCheck(){
+                if ($('#c_name').val()  && $('#c_email').val() && $('#message').val()){
+                        return true;
+                }else{
+                        return false;
+                }
+        }
+        
+
+        send_btn.click(function(){
+                if(infoCheck()){
+                        $.ajax({
+                                type: 'post',
+                                url: baseUrl +cur_lang +'/v1/contact',
+                                contentType: 'application/json',
+                                data: JSON.stringify({
+                                        'name': $('#c_name').val(),
+                                        'email': $('#c_email').val(),
+                                        'message': $('#message').val(),
+                                }),
+                                success:function(response){
+                                        if (response.code==200){
+                                                msg = contact_messages[0][cur_lang]
+                                                alert(msg)
+                                                window.location.reload()
+                                        }else{
+                                                alert(response.msg)
+                                        }
+                                }                                             
+                        })                              
+                }else{
+                        message = contact_messages[1][cur_lang]
+                        alert(message)
+                }                
+        })
+
+        
+
+
+        const contact_messages = [
+                {
+                'en': 'Thank you for your feedback!',
+                'zh_Hant_TW': '感謝您的回饋!',
+                'zh_Hans_CN': '感谢您的回馈!'        
+                },
+                {
+                'en': 'Contact info is incomplete.',
+                'zh_Hant_TW': '聯絡訊息不完整',
+                'zh_Hans_CN': '联系信息不完整'        
+                }
+        ]
+
+</script>
+
+{% endblock %}
