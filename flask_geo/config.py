@@ -1,4 +1,4 @@
 class Config(object):
         DEBUG = True
-        LANGUAGES = [ 'zh_Hant_TW', 'en', 'zh_Hans_CN']
+        LANGUAGES = [ 'en', 'zh_Hant_TW', 'zh_Hans_CN']
 
