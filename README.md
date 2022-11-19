@@ -95,6 +95,7 @@ $ pm2 start start_d.sh
 
 # List all running applications
 $ pm2 list
+
 # Monitor the resource usage of the application
 $ pm2 monit
 ```
