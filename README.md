@@ -112,6 +112,7 @@ $ nohup celery -A geo_memoir worker > celery.log 2>1& &
 1. [Make An Image Gallery With Reflection](https://www.youtube.com/watch?v=8ZAbDfS3GjI)
 2. [Tutorial for A Multilingual Web Application](https://medium.com/@nicolas_84494/flask-create-a-multilingual-web-application-with-language-specific-urls-5d994344f5fd)
 3. [Bootstrap framework](https://getbootstrap.com/docs/4.6/getting-started/introduction/) used by the web
+4. [Luxon library](https://moment.github.io/luxon/) for working with dates and times in JavaScript
 
 
 
