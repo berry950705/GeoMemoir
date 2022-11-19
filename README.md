@@ -56,7 +56,7 @@ class Config(object):
         LANGUAGES = [ 'en', 'zh_Hant_TW', 'zh_Hans_CN']
 ```
 
-2. __**babel.cfg** is a configuration file created to let pybabel know what files to scan for translation. The following codes is an example for scanning all .py files and html templates.__
+2. __**babel.cfg** is a configuration file created to let pybabel know what files to scan for translation. The following codes are an example for scanning all .py files and html templates.__
 
 ```python
 [python: app/**.py]
